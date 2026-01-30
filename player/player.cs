@@ -14,19 +14,19 @@ public partial class player : Node2D
 	{
 		var direction = Vector2.Zero;
 		
-		if (Input.IsActionPressed("ui_up"))
+		if (Input.IsActionPressed($"player_{this.PlayerId}_up"))
 		{
 			direction.Y = -1.0f;
 		}
-		if (Input.IsActionPressed("ui_down"))
+		if (Input.IsActionPressed($"player_{this.PlayerId}_down"))
 		{
 			direction.Y = 1.0f;
 		}
-		if (Input.IsActionPressed("ui_left"))
+		if (Input.IsActionPressed($"player_{this.PlayerId}_left"))
 		{
 			direction.X = -1.0f;
 		}
-		if (Input.IsActionPressed("ui_right"))
+		if (Input.IsActionPressed($"player_{this.PlayerId}_right"))
 		{
 			direction.X = 1.0f;
 		}
