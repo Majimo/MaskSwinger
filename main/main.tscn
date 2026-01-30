@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dheb367654qrd"]
+
+[ext_resource type="PackedScene" uid="uid://ch4so520oq5e" path="res://player/player.tscn" id="1_53q0u"]
+
+[node name="Main" type="Node2D" unique_id=874564439]
+
+[node name="Player1" parent="." unique_id=546545013 instance=ExtResource("1_53q0u")]
+modulate = Color(0, 0, 1, 1)
+position = Vector2(40, 48)
+
+[node name="Player2" parent="." unique_id=4632335 instance=ExtResource("1_53q0u")]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(40, 592)
+
+[node name="Player3" parent="." unique_id=1875134396 instance=ExtResource("1_53q0u")]
+modulate = Color(0.8729871, 0.42372683, 0.33693364, 1)
+position = Vector2(1108, 48)
+
+[node name="Player4" parent="." unique_id=1536890423 instance=ExtResource("1_53q0u")]
+modulate = Color(1, 0.73333335, 0, 1)
+position = Vector2(1107, 593)
