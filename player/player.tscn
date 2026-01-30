@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ch4so520oq5e"]
 
 [ext_resource type="Texture2D" uid="uid://bqykq2ueksvhs" path="res://icon.svg" id="1_oul6g"]
+[ext_resource type="Script" uid="uid://c7c81c465t3st" path="res://player/player.cs" id="1_rkbax"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rkbax"]
 radius = 13.0
@@ -9,6 +10,7 @@ height = 46.0
 [node name="Player" type="Node2D" unique_id=546545013]
 
 [node name="PlayerBody2D" type="CharacterBody2D" parent="." unique_id=1573078762]
+script = ExtResource("1_rkbax")
 
 [node name="Sprite2D" type="Sprite2D" parent="PlayerBody2D" unique_id=276017425]
 position = Vector2(5.9604645e-08, 1.7881393e-07)
