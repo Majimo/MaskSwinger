@@ -1,10 +1,12 @@
 using Godot;
-using System;
-using System.Numerics;
 using Vector2 = Godot.Vector2;
 
-public partial class player : CharacterBody2D
+public partial class player : Node2D
 {
+	[Export] public int PlayerId { get; set; } = 1;
+	[Export] public int Health { get; set; } = 3;
+	
+	private CharacterBody2D _body2D => GetNode<CharacterBody2D>("PlayerBody2D");
 	private float _speed = 400;
 	private Vector2 _velocity = Vector2.Zero;
 
@@ -32,7 +34,7 @@ public partial class player : CharacterBody2D
 		_velocity.X = direction.X * _speed;
 		_velocity.Y = direction.Y * _speed;
 		
-		Velocity = _velocity;
-		MoveAndSlide();
+		_body2D.Velocity = _velocity;
+		_body2D.MoveAndSlide();
 	}
 }

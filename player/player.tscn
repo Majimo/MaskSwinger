@@ -8,9 +8,9 @@ radius = 13.0
 height = 46.0
 
 [node name="Player" type="Node2D" unique_id=546545013]
+script = ExtResource("1_rkbax")
 
 [node name="PlayerBody2D" type="CharacterBody2D" parent="." unique_id=1573078762]
-script = ExtResource("1_rkbax")
 
 [node name="Sprite2D" type="Sprite2D" parent="PlayerBody2D" unique_id=276017425]
 position = Vector2(5.9604645e-08, 1.7881393e-07)
