@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="3_pwejh"]
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="5_86hbi"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="6_8joom"]
+[ext_resource type="AudioStream" uid="uid://cy1lo1igcd80n" path="res://music assets/Battle_theme.mp3" id="7_pwejh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8joom"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -77,3 +78,9 @@ auto_follow_distance_max = 50.0
 auto_follow_distance_divisor = 100.0
 align_transform_with_view = Callable()
 align_position_with_view = Callable()
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=691569204]
+stream = ExtResource("7_pwejh")
+autoplay = true
+
+[node name="AudioListener3D" type="AudioListener3D" parent="." unique_id=597177706]

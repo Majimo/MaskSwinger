@@ -5,7 +5,7 @@
 
 [node name="base_player_animations" type="AnimatedSprite3D" unique_id=376020763]
 sprite_frames = ExtResource("1_1po0w")
-animation = &"side_walk"
+animation = &"side_atk"
 autoplay = "walk"
-frame_progress = 0.9869192
+frame_progress = 0.172479
 script = ExtResource("2_cpqnc")
