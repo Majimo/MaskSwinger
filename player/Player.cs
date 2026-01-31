@@ -38,6 +38,7 @@ public partial class Player : Node3D
 		// }
 
 		_velocity.X = direction.X * _speed;
+		_velocity.Y = direction.Y * _speed;
 		_velocity.Z = direction.Z * _speed;
 		
 		_body3D.Velocity = _velocity;
