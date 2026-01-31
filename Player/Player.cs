@@ -1,11 +1,11 @@
 using Godot;
 using MaskSwinger.Player;
-using Vector2 = Godot.Vector2;
 
 public partial class Player : Node3D
 {
 	[Export] public int PlayerId { get; set; } = 1;
 	[Export] public int Health { get; set; } = 3;
+	[Export] public float Speed = 25.0f;
 	
 	[Export] public bool IsDashing { get; set; } 
 	[Export] public bool IsShielding { get; set; } 
@@ -13,42 +13,43 @@ public partial class Player : Node3D
 	
 	public PlayerBehavior Behavior = new PlayerBehavior();
 	public Direction CurrentDirection;
+	public CharacterBody3D Body3D => GetNode<CharacterBody3D>("PlayerBody");
 	
-	private CharacterBody3D _body3D => GetNode<CharacterBody3D>("PlayerBody");
-	private Cooldown _attackCooldown => GetNode<Cooldown>("AttackCooldown");
-	private float _speed = 50;
 	private Vector3 _velocity = Vector3.Zero;
 
 	public override void _Process(double delta)
 	{
-		var direction = Vector3.Zero;
-		
-		if (Input.IsActionPressed($"player_{this.PlayerId}_up"))
+		if (!IsDashing)
 		{
-			CurrentDirection = Direction.Up;
-			direction.Z = -1.0f;
-		}
-		if (Input.IsActionPressed($"player_{this.PlayerId}_down"))
-		{
-			CurrentDirection = Direction.Down;
-			direction.Z = 1.0f;
-		}
-		if (Input.IsActionPressed($"player_{this.PlayerId}_left"))
-		{
-			CurrentDirection = Direction.Left;
-			direction.X = -1.0f;
-		}
-		if (Input.IsActionPressed($"player_{this.PlayerId}_right"))
-		{
-			CurrentDirection = Direction.Right;
-			direction.X = 1.0f;
-		}
+			var direction = Vector3.Zero;
+			
+			if (Input.IsActionPressed($"player_{this.PlayerId}_up"))
+			{
+				CurrentDirection = Direction.Up;
+				direction.Z = -1.0f;
+			}
+			if (Input.IsActionPressed($"player_{this.PlayerId}_down"))
+			{
+				CurrentDirection = Direction.Down;
+				direction.Z = 1.0f;
+			}
+			if (Input.IsActionPressed($"player_{this.PlayerId}_left"))
+			{
+				CurrentDirection = Direction.Left;
+				direction.X = -1.0f;
+			}
+			if (Input.IsActionPressed($"player_{this.PlayerId}_right"))
+			{
+				CurrentDirection = Direction.Right;
+				direction.X = 1.0f;
+			}
 
-		_velocity.X = direction.X * _speed;
-		_velocity.Y = direction.Y * _speed;
-		_velocity.Z = direction.Z * _speed;
+			_velocity.X = direction.X * Speed;
+			_velocity.Y = direction.Y * Speed;
+			_velocity.Z = direction.Z * Speed;
 		
-		_body3D.Velocity = _velocity;
-		_body3D.MoveAndSlide();
+			Body3D.Velocity = _velocity;
+		}
+		Body3D.MoveAndSlide();
 	}
 }

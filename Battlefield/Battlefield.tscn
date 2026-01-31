@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dheb367654qrd"]
 
-[ext_resource type="PackedScene" uid="uid://drrga33bag8dm" path="res://player/player.tscn" id="1_8g6m8"]
+[ext_resource type="PackedScene" uid="uid://drrga33bag8dm" path="res://Player/Player.tscn" id="1_8g6m8"]
 [ext_resource type="PackedScene" uid="uid://ccycu7asq8cf8" path="res://3d assets/Teist.tscn" id="2_62b7x"]
 [ext_resource type="PackedScene" uid="uid://x0kigyy1bkjx" path="res://Mask/Mask.tscn" id="3_ablho"]
 
@@ -30,7 +30,7 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="Player1" parent="." unique_id=609764325 instance=ExtResource("1_8g6m8")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 40, 1, -40)
+transform = Transform3D(-3, 0, -4.5298742e-07, 0, 3, 0, 4.5298742e-07, 0, -3, 35, 1, -35)
 
 [node name="Player2" parent="." unique_id=743661568 instance=ExtResource("1_8g6m8")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 40, 1, 40)
