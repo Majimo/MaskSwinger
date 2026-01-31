@@ -49,6 +49,35 @@ _subresources={
 "use_external/fallback_path": "res://3d assets/materials/wood.tres",
 "use_external/path": "uid://fm68700b5ibx"
 }
+},
+"meshes": {
+"arbre_Cylinder": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://3d assets/meshes/arbre_Cylinder.res",
+"save_to_file/path": "uid://sj5e40r5ao6w"
+},
+"arbre_Cylinder_001": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://3d assets/meshes/arbre_Cylinder_001.res",
+"save_to_file/path": "uid://c3rk4qabu2vtx"
+},
+"arbre_Cylinder_002": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 20.0,
+"save_to_file/enabled": true,
+"save_to_file/fallback_path": "res://3d assets/meshes/arbre_Cylinder_002.res",
+"save_to_file/path": "uid://duq3es8jlpsrs"
+}
 }
 }
 gltf/naming_version=2

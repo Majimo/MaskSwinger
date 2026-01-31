@@ -1,63 +1,50 @@
 [gd_scene format=3 uid="uid://bvje4ohrthdl4"]
 
-[ext_resource type="PackedScene" uid="uid://c28qeyqje0ypl" path="res://3d assets/scenes/arbre.tscn" id="1_hfsqv"]
 [ext_resource type="PackedScene" uid="uid://cn2ud3gacjtff" path="res://3d assets/buisson.glb" id="2_afs14"]
+[ext_resource type="ArrayMesh" uid="uid://c8prbvtk0hsty" path="res://3d assets/meshes/arbre_Cylinder.res" id="2_myq6x"]
+[ext_resource type="ArrayMesh" uid="uid://bxi0yr11axhf6" path="res://3d assets/meshes/arbre_Cylinder_001.res" id="3_cqa17"]
+[ext_resource type="ArrayMesh" uid="uid://cgjbceqeamcd2" path="res://3d assets/meshes/arbre_Cylinder_002.res" id="4_btb86"]
 
 [node name="tree-block" type="Node3D" unique_id=1872134000]
 
-[node name="arbre" parent="." unique_id=2045254888 instance=ExtResource("1_hfsqv")]
-transform = Transform3D(0.91, 0, 0, 0, 0.91, 0, 0, 0, 0.91, -4.707627, 0, -4.471901)
-
-[node name="arbre2" parent="." unique_id=435649421 instance=ExtResource("1_hfsqv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9775965, 0, -4.0187554)
-
-[node name="arbre3" parent="." unique_id=1667998593 instance=ExtResource("1_hfsqv")]
-transform = Transform3D(0.84, 0, 0, 0, 0.84, 0, 0, 0, 0.84, -2.5166621, 0, -4.471901)
-
-[node name="arbre4" parent="." unique_id=280238268 instance=ExtResource("1_hfsqv")]
-transform = Transform3D(1.035, 0, 0, 0, 1.035, 0, 0, 0, 1.035, -1.6848692, 0, -4.0187554)
-
-[node name="arbre12" parent="." unique_id=1052927147 instance=ExtResource("1_hfsqv")]
-transform = Transform3D(0.835, 0, 0, 0, 0.835, 0, 0, 0, 0.835, -1.3479804, 0, -4.4922137)
-
-[node name="arbre13" parent="." unique_id=1105505014 instance=ExtResource("1_hfsqv")]
-transform = Transform3D(0.835, 0, 0, 0, 0.835, 0, 0, 0, 0.835, -3.3166904, 0, -4.4922137)
-
-[node name="arbre5" parent="." unique_id=2095345368 instance=ExtResource("1_hfsqv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24185729, 0, -4.471901)
-
-[node name="arbre6" parent="." unique_id=1607538494 instance=ExtResource("1_hfsqv")]
-transform = Transform3D(0.94, 0, 0, 0, 0.94, 0, 0, 0, 0.94, 0.51256716, 0, -4.0187554)
-
-[node name="arbre7" parent="." unique_id=1284057867 instance=ExtResource("1_hfsqv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8988768, 0, -4.471901)
-
-[node name="arbre11" parent="." unique_id=1971852612 instance=ExtResource("1_hfsqv")]
-transform = Transform3D(0.83, 0, 0, 0, 0.83, 0, 0, 0, 0.83, 1.0548836, 0, -4.471901)
-
-[node name="arbre8" parent="." unique_id=1910913816 instance=ExtResource("1_hfsqv")]
-transform = Transform3D(0.88, 0, 0, 0, 0.88, 0, 0, 0, 0.88, 2.9016252, 0, -4.471901)
-
-[node name="arbre9" parent="." unique_id=1688720783 instance=ExtResource("1_hfsqv")]
-transform = Transform3D(1.095, 0, 0, 0, 1.095, 0, 0, 0, 1.095, 3.5042996, 0, -4.0187554)
-
-[node name="arbre10" parent="." unique_id=618619582 instance=ExtResource("1_hfsqv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.227991, 0, -4.471901)
-
 [node name="buisson" parent="." unique_id=1811582527 instance=ExtResource("2_afs14")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.29454, 0, -4)
+transform = Transform3D(-0.007714239, 0, -0.99997026, 0, 1, 0, 0.99997026, 0, -0.007714239, 42.454018, 0, -6.6148324)
 
 [node name="buisson2" parent="." unique_id=770285464 instance=ExtResource("2_afs14")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.93365526, 0, -4)
+transform = Transform3D(-0.007714239, 0, -0.99997026, 0, 1, 0, 0.99997026, 0, -0.007714239, 42.435806, 0, -4.254017)
 
 [node name="buisson3" parent="." unique_id=1877570431 instance=ExtResource("2_afs14")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.675837, 0, -4)
+transform = Transform3D(-0.007714239, 0, -0.99997026, 0, 1, 0, 0.99997026, 0, -0.007714239, 42.415676, 0, -1.6446013)
 
 [node name="buisson4" parent="." unique_id=1930606005 instance=ExtResource("2_afs14")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.833022, 0, -4)
+transform = Transform3D(-0.007714239, 0, -0.99997026, 0, 1, 0, 0.99997026, 0, -0.007714239, 42.40675, 0, -0.48745108)
 
 [node name="buisson5" parent="." unique_id=125015871 instance=ExtResource("2_afs14")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.897251, 0, -4)
+transform = Transform3D(-0.007714239, 0, -0.99997026, 0, 1, 0, 0.99997026, 0, -0.007714239, 42.46638, 0, -8.217495)
 
 [node name="buisson6" parent="." unique_id=809537606 instance=ExtResource("2_afs14")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5387964, 0, -4)
+transform = Transform3D(-0.007714239, 0, -0.99997026, 0, 1, 0, 0.99997026, 0, -0.007714239, 42.424446, 0, -2.7816105)
+
+[node name="ArbreCylinder" type="MeshInstance3D" parent="." unique_id=955398469]
+transform = Transform3D(0.7799065, 0, -0.012074753, 0, 0.78, 0, 0.012074753, 0, 0.7799065, 48.38461, 0, -10.224791)
+mesh = ExtResource("2_myq6x")
+
+[node name="ArbreCylinder001" type="MeshInstance3D" parent="." unique_id=1597834924]
+transform = Transform3D(0.865, 0, 0, 0, 0.865, 0, 0, 0, 0.865, 47.040707, 0, -7.5802565)
+mesh = ExtResource("3_cqa17")
+
+[node name="ArbreCylinder002" type="MeshInstance3D" parent="." unique_id=2105539830]
+transform = Transform3D(0.3756494, 0, 0.839814, 0, 0.92, 0, -0.839814, 0, 0.3756494, 48.955273, 0, -5.3084455)
+mesh = ExtResource("4_btb86")
+
+[node name="ArbreCylinder2" type="MeshInstance3D" parent="." unique_id=1976880380]
+transform = Transform3D(0.7679363, 0, 0.13665202, 0, 0.7800001, 0, -0.13665202, 0, 0.7679363, 47.89999, 0, -17.350494)
+mesh = ExtResource("2_myq6x")
+
+[node name="ArbreCylinder003" type="MeshInstance3D" parent="." unique_id=554753899]
+transform = Transform3D(0.8491737, 0, 0.16470893, 0, 0.865, 0, -0.16470893, 0, 0.8491737, 47.084236, 0, -14.498446)
+mesh = ExtResource("3_cqa17")
+
+[node name="ArbreCylinder004" type="MeshInstance3D" parent="." unique_id=1693262349]
+transform = Transform3D(0.20886324, 0, 0.89597774, 0, 0.92, 0, -0.89597774, 0, 0.20886324, 49.39636, 0, -12.632763)
+mesh = ExtResource("4_btb86")

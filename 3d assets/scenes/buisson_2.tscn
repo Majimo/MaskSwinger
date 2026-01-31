@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://hoga2hflv7ks"]
+
+[ext_resource type="ArrayMesh" uid="uid://ddtey8xf1vhfo" path="res://3d assets/meshes/buisson_Cylinder_002.res" id="1_8lblt"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_05uub"]
+size = Vector3(4.8095703, 1.8623047, 1)
+
+[node name="buisson2" type="Node3D" unique_id=1989823110]
+
+[node name="buisson" type="MeshInstance3D" parent="." unique_id=406493565]
+mesh = ExtResource("1_8lblt")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1837705334]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=659236847]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9399414, 0)
+shape = SubResource("BoxShape3D_05uub")

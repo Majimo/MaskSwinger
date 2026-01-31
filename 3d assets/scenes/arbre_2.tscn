@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bgx3ftw2h63m0"]
+
+[ext_resource type="ArrayMesh" uid="uid://bxi0yr11axhf6" path="res://3d assets/meshes/arbre_Cylinder_001.res" id="1_05ryy"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_x54u0"]
+height = 4.2753906
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_j7eyo"]
+height = 4.4970703
+radius = 2.4516602
+
+[node name="arbre2" type="Node3D" unique_id=1989823110]
+
+[node name="ArbreCylinder" type="MeshInstance3D" parent="." unique_id=406493565]
+mesh = ExtResource("1_05ryy")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1837705334]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=659236847]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1123047, 0)
+shape = SubResource("CylinderShape3D_x54u0")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=1023212141]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.4835415, 0)
+shape = SubResource("CylinderShape3D_j7eyo")
