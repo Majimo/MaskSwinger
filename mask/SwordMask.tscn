@@ -4,18 +4,18 @@
 [ext_resource type="Resource" uid="uid://cahh5sfslab5" path="res://mask/SwordMaskAttack.tres" id="2_30xea"]
 [ext_resource type="Texture2D" uid="uid://bqykq2ueksvhs" path="res://icon.svg" id="3_v3y8u"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_lp4wd"]
-radius = 90.47099
+[sub_resource type="SphereShape3D" id="SphereShape3D_rrwd6"]
+radius = 0.9532199
 
-[node name="SwordMask" type="Node2D" unique_id=1653312451]
+[node name="SwordMask" type="Node3D" unique_id=1995162680]
 script = ExtResource("1_rrwd6")
 attackResource = ExtResource("2_30xea")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=486939252]
-rotation = 0.7853982
+[node name="Sprite" type="Sprite3D" parent="." unique_id=1586256970]
+transform = Transform3D(-0.70710677, 0.70710677, -3.090862e-08, 0, -4.371139e-08, -1, -0.70710677, -0.70710677, 3.090862e-08, 0, 0, 0)
 texture = ExtResource("3_v3y8u")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1167070163]
+[node name="Area" type="Area3D" parent="." unique_id=2040927948]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1706164326]
-shape = SubResource("CircleShape2D_lp4wd")
+[node name="CollisionShape" type="CollisionShape3D" parent="Area" unique_id=672123985]
+shape = SubResource("SphereShape3D_rrwd6")

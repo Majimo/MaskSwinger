@@ -4,19 +4,20 @@
 [ext_resource type="Script" uid="uid://c7c81c465t3st" path="res://player/player.cs" id="1_rkbax"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_rkbax"]
-height = 0.45410156
-radius = 0.1381836
+height = 1.2675781
+radius = 0.63916016
 
 [node name="Player" type="Node3D" unique_id=609764325]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 script = ExtResource("1_rkbax")
 
-[node name="PlayerBody3D" type="CharacterBody3D" parent="." unique_id=1298676923]
+[node name="PlayerBody" type="CharacterBody3D" parent="." unique_id=1298676923]
 motion_mode = 1
 
-[node name="Sprite3D" type="Sprite3D" parent="PlayerBody3D" unique_id=596940612]
+[node name="Sprite" type="Sprite3D" parent="PlayerBody" unique_id=596940612]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 texture = ExtResource("1_oul6g")
 
-[node name="CollisionShape2D" type="CollisionShape3D" parent="PlayerBody3D" unique_id=1218065430]
+[node name="CollisionShape" type="CollisionShape3D" parent="PlayerBody" unique_id=1218065430]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 shape = SubResource("CylinderShape3D_rkbax")
