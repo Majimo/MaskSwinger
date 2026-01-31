@@ -21,10 +21,10 @@ func _ready() -> void:
 	if randf() < 0.5:
 		#await half_delay
 		tween.tween_property(self, "scale", scale_smol, half_delay).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_IN_OUT)
-	
-	
-	tween.tween_property(self, "scale", scale_big, half_delay).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_IN_OUT)
-	tween.tween_property(self, "scale", scale_smol, half_delay).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_IN_OUT)
+		tween.tween_property(self, "scale", scale_big, half_delay).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_IN_OUT)
+	else:
+		tween.tween_property(self, "scale", scale_big, half_delay).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_IN_OUT)
+		tween.tween_property(self, "scale", scale_smol, half_delay).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_IN_OUT)
 	tween.set_loops()
 
 

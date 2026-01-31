@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://ccycu7asq8cf8"]
 
 [ext_resource type="PackedScene" uid="uid://d3hlwsb4k6iry" path="res://3d assets/scenes/wall.tscn" id="1_oabow"]
+[ext_resource type="Material" uid="uid://dcvbrligww5i" path="res://3d assets/materials/ground.tres" id="2_p0coo"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_o7hdf"]
+material = ExtResource("2_p0coo")
 size = Vector2(100, 100)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_o7hdf"]

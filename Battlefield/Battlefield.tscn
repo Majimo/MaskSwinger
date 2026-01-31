@@ -1,35 +1,53 @@
 [gd_scene format=3 uid="uid://dheb367654qrd"]
 
-[ext_resource type="PackedScene" uid="uid://dlsiievipm64e" path="res://Player/Player.tscn" id="1_8g6m8"]
+[ext_resource type="PackedScene" uid="uid://dlsiievipm64e" path="res://player/player.tscn" id="1_8g6m8"]
 [ext_resource type="PackedScene" uid="uid://ccycu7asq8cf8" path="res://3d assets/Teist.tscn" id="2_62b7x"]
 [ext_resource type="PackedScene" uid="uid://x0kigyy1bkjx" path="res://Mask/Mask.tscn" id="3_ablho"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8g6m8"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_62b7x"]
+sky_material = SubResource("ProceduralSkyMaterial_8g6m8")
+
+[sub_resource type="Environment" id="Environment_ablho"]
+background_mode = 1
+background_color = Color(5.565118e-08, 0.10024113, 0.035829917, 1)
+sky = SubResource("Sky_62b7x")
+ambient_light_source = 3
+fog_light_color = Color(0.51387626, 0.5474587, 0.6051076, 1)
+fog_sky_affect = 0.485
+volumetric_fog_albedo = Color(0.13464779, 0.20962289, 0.48861754, 1)
+
 [node name="Main" type="Node3D" unique_id=1184177733]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1703007194]
+environment = SubResource("Environment_ablho")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1451696167]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, -73.75673, 40.75303, -47.6085)
+shadow_enabled = true
 
 [node name="Player1" parent="." unique_id=609764325 instance=ExtResource("1_8g6m8")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 40, 1, -40)
-PlayerId = 1
-Health = 3
 
 [node name="Player2" parent="." unique_id=743661568 instance=ExtResource("1_8g6m8")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 40, 1, 40)
 PlayerId = 2
-Health = 3
 
 [node name="Player3" parent="." unique_id=756489808 instance=ExtResource("1_8g6m8")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -40, 1, -40)
 PlayerId = 3
-Health = 3
 
 [node name="Player4" parent="." unique_id=2133927695 instance=ExtResource("1_8g6m8")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -40, 1, 40)
 PlayerId = 4
-Health = 3
 
 [node name="Ground" parent="." unique_id=432543835 instance=ExtResource("2_62b7x")]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1056510175]
-transform = Transform3D(1, 0, 0, 0, 0.34202012, 0.93969256, 0, -0.93969256, 0.34202012, 0, 59.136208, 0)
+transform = Transform3D(1, 0, 0, 0, 0.47027272, 0.88252115, 0, -0.88252115, 0.47027272, 0, 51.900314, 45.041588)
 size = 100.0
 
 [node name="Mask" parent="." unique_id=1995162680 instance=ExtResource("3_ablho")]
