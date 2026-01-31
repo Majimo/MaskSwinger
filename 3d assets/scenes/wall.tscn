@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b384va55ngmm6" path="res://3d assets/scenes/arbre_3.tscn" id="3_ja24g"]
 [ext_resource type="PackedScene" uid="uid://ioj7ccd40pxk" path="res://3d assets/scenes/buisson_1.tscn" id="4_ja24g"]
 [ext_resource type="PackedScene" uid="uid://hoga2hflv7ks" path="res://3d assets/scenes/buisson_2.tscn" id="5_c0xvo"]
+[ext_resource type="PackedScene" uid="uid://k0eao7l2cn2o" path="res://3d assets/scenes/flower.tscn" id="6_c0xvo"]
 
 [node name="wall" type="Node3D" unique_id=1098000650]
 
@@ -145,3 +146,27 @@ transform = Transform3D(-0.034411117, 0, 0.99940777, 0, 1, 0, -0.99940777, 0, -0
 
 [node name="buisson8" parent="." unique_id=433379500 instance=ExtResource("5_c0xvo")]
 transform = Transform3D(-0.12983406, 0, -0.9915357, 0, 1, 0, 0.9915357, 0, -0.12983406, -43.65358, 0, -26.000973)
+
+[node name="flower" parent="." unique_id=1138244188 instance=ExtResource("6_c0xvo")]
+transform = Transform3D(-0.9869993, 0, 0.16072538, 0, 1, 0, -0.16072538, 0, -0.9869993, -42.8351, 0, -3.3542938)
+
+[node name="flower2" parent="." unique_id=1067599033 instance=ExtResource("6_c0xvo")]
+transform = Transform3D(-0.96820456, 0, -0.25016034, 0, 1, 0, 0.25016034, 0, -0.96820456, -42.176586, 0, 13.59304)
+
+[node name="flower3" parent="." unique_id=675956967 instance=ExtResource("6_c0xvo")]
+transform = Transform3D(-0.98573005, 0, 0.16833457, 0, 1, 0, -0.16833457, 0, -0.98573005, -43.308212, 0, -21.711311)
+
+[node name="flower4" parent="." unique_id=915981837 instance=ExtResource("6_c0xvo")]
+transform = Transform3D(-0.9839163, 0, -0.17863047, 0, 1, 0, 0.17863047, 0, -0.9839163, -43.308212, 0, -40.15059)
+
+[node name="flower6" parent="." unique_id=1950450614 instance=ExtResource("6_c0xvo")]
+transform = Transform3D(-0.9557725, 0, 0.2941071, 0, 1, 0, -0.2941071, 0, -0.9557725, -42.755898, 0, -33.644367)
+
+[node name="flower7" parent="." unique_id=383827704 instance=ExtResource("6_c0xvo")]
+transform = Transform3D(-0.9997729, 0, -0.02130881, 0, 1, 0, 0.02130881, 0, -0.9997729, -41.921562, 0, -8.215305)
+
+[node name="flower8" parent="." unique_id=846805493 instance=ExtResource("6_c0xvo")]
+transform = Transform3D(-0.97372216, 0, 0.22773914, 0, 1, 0, -0.22773914, 0, -0.97372216, -42.399902, 9.536743e-07, 23.317682)
+
+[node name="flower5" parent="." unique_id=1266663951 instance=ExtResource("6_c0xvo")]
+transform = Transform3D(-0.9587504, 0, 0.28424963, 0, 1, 0, -0.28424963, 0, -0.9587504, -41.8789, 0, 35.34037)

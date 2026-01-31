@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://qnmumuk10hff"]
+
+[resource]
+resource_name = "flower_center"
+cull_mode = 2
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.9063355, 0.56057334, 0.4272263, 1)
+roughness = 0.5
