@@ -4,7 +4,7 @@ using MaskSwinger.Player;
 [GlobalClass]
 public partial class DashFeature : Feature
 {
-	public override void _Process(double delta)
+	public override void _PhysicsProcess(double delta)
 	{
 		if (!this.Cooldown.CanExecute() || this.Player.IsDashing || this.Player.IsAttacking || this.Player.IsShielding)
 		{

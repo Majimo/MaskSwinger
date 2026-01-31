@@ -3,7 +3,7 @@ using Godot;
 [GlobalClass]
 public partial class ShieldFeature : Feature
 {
-	public override void _Process(double delta)
+	public override void _PhysicsProcess(double delta)
 	{
 		if (!this.Cooldown.CanExecute() || this.Player.IsDashing || this.Player.IsAttacking || this.Player.IsShielding)
 		{

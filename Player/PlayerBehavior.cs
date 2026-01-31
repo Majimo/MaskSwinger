@@ -17,11 +17,11 @@ public partial class PlayerBehavior : Resource
 	{
 		GD.Print("Attacking " + player.PlayerId + " towards " + direction);
 	}
-
-	public virtual void Dash(Player player, Direction direction)
-	{
-		Vector3 dashVelocity = player.Body3D.Velocity * DashSpeedFactor;
-		player.Body3D.Velocity = dashVelocity;
+	
+    public virtual void Dash(Player player, Direction direction)
+    {
+        var dashVelocity = player.Velocity * DashSpeedFactor;
+        player.Velocity = dashVelocity;
 			
 		Timer timer = new Timer();
 		timer.WaitTime = player.Behavior.DashDuration;

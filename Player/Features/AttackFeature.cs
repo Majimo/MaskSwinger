@@ -22,12 +22,10 @@ public partial class AttackFeature : Feature
         {
             Area3D zone = keyValuePair.Key;
             Direction direction = keyValuePair.Value;
-            
-            
         }
     }
     
-    public override void _Process(double delta)
+    public override void _PhysicsProcess(double delta)
     {
         if (this.Cooldown.CanExecute())
         {
