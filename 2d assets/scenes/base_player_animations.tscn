@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://w1rk7iiysevn"]
+
+[ext_resource type="SpriteFrames" uid="uid://c832i873j2gpc" path="res://2d assets/animations/base_face.tres" id="1_1po0w"]
+
+[node name="base_player_animations" type="AnimatedSprite3D" unique_id=376020763]
+sprite_frames = ExtResource("1_1po0w")
+animation = &"walk"
+autoplay = "walk"
