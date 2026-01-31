@@ -10,33 +10,26 @@ public partial class PlayerBehavior : Resource
     [Export] public int DashRange;
     [Export] public int DashCooldown;
     
-    public virtual void Attack(Player player)
+    public enum DirectionEnum
     {
-        if (Input.IsActionJustPressed("player_" + player.PlayerId + "_attack_up"))
-        {
-            GD.Print("Player " + player.PlayerId + " attacked UP");
-        }
-        if (Input.IsActionJustPressed("player_" + player.PlayerId + "_attack_down"))
-        {
-            GD.Print("Player " + player.PlayerId + " attacked with damage DOWN ");
-        }
-        if (Input.IsActionJustPressed("player_" + player.PlayerId + "_attack_left"))
-        {
-            GD.Print("Player " + player.PlayerId + " attacked with damage LEFT ");
-        }
-        if (Input.IsActionJustPressed("player_" + player.PlayerId + "_attack_right"))
-        {
-            GD.Print("Player " + player.PlayerId + " attacked with damage RIGHT ");
-        }
+        UP,
+        DOWN,
+        LEFT,
+        RIGHT
+    }
+    
+    public virtual void Attack(Player player, DirectionEnum Direction)
+    {
+        GD.Print("Attacking " + player.PlayerId + " towards " + Direction);
     }
 
-    public virtual void Dash(Player player)
+    public virtual void Dash(Player player, DirectionEnum Direction)
     {
-        GD.Print("Dash executed!");
+        GD.Print("Dash executed " + player.PlayerId + " towards " + Direction);
     }
 
-    public virtual void Shield(Player player)
+    public virtual void Shield(Player player, DirectionEnum Direction)
     {
-        GD.Print("Shield executed!");
+        GD.Print("Shield executed " + player.PlayerId + " towards " + Direction);
     }
 }

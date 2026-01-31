@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bv42fecvome3q" path="res://Player/Player.cs" id="1_3c3w1"]
 [ext_resource type="Texture2D" uid="uid://bqykq2ueksvhs" path="res://icon.svg" id="1_oul6g"]
+[ext_resource type="Script" uid="uid://cbdhgo7km4kyi" path="res://Player/Cooldown.cs" id="3_tok1r"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_rkbax"]
 height = 1.2675781
@@ -10,8 +11,6 @@ radius = 0.63916016
 [node name="Player" type="Node3D" unique_id=609764325]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 script = ExtResource("1_3c3w1")
-PlayerId = null
-Health = null
 
 [node name="PlayerBody" type="CharacterBody3D" parent="." unique_id=1298676923]
 
@@ -22,3 +21,8 @@ texture = ExtResource("1_oul6g")
 [node name="CollisionShape" type="CollisionShape3D" parent="PlayerBody" unique_id=1218065430]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 shape = SubResource("CylinderShape3D_rkbax")
+
+[node name="AttackCooldown" type="Node" parent="." unique_id=1753931267]
+script = ExtResource("3_tok1r")
+Duration = 2.0
+metadata/_custom_type_script = "uid://cbdhgo7km4kyi"
