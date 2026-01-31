@@ -3,7 +3,5 @@
 [resource]
 resource_name = "leaves"
 cull_mode = 2
-diffuse_mode = 3
-specular_mode = 1
-albedo_color = Color(0.1098594, 0.73665816, 0, 1)
+albedo_color = Color(0.14585648, 0.9063355, 0, 1)
 roughness = 0.5

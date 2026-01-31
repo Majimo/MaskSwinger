@@ -38,6 +38,18 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={
+"materials": {
+"fruit": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://3d assets/materials/fruit.tres",
+"use_external/path": "uid://cjheq3c57v7ii"
+},
+"leaves": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://3d assets/materials/leaves.tres",
+"use_external/path": "uid://bxsek0l8ibndt"
+}
+},
 "meshes": {
 "buisson_Cylinder_001": {
 "generate/lightmap_uv": 0,

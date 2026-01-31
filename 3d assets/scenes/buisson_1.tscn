@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bc8e4c6vdvobh" path="res://3d assets/scripts/tween_animation.gd" id="2_05uub"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_05uub"]
-size = Vector3(4.8095703, 1.8623047, 1)
+size = Vector3(4.8095703, 1.8623047, 4.161133)
 
 [node name="buisson1" type="Node3D" unique_id=1989823110]
 
