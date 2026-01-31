@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dheb367654qrd"]
 
-[ext_resource type="PackedScene" uid="uid://ch4so520oq5e" path="res://Player/Player.tscn" id="1_8g6m8"]
+[ext_resource type="PackedScene" uid="uid://cqyiq78vy61fh" path="res://Player/TOTO.tscn" id="1_8g6m8"]
 [ext_resource type="PackedScene" uid="uid://ccycu7asq8cf8" path="res://3d assets/Teist.tscn" id="2_62b7x"]
 [ext_resource type="PackedScene" uid="uid://x0kigyy1bkjx" path="res://Mask/Mask.tscn" id="3_ablho"]
 
@@ -8,18 +8,23 @@
 
 [node name="Player1" parent="." unique_id=546545013 instance=ExtResource("1_8g6m8")]
 transform = Transform3D(-3, 0, -2.6226832e-07, 0, 3, 0, 2.6226832e-07, 0, -3, 40, 1, -40)
+PlayerId = null
+Health = null
 
 [node name="Player2" parent="." unique_id=4632335 instance=ExtResource("1_8g6m8")]
 transform = Transform3D(-3, 0, -2.6226832e-07, 0, 3, 0, 2.6226832e-07, 0, -3, 40, 1, 40)
 PlayerId = 2
+Health = null
 
 [node name="Player3" parent="." unique_id=1875134396 instance=ExtResource("1_8g6m8")]
 transform = Transform3D(-3, 0, -2.6226832e-07, 0, 3, 0, 2.6226832e-07, 0, -3, -40, 1, 40)
 PlayerId = 3
+Health = null
 
 [node name="Player4" parent="." unique_id=1536890423 instance=ExtResource("1_8g6m8")]
 transform = Transform3D(-3, 0, -2.6226832e-07, 0, 3, 0, 2.6226832e-07, 0, -3, -40, 1, -40)
 PlayerId = 4
+Health = null
 
 [node name="Ground" parent="." unique_id=432543835 instance=ExtResource("2_62b7x")]
 
