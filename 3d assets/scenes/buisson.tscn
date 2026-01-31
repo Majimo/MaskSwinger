@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://cjoe4xd5rywj8"]
-
-[ext_resource type="PackedScene" uid="uid://cn2ud3gacjtff" path="res://3d assets/buisson.glb" id="1_q41o5"]
-
-[node name="buisson" unique_id=1811582527 instance=ExtResource("1_q41o5")]

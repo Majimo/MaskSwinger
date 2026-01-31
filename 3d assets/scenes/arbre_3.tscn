@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b384va55ngmm6"]
 
 [ext_resource type="ArrayMesh" uid="uid://cgjbceqeamcd2" path="res://3d assets/meshes/arbre_Cylinder_002.res" id="1_5i011"]
+[ext_resource type="Script" uid="uid://bc8e4c6vdvobh" path="res://3d assets/scripts/tween_animation.gd" id="2_hr8ax"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_x54u0"]
 height = 4.2753906
@@ -13,6 +14,7 @@ radius = 2.4516602
 
 [node name="ArbreCylinder" type="MeshInstance3D" parent="." unique_id=406493565]
 mesh = ExtResource("1_5i011")
+script = ExtResource("2_hr8ax")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1837705334]
 
