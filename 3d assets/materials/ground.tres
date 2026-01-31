@@ -15,5 +15,7 @@ color_ramp = SubResource("Gradient_tjieh")
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_tjieh"]
 
 [resource]
+diffuse_mode = 3
+specular_mode = 1
 albedo_texture = SubResource("NoiseTexture2D_erac2")
 normal_texture = SubResource("NoiseTexture2D_tjieh")

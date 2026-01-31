@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b22v2q28f1bjx"]
+
+[ext_resource type="PackedScene" uid="uid://b0dukgaypuwsc" path="res://3d assets/muret.glb" id="1_h8ssw"]
+[ext_resource type="Script" uid="uid://bc8e4c6vdvobh" path="res://3d assets/scripts/tween_animation.gd" id="2_f4tay"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h8ssw"]
+size = Vector3(2.435669, 2.7050781, 4.936035)
+
+[node name="muret" unique_id=2121342368 instance=ExtResource("1_h8ssw")]
+script = ExtResource("2_f4tay")
+scale_smol = Vector3(0.95, 0.95, 0.95)
+scale_big = Vector3(1.05, 1.05, 1.05)
+random_ratio = 0.005
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1629879403]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=274223140]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4989624, 0.85253906, 0.2253418)
+shape = SubResource("BoxShape3D_h8ssw")

@@ -1,6 +1,6 @@
 extends Node3D
 
-@export var bpm: int = 130
+@export var bpm: int = 65
 @export var scale_smol: Vector3 = Vector3(.9, .9, .9)
 @export var scale_big: Vector3 = Vector3(1.1, 1.1, 1.1)
 @export var random_ratio: float = 0.015

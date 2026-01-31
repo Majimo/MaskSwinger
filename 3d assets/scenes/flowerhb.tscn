@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://k0eao7l2cn2o"]
+[gd_scene format=3 uid="uid://dpjx4wr503mcr"]
 
-[ext_resource type="PackedScene" uid="uid://biodb7o0rdpva" path="res://3d assets/flower.glb" id="1_w03ra"]
+[ext_resource type="PackedScene" uid="uid://biodb7o0rdpva" path="res://3d assets/flower.glb" id="1_emo5l"]
 
-[node name="flower" unique_id=2000433282 instance=ExtResource("1_w03ra")]
+[node name="flower" unique_id=134487398 instance=ExtResource("1_emo5l")]
 
 [node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(316538987) index="0" unique_id=216318840]
 bones/0/rotation = Quaternion(-0.052668627, -1.1904381e-07, 6.278583e-09, 0.99861205)
@@ -12,5 +12,5 @@ bones/3/rotation = Quaternion(0.47261712, -0.47261685, 0.5259592, 0.52595943)
 bones/4/rotation = Quaternion(0.47261712, -0.47261685, 0.5259592, 0.52595943)
 
 [node name="AnimationPlayer" parent="." index="1" unique_id=309919075]
-autoplay = &"flower_balance"
+autoplay = &"flower_headbang"
 speed_scale = 2.0
