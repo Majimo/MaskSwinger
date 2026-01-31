@@ -10,7 +10,7 @@ public partial class Player : Node3D
 	private float _speed = 50;
 	private Vector3 _velocity = Vector3.Zero;
 	
-	private PlayerBehavior _attackResource;
+	private PlayerBehavior _behavior = new PlayerBehavior();
 
 	public override void _Process(double delta)
 	{
@@ -32,6 +32,8 @@ public partial class Player : Node3D
 		{
 			direction.X = 1.0f;
 		}
+		
+		_behavior.Attack(this);
 		// if (Input.IsActionJustPressed($"player_{this.PlayerId}_attack"))
 		// {
 		// 	_attackResource?.Attack(this);

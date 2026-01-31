@@ -9,18 +9,22 @@
 [node name="Player1" parent="." unique_id=609764325 instance=ExtResource("1_8g6m8")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 40, 1, -40)
 PlayerId = 1
+Health = 3
 
 [node name="Player2" parent="." unique_id=743661568 instance=ExtResource("1_8g6m8")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 40, 1, 40)
 PlayerId = 2
+Health = 3
 
 [node name="Player3" parent="." unique_id=756489808 instance=ExtResource("1_8g6m8")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -40, 1, -40)
 PlayerId = 3
+Health = 3
 
 [node name="Player4" parent="." unique_id=2133927695 instance=ExtResource("1_8g6m8")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -40, 1, 40)
 PlayerId = 4
+Health = 3
 
 [node name="Ground" parent="." unique_id=432543835 instance=ExtResource("2_62b7x")]
 
