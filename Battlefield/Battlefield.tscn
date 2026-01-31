@@ -53,7 +53,8 @@ PlayerId = 4
 [node name="Ground" parent="." unique_id=432543835 instance=ExtResource("2_62b7x")]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1056510175]
-transform = Transform3D(1, 0, 0, 0, 0.5734907, 0.8192121, 0, -0.8192121, 0.5734907, 0, 42.492134, 42.681396)
+physics_interpolation_mode = 1
+transform = Transform3D(1, 0, 0, 0, 0.5734907, 0.8192121, 0, -0.8192121, 0.5734907, 0, 37.70106, 48.282455)
 top_level = true
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D" unique_id=161991778]
@@ -64,7 +65,13 @@ script = ExtResource("3_pwejh")
 [node name="MaskSpawner1" parent="." unique_id=340619910 instance=ExtResource("3_8g6m8")]
 
 [node name="PhantomCamera3D" type="Node3D" parent="." unique_id=632207897 node_paths=PackedStringArray("follow_targets")]
-transform = Transform3D(1, 0, 0, 0, 0.5734907, 0.8192121, 0, -0.8192121, 0.5734907, 0, 42.492134, 42.681396)
+transform = Transform3D(1, 0, 0, 0, 0.5734907, 0.8192121, 0, -0.8192121, 0.5734907, 0, 37.70106, 48.282455)
+top_level = true
 script = ExtResource("5_86hbi")
-follow_targets = [NodePath("../Player3")]
+follow_mode = 3
+follow_targets = [NodePath("../Player1"), NodePath("../Player2"), NodePath("../Player3"), NodePath("../Player4")]
 tween_resource = SubResource("Resource_8joom")
+follow_offset = Vector3(0, 31.605, 42.915)
+auto_follow_distance = true
+align_transform_with_view = Callable()
+align_position_with_view = Callable()
