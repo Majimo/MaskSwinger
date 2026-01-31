@@ -1,0 +1,157 @@
+[gd_scene format=3 uid="uid://oggq1qukv1an"]
+
+[ext_resource type="Script" uid="uid://dnpawbprheo16" path="res://Lobby/Lobby.cs" id="1_6tm10"]
+[ext_resource type="FontFile" uid="uid://uxxdumf0dypo" path="res://Fonts/UnrealT.ttf" id="1_ctcp8"]
+[ext_resource type="Texture2D" uid="uid://dxssl2tctsqo7" path="res://2d assets/Player-Base.png" id="3_6tm10"]
+[ext_resource type="AudioStream" uid="uid://qbv8dwshv48i" path="res://AudioAssets/Musics/Lobby_theme.mp3" id="4_iiluk"]
+
+[sub_resource type="Theme" id="Theme_k4in3"]
+default_font = ExtResource("1_ctcp8")
+default_font_size = 22
+
+[sub_resource type="LabelSettings" id="LabelSettings_kd8pr"]
+line_spacing = 32.0
+font_size = 65
+
+[sub_resource type="Theme" id="Theme_ib2es"]
+default_font = ExtResource("1_ctcp8")
+default_font_size = 22
+
+[node name="Lobby" type="Control" unique_id=271721918]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6tm10")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1252589309]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.46034718, 0.46034718, 0.46034712, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=134340831]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1565059737]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=358945965]
+layout_mode = 2
+size_flags_vertical = 6
+theme = SubResource("Theme_k4in3")
+theme_override_font_sizes/font_size = 72
+text = "~Mask-Swinger~"
+label_settings = SubResource("LabelSettings_kd8pr")
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1479314568]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Player1" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=657317580]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Player1" unique_id=590933464]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Avatar" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/Player1/VBoxContainer" unique_id=1168432275]
+modulate = Color(1, 1, 1, 0.29411766)
+layout_mode = 2
+texture = ExtResource("3_6tm10")
+expand_mode = 5
+
+[node name="JoinButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/Player1/VBoxContainer" unique_id=770005506]
+layout_mode = 2
+text = "Join"
+
+[node name="Player2" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=675969771]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Player2" unique_id=895632709]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Avatar" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/Player2/VBoxContainer" unique_id=1670585876]
+modulate = Color(1, 1, 1, 0.29411766)
+layout_mode = 2
+texture = ExtResource("3_6tm10")
+expand_mode = 5
+
+[node name="JoinButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/Player2/VBoxContainer" unique_id=1937909462]
+layout_mode = 2
+text = "Join"
+
+[node name="Player3" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=55432488]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Player3" unique_id=613705885]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Avatar" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/Player3/VBoxContainer" unique_id=1442648776]
+modulate = Color(1, 1, 1, 0.29411766)
+layout_mode = 2
+texture = ExtResource("3_6tm10")
+expand_mode = 5
+
+[node name="JoinButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/Player3/VBoxContainer" unique_id=1223679987]
+layout_mode = 2
+text = "Join"
+
+[node name="Player4" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1698478951]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Player4" unique_id=994130363]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Avatar" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/Player4/VBoxContainer" unique_id=1398315546]
+modulate = Color(1, 1, 1, 0.29411766)
+layout_mode = 2
+texture = ExtResource("3_6tm10")
+expand_mode = 5
+
+[node name="JoinButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/Player4/VBoxContainer" unique_id=925395640]
+layout_mode = 2
+text = "Join"
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=1809948471]
+layout_mode = 2
+theme_override_constants/margin_left = 300
+theme_override_constants/margin_right = 300
+
+[node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer" unique_id=306960220]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_ib2es")
+disabled = true
+text = "Start"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2071440702]
+stream = ExtResource("4_iiluk")
+autoplay = true
+parameters/looping = true
