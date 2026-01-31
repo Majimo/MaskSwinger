@@ -18,7 +18,7 @@ public partial class Cooldown : Node
         return _current <= 0;
     }
 
-    public void Reset()
+    public void Restart()
     {
         _current = Duration;
     }

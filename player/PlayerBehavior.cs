@@ -1,4 +1,5 @@
 using Godot;
+using MaskSwinger.Player;
 
 [GlobalClass]
 public partial class PlayerBehavior : Resource
@@ -10,26 +11,19 @@ public partial class PlayerBehavior : Resource
     [Export] public int DashRange;
     [Export] public int DashCooldown;
     
-    public enum DirectionEnum
+    public virtual void Attack(Player player, Direction direction)
     {
-        UP,
-        DOWN,
-        LEFT,
-        RIGHT
-    }
-    
-    public virtual void Attack(Player player, DirectionEnum Direction)
-    {
-        GD.Print("Attacking " + player.PlayerId + " towards " + Direction);
+        GD.Print("Attacking " + player.PlayerId + " towards " + direction);
     }
 
-    public virtual void Dash(Player player, DirectionEnum Direction)
+    public virtual void Dash(Player player, Direction direction)
     {
-        GD.Print("Dash executed " + player.PlayerId + " towards " + Direction);
+        GD.Print("Dash executed " + player.PlayerId + " towards " + direction);
+        player.IsDashing = true;
     }
 
-    public virtual void Shield(Player player, DirectionEnum Direction)
+    public virtual void Shield(Player player, Direction direction)
     {
-        GD.Print("Shield executed " + player.PlayerId + " towards " + Direction);
+        GD.Print("Shield executed " + player.PlayerId + " towards " + direction);
     }
 }
