@@ -1,4 +1,5 @@
 extends AnimatedSprite3D
+class_name PlayerAnimationController
 
 var player
 
@@ -16,14 +17,14 @@ func _play_idle(side: animation_side) -> void:
 	flip_h = false
 	match side:
 		animation_side.FACE:
-			play("face_walk")
+			play("face_idle")
 		animation_side.RIGHT:
-			play("side_walk")
+			play("side_idle")
 		animation_side.LEFT:
 			flip_h = true
-			play("side_walk")
+			play("side_idle")
 		animation_side.BACK:
-			play("back_walk")
+			play("back_idle")
 
 func _play_walk(side: animation_side) -> void:
 	flip_h = false

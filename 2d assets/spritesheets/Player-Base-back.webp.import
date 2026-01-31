@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbyu563qcndpb"
-path.s3tc="res://.godot/imported/base_back.png-8fc914cc2d0dd9630ec5bdb0eba72374.s3tc.ctex"
+uid="uid://bre2bdldqt1ig"
+path.s3tc="res://.godot/imported/Player-Base-back.webp-cebfa4e8c03aa0552181334ede7a7db6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://2d assets/spritesheets/base_back.png"
-dest_files=["res://.godot/imported/base_back.png-8fc914cc2d0dd9630ec5bdb0eba72374.s3tc.ctex"]
+source_file="res://2d assets/spritesheets/Player-Base-back.webp"
+dest_files=["res://.godot/imported/Player-Base-back.webp-cebfa4e8c03aa0552181334ede7a7db6.s3tc.ctex"]
 
 [params]
 

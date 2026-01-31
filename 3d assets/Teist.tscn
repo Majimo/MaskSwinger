@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b22v2q28f1bjx" path="res://3d assets/scenes/muret.tscn" id="3_707xs"]
 [ext_resource type="PackedScene" uid="uid://s67rcabiqgw4" path="res://3d assets/scenes/luciole_particles.tscn" id="4_6mkuf"]
 [ext_resource type="PackedScene" uid="uid://w1rk7iiysevn" path="res://2d assets/scenes/base_player_animations.tscn" id="5_4hnps"]
+[ext_resource type="Script" uid="uid://dmlqxejw5vf0y" path="res://3d assets/scripts/debug_ui.gd" id="6_kx7aw"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_o7hdf"]
 material = ExtResource("2_p0coo")
@@ -101,3 +102,43 @@ shape = SubResource("BoxShape3D_o7hdf")
 
 [node name="base_player_animations" parent="." unique_id=376020763 instance=ExtResource("5_4hnps")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.6635838, 0)
+
+[node name="DEBUG_ui" type="Control" parent="." unique_id=1924334901]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_kx7aw")
+
+[node name="idle face" type="Button" parent="DEBUG_ui" unique_id=851956810]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 40.0
+offset_right = 34.0
+offset_bottom = 48.0
+text = "idle face"
+
+[node name="walk left" type="Button" parent="DEBUG_ui" unique_id=463391457]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 93.0
+offset_right = 99.0
+offset_bottom = 124.0
+text = "walk left"
+
+[node name="atk back" type="Button" parent="DEBUG_ui" unique_id=1089702150]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 132.0
+offset_right = 100.0
+offset_bottom = 163.0
+text = "atk back"
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1324427471]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2796211, 6.990309, 29.225311)
+
+[connection signal="pressed" from="DEBUG_ui/idle face" to="DEBUG_ui" method="_on_idle_face_pressed"]
+[connection signal="pressed" from="DEBUG_ui/walk left" to="DEBUG_ui" method="_on_walk_left_pressed"]
+[connection signal="pressed" from="DEBUG_ui/atk back" to="DEBUG_ui" method="_on_atk_back_pressed"]
