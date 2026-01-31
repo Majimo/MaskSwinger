@@ -1,15 +1,19 @@
 [gd_scene format=3 uid="uid://x0kigyy1bkjx"]
 
-[ext_resource type="Script" uid="uid://dthxvlfhmiye1" path="res://Mask.cs" id="1_rrwd6"]
-[ext_resource type="Resource" uid="uid://cahh5sfslab5" path="res://mask/SwordMaskAttack.tres" id="2_30xea"]
+[ext_resource type="Script" uid="uid://dthxvlfhmiye1" path="res://Mask/Mask.cs" id="1_rrwd6"]
+[ext_resource type="Script" uid="uid://cjj3y71hn0tfk" path="res://Player/PlayerBehavior.cs" id="2_ltxsw"]
 [ext_resource type="Texture2D" uid="uid://bqykq2ueksvhs" path="res://icon.svg" id="3_v3y8u"]
+
+[sub_resource type="Resource" id="Resource_otmu0"]
+script = ExtResource("2_ltxsw")
+metadata/_custom_type_script = "uid://cjj3y71hn0tfk"
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_rrwd6"]
 radius = 0.9532199
 
-[node name="SwordMask" type="Node3D" unique_id=1995162680]
+[node name="Mask" type="Node3D" unique_id=1995162680]
 script = ExtResource("1_rrwd6")
-attackResource = ExtResource("2_30xea")
+Behavior = SubResource("Resource_otmu0")
 
 [node name="Sprite" type="Sprite3D" parent="." unique_id=1586256970]
 transform = Transform3D(-0.70710677, 0.70710677, -3.090862e-08, 0, -4.371139e-08, -1, -0.70710677, -0.70710677, 3.090862e-08, 0, 0, 0)

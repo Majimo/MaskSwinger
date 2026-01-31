@@ -1,11 +1,11 @@
 using Godot;
 
 [GlobalClass]
-public partial class SwordMaskAttack : AttackResource
+public partial class BullBehavior : PlayerBehavior
 {
     [Export] public int slashRange = 50;
     
-    public override void Attack(player player)
+    public override void Attack(Player player)
     {
         GD.Print($"Player {player.PlayerId} performs a sword mask attack!");
     }

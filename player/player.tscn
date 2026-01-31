@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ch4so520oq5e"]
 
 [ext_resource type="Texture2D" uid="uid://bqykq2ueksvhs" path="res://icon.svg" id="1_oul6g"]
-[ext_resource type="Script" uid="uid://c7c81c465t3st" path="res://player/player.cs" id="1_rkbax"]
+[ext_resource type="Script" uid="uid://bhpi28b0agmb0" path="res://Player/Player.cs" id="1_rkbax"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_rkbax"]
 height = 1.2675781

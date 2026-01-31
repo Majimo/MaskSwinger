@@ -3,5 +3,5 @@ using System;
 
 public partial class Mask : Node3D
 {
-	[Export] public AttackResource attackResource;
+	[Export] public PlayerBehavior Behavior;
 }

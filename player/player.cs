@@ -1,7 +1,7 @@
 using Godot;
 using Vector2 = Godot.Vector2;
 
-public partial class player : Node3D
+public partial class Player : Node3D
 {
 	[Export] public int PlayerId { get; set; } = 1;
 	[Export] public int Health { get; set; } = 3;
@@ -10,7 +10,7 @@ public partial class player : Node3D
 	private float _speed = 50;
 	private Vector3 _velocity = Vector3.Zero;
 	
-	private AttackResource _attackResource;
+	private PlayerBehavior _attackResource;
 
 	public override void _Process(double delta)
 	{

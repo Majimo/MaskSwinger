@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="SwordMaskAttack" format=3 uid="uid://cahh5sfslab5"]
 
-[ext_resource type="Script" uid="uid://cg7v6nixgvyqa" path="res://mask/SwordMaskAttack.cs" id="1_igu2o"]
+[ext_resource type="Script" uid="uid://cg7v6nixgvyqa" path="res://Mask/Bull/BullBehavior.cs" id="1_igu2o"]
 
 [resource]
 script = ExtResource("1_igu2o")
