@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://s67rcabiqgw4"]
+
+[ext_resource type="Material" uid="uid://c1j0okct0462a" path="res://3d assets/materials/luciole_particles_ma.tres" id="1_at8wj"]
+
+[sub_resource type="Curve" id="Curve_at8wj"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 2.8, 0, 0, Vector2(0.2, -0.19999999), -5.7048583, -5.7048583, 0, 0, Vector2(1, -1), 0.0, 0.0, 0, 0]
+point_count = 3
+metadata/_snap_enabled = true
+
+[sub_resource type="CurveTexture" id="CurveTexture_4fswv"]
+curve = SubResource("Curve_at8wj")
+
+[sub_resource type="Curve" id="Curve_kdtgd"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.8834951, 0.6860313), -2.52495, -2.52495, 0, 0, Vector2(1, 0), -6.6847878, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_m6l46"]
+curve = SubResource("Curve_kdtgd")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4fswv"]
+emission_shape = 3
+emission_box_extents = Vector3(50, 10, 50)
+velocity_pivot = Vector3(4.375, 1.38, 1.02)
+spread = 180.0
+initial_velocity_min = 0.099999994
+initial_velocity_max = 0.5
+angular_velocity_min = 0.0999839
+angular_velocity_max = 0.4999839
+angular_velocity_curve = SubResource("CurveTexture_4fswv")
+orbit_velocity_min = 9.49949e-08
+orbit_velocity_max = 0.90400016
+gravity = Vector3(0, 0, 0)
+scale_min = 0.79999995
+scale_max = 1.1999999
+scale_over_velocity_curve = SubResource("CurveTexture_m6l46")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_at8wj"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(1, 1, 0.34901962, 0.18039216)
+
+[sub_resource type="SphereMesh" id="SphereMesh_kdtgd"]
+material = SubResource("StandardMaterial3D_at8wj")
+radial_segments = 8
+rings = 4
+
+[sub_resource type="SphereMesh" id="SphereMesh_at8wj"]
+material = ExtResource("1_at8wj")
+radius = 0.2
+height = 0.4
+radial_segments = 8
+rings = 4
+
+[node name="luciole_particles" type="Node3D" unique_id=1785180924]
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=215360953]
+amount = 30
+lifetime = 40.0
+preprocess = 40.0
+explosiveness = 1.0
+randomness = 1.0
+visibility_aabb = AABB(-93.106575, -22.574862, -100.57274, 182.47165, 63.902206, 196.4783)
+trail_lifetime = 7.529999999999999
+process_material = SubResource("ParticleProcessMaterial_4fswv")
+draw_passes = 2
+draw_pass_1 = SubResource("SphereMesh_kdtgd")
+draw_pass_2 = SubResource("SphereMesh_at8wj")
