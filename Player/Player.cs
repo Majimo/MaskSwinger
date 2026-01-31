@@ -23,17 +23,17 @@ public partial class Player : Node3D
 		{
 			var direction = Vector3.Zero;
 			
-			if (Input.IsActionPressed($"player_{this.PlayerId}_up"))
+			if (Input.IsActionPressed($"player_{this.PlayerId}_Up"))
 			{
 				CurrentDirection = Direction.Up;
 				direction.Z = -1.0f;
 			}
-			if (Input.IsActionPressed($"player_{this.PlayerId}_down"))
+			if (Input.IsActionPressed($"player_{this.PlayerId}_Down"))
 			{
 				CurrentDirection = Direction.Down;
 				direction.Z = 1.0f;
 			}
-			if (Input.IsActionPressed($"player_{this.PlayerId}_left"))
+			if (Input.IsActionPressed($"player_{this.PlayerId}_Left"))
 			{
 				CurrentDirection = Direction.Left;
 				direction.X = -1.0f;
