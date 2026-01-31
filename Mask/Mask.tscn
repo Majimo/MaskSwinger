@@ -6,17 +6,16 @@
 
 [sub_resource type="Resource" id="Resource_otmu0"]
 script = ExtResource("2_ltxsw")
-metadata/_custom_type_script = "uid://cjj3y71hn0tfk"
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_rrwd6"]
 radius = 0.9532199
 
 [node name="Mask" type="Node3D" unique_id=1995162680]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 script = ExtResource("1_rrwd6")
 Behavior = SubResource("Resource_otmu0")
 
 [node name="Sprite" type="Sprite3D" parent="." unique_id=1586256970]
-transform = Transform3D(-0.70710677, 0.70710677, -3.090862e-08, 0, -4.371139e-08, -1, -0.70710677, -0.70710677, 3.090862e-08, 0, 0, 0)
 texture = ExtResource("3_v3y8u")
 
 [node name="Area" type="Area3D" parent="." unique_id=2040927948]

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://drrga33bag8dm" path="res://Player/Player.tscn" id="1_8g6m8"]
 [ext_resource type="PackedScene" uid="uid://ccycu7asq8cf8" path="res://3d assets/Teist.tscn" id="2_62b7x"]
-[ext_resource type="PackedScene" uid="uid://x0kigyy1bkjx" path="res://Mask/Mask.tscn" id="3_ablho"]
+[ext_resource type="PackedScene" uid="uid://cbm8g3jmeuckx" path="res://Mask/MaskSpawner.tscn" id="3_8g6m8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8g6m8"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -50,5 +50,4 @@ PlayerId = 4
 transform = Transform3D(1, 0, 0, 0, 0.47027272, 0.88252115, 0, -0.88252115, 0.47027272, 0, 51.900314, 45.041588)
 size = 100.0
 
-[node name="Mask" parent="." unique_id=1995162680 instance=ExtResource("3_ablho")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1, 0)
+[node name="MaskSpawner1" parent="." unique_id=340619910 instance=ExtResource("3_8g6m8")]
