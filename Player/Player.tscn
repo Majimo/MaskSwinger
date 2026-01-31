@@ -32,6 +32,7 @@ metadata/_custom_type_script = "uid://djq5csqrq5o0q"
 
 [node name="Cooldown" type="Node" parent="DashFeature" unique_id=1609102972]
 script = ExtResource("3_tok1r")
+Duration = 2.0
 metadata/_custom_type_script = "uid://u4sm6v5p5nig"
 
 [node name="AttackFeature" type="Node" parent="." unique_id=790241769]
@@ -40,6 +41,7 @@ metadata/_custom_type_script = "uid://b4lwen0oemnkr"
 
 [node name="Cooldown" type="Node" parent="AttackFeature" unique_id=479444181]
 script = ExtResource("3_tok1r")
+Duration = 2.0
 metadata/_custom_type_script = "uid://u4sm6v5p5nig"
 
 [node name="ShieldFeature" type="Node" parent="." unique_id=1329987233]
@@ -48,4 +50,5 @@ metadata/_custom_type_script = "uid://c676f8mw8xoof"
 
 [node name="Cooldown" type="Node" parent="ShieldFeature" unique_id=1749358788]
 script = ExtResource("3_tok1r")
+Duration = 2.0
 metadata/_custom_type_script = "uid://u4sm6v5p5nig"
