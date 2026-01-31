@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://c28qeyqje0ypl"]
+
+[ext_resource type="PackedScene" uid="uid://cbilvulm7i3p" path="res://3d assets/arbre.glb" id="1_mw6n4"]
+
+[node name="arbre" unique_id=2045254888 instance=ExtResource("1_mw6n4")]

@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://bvje4ohrthdl4"]
+
+[ext_resource type="PackedScene" uid="uid://c28qeyqje0ypl" path="res://3d assets/scenes/arbre.tscn" id="1_hfsqv"]
+[ext_resource type="PackedScene" uid="uid://cn2ud3gacjtff" path="res://3d assets/buisson.glb" id="2_afs14"]
+
+[node name="tree-block" type="Node3D" unique_id=1872134000]
+
+[node name="arbre" parent="." unique_id=2045254888 instance=ExtResource("1_hfsqv")]
+transform = Transform3D(0.91, 0, 0, 0, 0.91, 0, 0, 0, 0.91, -4.707627, 0, -4.471901)
+
+[node name="arbre2" parent="." unique_id=435649421 instance=ExtResource("1_hfsqv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.9775965, 0, -4.0187554)
+
+[node name="arbre3" parent="." unique_id=1667998593 instance=ExtResource("1_hfsqv")]
+transform = Transform3D(0.84, 0, 0, 0, 0.84, 0, 0, 0, 0.84, -2.5166621, 0, -4.471901)
+
+[node name="arbre4" parent="." unique_id=280238268 instance=ExtResource("1_hfsqv")]
+transform = Transform3D(1.035, 0, 0, 0, 1.035, 0, 0, 0, 1.035, -1.6848692, 0, -4.0187554)
+
+[node name="arbre12" parent="." unique_id=1052927147 instance=ExtResource("1_hfsqv")]
+transform = Transform3D(0.835, 0, 0, 0, 0.835, 0, 0, 0, 0.835, -1.3479804, 0, -4.4922137)
+
+[node name="arbre13" parent="." unique_id=1105505014 instance=ExtResource("1_hfsqv")]
+transform = Transform3D(0.835, 0, 0, 0, 0.835, 0, 0, 0, 0.835, -3.3166904, 0, -4.4922137)
+
+[node name="arbre5" parent="." unique_id=2095345368 instance=ExtResource("1_hfsqv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.24185729, 0, -4.471901)
+
+[node name="arbre6" parent="." unique_id=1607538494 instance=ExtResource("1_hfsqv")]
+transform = Transform3D(0.94, 0, 0, 0, 0.94, 0, 0, 0, 0.94, 0.51256716, 0, -4.0187554)
+
+[node name="arbre7" parent="." unique_id=1284057867 instance=ExtResource("1_hfsqv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8988768, 0, -4.471901)
+
+[node name="arbre11" parent="." unique_id=1971852612 instance=ExtResource("1_hfsqv")]
+transform = Transform3D(0.83, 0, 0, 0, 0.83, 0, 0, 0, 0.83, 1.0548836, 0, -4.471901)
+
+[node name="arbre8" parent="." unique_id=1910913816 instance=ExtResource("1_hfsqv")]
+transform = Transform3D(0.88, 0, 0, 0, 0.88, 0, 0, 0, 0.88, 2.9016252, 0, -4.471901)
+
+[node name="arbre9" parent="." unique_id=1688720783 instance=ExtResource("1_hfsqv")]
+transform = Transform3D(1.095, 0, 0, 0, 1.095, 0, 0, 0, 1.095, 3.5042996, 0, -4.0187554)
+
+[node name="arbre10" parent="." unique_id=618619582 instance=ExtResource("1_hfsqv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.227991, 0, -4.471901)
+
+[node name="buisson" parent="." unique_id=1811582527 instance=ExtResource("2_afs14")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.29454, 0, -4)
+
+[node name="buisson2" parent="." unique_id=770285464 instance=ExtResource("2_afs14")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.93365526, 0, -4)
+
+[node name="buisson3" parent="." unique_id=1877570431 instance=ExtResource("2_afs14")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.675837, 0, -4)
+
+[node name="buisson4" parent="." unique_id=1930606005 instance=ExtResource("2_afs14")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.833022, 0, -4)
+
+[node name="buisson5" parent="." unique_id=125015871 instance=ExtResource("2_afs14")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.897251, 0, -4)
+
+[node name="buisson6" parent="." unique_id=809537606 instance=ExtResource("2_afs14")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5387964, 0, -4)
