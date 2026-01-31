@@ -30,18 +30,18 @@ transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545
 shadow_enabled = true
 
 [node name="Player1" parent="." unique_id=609764325 instance=ExtResource("1_8g6m8")]
-transform = Transform3D(-3, 0, -4.5298742e-07, 0, 3, 0, 4.5298742e-07, 0, -3, 35, 1, -35)
+transform = Transform3D(-2, -3.019916e-07, -1.3200472e-14, 0, -8.742278e-08, 2, -3.019916e-07, 2, 8.742278e-08, 35, 2, -35)
 
 [node name="Player2" parent="." unique_id=743661568 instance=ExtResource("1_8g6m8")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 40, 1, 40)
+transform = Transform3D(-2, -3.019916e-07, -1.3200472e-14, 0, -8.742278e-08, 2, -3.019916e-07, 2, 8.742278e-08, 40, 2, 40)
 PlayerId = 2
 
 [node name="Player3" parent="." unique_id=756489808 instance=ExtResource("1_8g6m8")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -40, 1, -40)
+transform = Transform3D(-2, -3.019916e-07, -1.3200472e-14, 0, -8.742278e-08, 2, -3.019916e-07, 2, 8.742278e-08, -40, 2, -40)
 PlayerId = 3
 
 [node name="Player4" parent="." unique_id=2133927695 instance=ExtResource("1_8g6m8")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -40, 1, 40)
+transform = Transform3D(-2, -3.019916e-07, -1.3200472e-14, 0, -8.742278e-08, 2, -3.019916e-07, 2, 8.742278e-08, -40, 2, 40)
 PlayerId = 4
 
 [node name="Ground" parent="." unique_id=432543835 instance=ExtResource("2_62b7x")]
