@@ -1,26 +1,28 @@
 using Godot;
 using Vector2 = Godot.Vector2;
 
-public partial class player : Node2D
+public partial class player : Node3D
 {
 	[Export] public int PlayerId { get; set; } = 1;
 	[Export] public int Health { get; set; } = 3;
 	
-	private CharacterBody2D _body2D => GetNode<CharacterBody2D>("PlayerBody2D");
-	private float _speed = 400;
-	private Vector2 _velocity = Vector2.Zero;
+	private CharacterBody3D _body3D => GetNode<CharacterBody3D>("PlayerBody3D");
+	private float _speed = 50;
+	private Vector3 _velocity = Vector3.Zero;
+	
+	private AttackResource _attackResource;
 
 	public override void _Process(double delta)
 	{
-		var direction = Vector2.Zero;
+		var direction = Vector3.Zero;
 		
 		if (Input.IsActionPressed($"player_{this.PlayerId}_up"))
 		{
-			direction.Y = -1.0f;
+			direction.Z = -1.0f;
 		}
 		if (Input.IsActionPressed($"player_{this.PlayerId}_down"))
 		{
-			direction.Y = 1.0f;
+			direction.Z = 1.0f;
 		}
 		if (Input.IsActionPressed($"player_{this.PlayerId}_left"))
 		{
@@ -30,11 +32,15 @@ public partial class player : Node2D
 		{
 			direction.X = 1.0f;
 		}
+		// if (Input.IsActionJustPressed($"player_{this.PlayerId}_attack"))
+		// {
+		// 	_attackResource?.Attack(this);
+		// }
 
 		_velocity.X = direction.X * _speed;
-		_velocity.Y = direction.Y * _speed;
+		_velocity.Z = direction.Z * _speed;
 		
-		_body2D.Velocity = _velocity;
-		_body2D.MoveAndSlide();
+		_body3D.Velocity = _velocity;
+		_body3D.MoveAndSlide();
 	}
 }

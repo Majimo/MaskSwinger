@@ -15,9 +15,17 @@ run/main_scene="uid://dheb367654qrd"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [dotnet]
 
 project/assembly_name="MaskSwinger"
+
+[filesystem]
+
+import/blender/enabled=false
 
 [input]
 

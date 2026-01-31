@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bvje4ohrthdl4" path="res://3d assets/scenes/tree_block.tscn" id="1_oabow"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_o7hdf"]
-size = Vector2(10, 10)
+size = Vector2(100, 100)
 
 [node name="Teist" type="Node3D" unique_id=432543835]
 

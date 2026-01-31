@@ -1,24 +1,28 @@
 [gd_scene format=3 uid="uid://dheb367654qrd"]
 
 [ext_resource type="PackedScene" uid="uid://ch4so520oq5e" path="res://player/player.tscn" id="1_53q0u"]
+[ext_resource type="PackedScene" uid="uid://ccycu7asq8cf8" path="res://3d assets/Teist.tscn" id="2_pjrb6"]
 
-[node name="Main" type="Node2D" unique_id=874564439]
+[node name="Main" type="Node3D" unique_id=1184177733]
 
 [node name="Player1" parent="." unique_id=546545013 instance=ExtResource("1_53q0u")]
-modulate = Color(0, 0, 1, 1)
-position = Vector2(40, 48)
+transform = Transform3D(-3, 0, -2.6226832e-07, 0, 3, 0, 2.6226832e-07, 0, -3, 40, 1, -40)
 
 [node name="Player2" parent="." unique_id=4632335 instance=ExtResource("1_53q0u")]
-modulate = Color(1, 0, 0, 1)
-position = Vector2(40, 592)
+transform = Transform3D(-3, 0, -2.6226832e-07, 0, 3, 0, 2.6226832e-07, 0, -3, 40, 1, 40)
 PlayerId = 2
 
 [node name="Player3" parent="." unique_id=1875134396 instance=ExtResource("1_53q0u")]
-modulate = Color(0.8729871, 0.42372683, 0.33693364, 1)
-position = Vector2(1108, 48)
+transform = Transform3D(-3, 0, -2.6226832e-07, 0, 3, 0, 2.6226832e-07, 0, -3, -40, 1, 40)
 PlayerId = 3
 
 [node name="Player4" parent="." unique_id=1536890423 instance=ExtResource("1_53q0u")]
-modulate = Color(1, 0.73333335, 0, 1)
-position = Vector2(1107, 593)
+transform = Transform3D(-3, 0, -2.6226832e-07, 0, 3, 0, 2.6226832e-07, 0, -3, -40, 1, -40)
 PlayerId = 4
+
+[node name="Ground" parent="." unique_id=432543835 instance=ExtResource("2_pjrb6")]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1056510175]
+transform = Transform3D(1, 0, 0, 0, -4.3711385e-08, 0.99999994, 0, -0.99999994, -4.3711385e-08, 0, 59.136208, 0)
+projection = 1
+size = 100.0

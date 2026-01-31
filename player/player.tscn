@@ -3,19 +3,20 @@
 [ext_resource type="Texture2D" uid="uid://bqykq2ueksvhs" path="res://icon.svg" id="1_oul6g"]
 [ext_resource type="Script" uid="uid://c7c81c465t3st" path="res://player/player.cs" id="1_rkbax"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rkbax"]
-radius = 13.0
-height = 46.0
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_rkbax"]
+height = 0.45410156
+radius = 0.1381836
 
-[node name="Player" type="Node2D" unique_id=546545013]
+[node name="Player" type="Node3D" unique_id=609764325]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
 script = ExtResource("1_rkbax")
 
-[node name="PlayerBody2D" type="CharacterBody2D" parent="." unique_id=1573078762]
+[node name="PlayerBody3D" type="CharacterBody3D" parent="." unique_id=1298676923]
+motion_mode = 1
 
-[node name="Sprite2D" type="Sprite2D" parent="PlayerBody2D" unique_id=276017425]
-position = Vector2(5.9604645e-08, 1.7881393e-07)
-scale = Vector2(0.20312499, 0.359375)
+[node name="Sprite3D" type="Sprite3D" parent="PlayerBody3D" unique_id=596940612]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 texture = ExtResource("1_oul6g")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerBody2D" unique_id=251267866]
-shape = SubResource("CapsuleShape2D_rkbax")
+[node name="CollisionShape2D" type="CollisionShape3D" parent="PlayerBody3D" unique_id=1218065430]
+shape = SubResource("CylinderShape3D_rkbax")
