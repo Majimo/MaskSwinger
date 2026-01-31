@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://x0kigyy1bkjx"]
 
 [ext_resource type="Script" uid="uid://dthxvlfhmiye1" path="res://Mask/Mask.cs" id="1_rrwd6"]
-[ext_resource type="Script" uid="uid://cjj3y71hn0tfk" path="res://Player/PlayerBehavior.cs" id="2_ltxsw"]
+[ext_resource type="Script" uid="uid://cdd2y1cq0uamd" path="res://Player/PlayerBehavior.cs" id="2_ltxsw"]
 [ext_resource type="Texture2D" uid="uid://bqykq2ueksvhs" path="res://icon.svg" id="3_v3y8u"]
 
 [sub_resource type="Resource" id="Resource_otmu0"]

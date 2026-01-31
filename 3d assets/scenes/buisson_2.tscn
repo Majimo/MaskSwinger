@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://hoga2hflv7ks"]
 
-[ext_resource type="ArrayMesh" uid="uid://ddtey8xf1vhfo" path="res://3d assets/meshes/buisson_Cylinder_002.res" id="1_8lblt"]
+[ext_resource type="ArrayMesh" uid="uid://c542rbb28fqn4" path="res://3d assets/meshes/buisson_Cylinder_002.res" id="1_8lblt"]
 [ext_resource type="Script" uid="uid://bc8e4c6vdvobh" path="res://3d assets/scripts/tween_animation.gd" id="2_40cjw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_05uub"]

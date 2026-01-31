@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dheb367654qrd"]
 
-[ext_resource type="PackedScene" uid="uid://dlsiievipm64e" path="res://player/player.tscn" id="1_8g6m8"]
+[ext_resource type="PackedScene" uid="uid://drrga33bag8dm" path="res://player/player.tscn" id="1_8g6m8"]
 [ext_resource type="PackedScene" uid="uid://ccycu7asq8cf8" path="res://3d assets/Teist.tscn" id="2_62b7x"]
 [ext_resource type="PackedScene" uid="uid://x0kigyy1bkjx" path="res://Mask/Mask.tscn" id="3_ablho"]
 

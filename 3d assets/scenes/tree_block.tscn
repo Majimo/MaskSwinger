@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bvje4ohrthdl4"]
 
 [ext_resource type="PackedScene" uid="uid://cn2ud3gacjtff" path="res://3d assets/buisson.glb" id="2_afs14"]
-[ext_resource type="ArrayMesh" uid="uid://c8prbvtk0hsty" path="res://3d assets/meshes/arbre_Cylinder.res" id="2_myq6x"]
+[ext_resource type="ArrayMesh" uid="uid://sj5e40r5ao6w" path="res://3d assets/meshes/arbre_Cylinder.res" id="2_myq6x"]
 [ext_resource type="ArrayMesh" uid="uid://bxi0yr11axhf6" path="res://3d assets/meshes/arbre_Cylinder_001.res" id="3_cqa17"]
-[ext_resource type="ArrayMesh" uid="uid://cgjbceqeamcd2" path="res://3d assets/meshes/arbre_Cylinder_002.res" id="4_btb86"]
+[ext_resource type="ArrayMesh" uid="uid://duq3es8jlpsrs" path="res://3d assets/meshes/arbre_Cylinder_002.res" id="4_btb86"]
 
 [node name="tree-block" type="Node3D" unique_id=1872134000]
 

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b384va55ngmm6"]
 
-[ext_resource type="ArrayMesh" uid="uid://cgjbceqeamcd2" path="res://3d assets/meshes/arbre_Cylinder_002.res" id="1_5i011"]
+[ext_resource type="ArrayMesh" uid="uid://duq3es8jlpsrs" path="res://3d assets/meshes/arbre_Cylinder_002.res" id="1_5i011"]
 [ext_resource type="Script" uid="uid://bc8e4c6vdvobh" path="res://3d assets/scripts/tween_animation.gd" id="2_hr8ax"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_x54u0"]
