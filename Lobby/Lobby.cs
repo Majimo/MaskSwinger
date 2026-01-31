@@ -9,50 +9,76 @@ public partial class Lobby : Node
     
     private Array<Color> _playerColors =
     [
-        Color.Color8(255, 0, 0, 255),    // Red
-        Color.Color8(0, 255, 0, 255),    // Green
-        Color.Color8(0, 0, 255, 255),    // Blue
-        Color.Color8(255, 255, 0, 255)   // Yellow
+        Color.Color8(255, 0, 0),    // Red
+        Color.Color8(0, 255, 0),    // Green
+        Color.Color8(0, 0, 255),    // Blue
+        Color.Color8(255, 255, 0)   // Yellow
     ];
-    private bool _atLeastOnePlayerJoined = false;
+    
+    private readonly bool[] _playersJoined = new bool[4];
 
     public override void _Ready()
     {
+        GameManager.Instance.ClearPlayers();
+        
         for (var i = 1; i <= 4; i++)
         {
             var joinAvatar = JoinButtonsContainer.GetNode<TextureRect>($"Player{i}/VBoxContainer/Avatar");
             joinAvatar.Modulate = Color.Color8(255, 255, 255, 75);
         }
+        if (StartButton != null) StartButton.Disabled = true;
     }
 
     public override void _Process(double delta)
     {
+        for (var i = 1; i <= 4; i++)
+        {
+            if (_playersJoined[i - 1]) continue; // Déjà rejoint
+            
+            if (Input.IsActionJustPressed($"player_{i}_join"))
+            {
+                JoinPlayer(i);
+            }
+        }
+
+        for (var i = 1; i <= 4; i++)
+        {
+            if (!Input.IsActionJustPressed($"player_{i}_launch") ||
+                GameManager.Instance.GetPlayerCount() <= 0) continue;
+            StartGame();
+            return;
+        }
+    }
+    
+    private void JoinPlayer(int playerId)
+    {
         try
         {
-            for (var i = 1; i <= 4; i++)
+            var joinButton = JoinButtonsContainer.GetNode<Button>($"Player{playerId}/VBoxContainer/JoinButton");
+            var joinAvatar = JoinButtonsContainer.GetNode<TextureRect>($"Player{playerId}/VBoxContainer/Avatar");
+            
+            _playersJoined[playerId - 1] = true;
+            
+            joinButton.Text = "Ready!";
+            joinButton.Disabled = true;
+            joinAvatar.Modulate = _playerColors[playerId - 1];
+            
+            GameManager.Instance.AddPlayer(playerId, _playerColors[playerId - 1]);
+            
+            if (StartButton != null)
             {
-                var joinButton = JoinButtonsContainer.GetNode<Button>($"Player{i}/VBoxContainer/JoinButton");
-                var joinAvatar = JoinButtonsContainer.GetNode<TextureRect>($"Player{i}/VBoxContainer/Avatar");
-                
-                if (!Input.IsActionJustPressed($"player_{i}_join")) continue;
-                
-                joinButton.Text = "Joined";
-                joinAvatar.Modulate = _playerColors[i - 1];
-                _atLeastOnePlayerJoined = true;
-                StartButton.Disabled = !_atLeastOnePlayerJoined;
+                StartButton.Disabled = false;
             }
         }
         catch (Exception e)
         {
-            GD.PrintErr($"Erreur : {e.Message}");
-        }   
-
-        for (var i = 1; i <= 4; i++)
-        {
-            if (!Input.IsActionJustPressed($"player_{i}_launch") || !_atLeastOnePlayerJoined) continue;
-            
-            GetTree().ChangeSceneToFile("res://Battlefield/Battlefield.tscn");
-            return;
+            GD.PrintErr($"Erreur lors du join du joueur {playerId}: {e.Message}");
         }
+    }
+    
+    private void StartGame()
+    {
+        GD.Print($"Starting game with {GameManager.Instance.GetPlayerCount()} players.");
+        GetTree().ChangeSceneToFile("res://Battlefield/Battlefield.tscn");
     }
 }

@@ -22,7 +22,7 @@ public static class PhantomCameraHostExtensions
 
 public class PhantomCameraHost()
 {
-    public Node Node { get; } = null!;
+    private Node? Node { get; } = null!;
 
     public PhantomCameraHost(GodotObject node) : this()
     {
@@ -31,8 +31,8 @@ public class PhantomCameraHost()
         var callablePCamBecameActive = Callable.From<Node>(pCam => PCamBecameActive?.Invoke(pCam));
         var callablePCamBecameInactive = Callable.From<Node>(pCam => PCamBecameInactive?.Invoke(pCam));
 
-        Node.Connect(SignalName.PCamBecameActive, callablePCamBecameActive);
-        Node.Connect(SignalName.PCamBecameInactive, callablePCamBecameInactive);
+        Node!.Connect(SignalName.PCamBecameActive, callablePCamBecameActive);
+        Node!.Connect(SignalName.PCamBecameInactive, callablePCamBecameInactive);
     }
 
     public delegate void PCamBecameActiveEventHandler(Node pCam);
@@ -42,34 +42,31 @@ public class PhantomCameraHost()
     public event PCamBecameInactiveEventHandler? PCamBecameInactive;
 
 
-    private readonly Callable _callablePCamBecameActive;
-    private readonly Callable _callablePCamBecameInactive;
-
     public int HostLayers
     {
-        get => (int)Node.Call(PhantomCamera.MethodName.GetHostLayers);
-        set => Node.Call(PhantomCamera.MethodName.SetHostLayers, value);
+        get => (int)Node!.Call(PhantomCamera.MethodName.GetHostLayers);
+        set => Node!.Call(PhantomCamera.MethodName.SetHostLayers, value);
     }
 
-    public void SetHostLayersValue(int layer, bool value) => Node.Call(MethodName.SetHostLayersValue, layer, value);
+    public void SetHostLayersValue(int layer, bool value) => Node!.Call(MethodName.SetHostLayersValue, layer, value);
 
-    public Camera2D? Camera2D => (Camera2D?)Node.Get(PropertyName.Camera2D);
+    public Camera2D? Camera2D => (Camera2D?)Node!.Get(PropertyName.Camera2D);
 
-    public Camera3D? Camera3D => (Camera3D?)Node.Get(PropertyName.Camera3D);
+    public Camera3D? Camera3D => (Camera3D?)Node!.Get(PropertyName.Camera3D);
 
     public InterpolationMode InterpolationMode
     {
-        get => (InterpolationMode)(int)Node.Call(MethodName.GetInterpolationMode);
-        set => Node.Call(MethodName.SetInterpolationMode, (int)value);
+        get => (InterpolationMode)(int)Node!.Call(MethodName.GetInterpolationMode);
+        set => Node!.Call(MethodName.SetInterpolationMode, (int)value);
     }
 
-    public bool TriggerPhantomCameraTween => (bool)Node.Call(MethodName.GetTriggerPhantomCameraTween);
+    public bool TriggerPhantomCameraTween => (bool)Node!.Call(MethodName.GetTriggerPhantomCameraTween);
 
-    public void Process() => Node.Call(MethodName.Process);
+    public void Process() => Node!.Call(MethodName.Process);
 
     public PhantomCamera? GetActivePhantomCamera()
     {
-        var result = Node.Call(MethodName.GetActivePhantomCamera);
+        var result = Node!.Call(MethodName.GetActivePhantomCamera);
 
         if (result.Obj is Node2D node2D)
         {
@@ -84,13 +81,13 @@ public class PhantomCameraHost()
         return null;
     }
 
-    public static class PropertyName
+    private static class PropertyName
     {
         public static readonly StringName Camera2D = new("camera_2d");
         public static readonly StringName Camera3D = new("camera_3d");
     }
 
-    public static class MethodName
+    private static class MethodName
     {
         public static readonly StringName GetActivePhantomCamera = new("get_active_pcam");
         public static readonly StringName GetTriggerPhantomCameraTween = new("get_trigger_pcam_tween");
@@ -103,7 +100,7 @@ public class PhantomCameraHost()
         public static readonly StringName Process = new("process");
     }
 
-    public static class SignalName
+    private static class SignalName
     {
         public static readonly StringName PCamBecameActive = new("pcam_became_active");
         public static readonly StringName PCamBecameInactive = new("pcam_became_inactive");

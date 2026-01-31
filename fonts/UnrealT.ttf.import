@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://uxxdumf0dypo"
-path="res://.godot/imported/UnrealT.ttf-0f1c7b6010e41d38ab29c8ea253a698b.fontdata"
+uid="uid://d0y83c0weoe1c"
+path="res://.godot/imported/UnrealT.ttf-687b618d75e6bc0951f73ca7d348261e.fontdata"
 
 [deps]
 
-source_file="res://Fonts/UnrealT.ttf"
-dest_files=["res://.godot/imported/UnrealT.ttf-0f1c7b6010e41d38ab29c8ea253a698b.fontdata"]
+source_file="res://fonts/UnrealT.ttf"
+dest_files=["res://.godot/imported/UnrealT.ttf-687b618d75e6bc0951f73ca7d348261e.fontdata"]
 
 [params]
 

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://drrga33bag8dm" path="res://Player/Player.tscn" id="1_8g6m8"]
 [ext_resource type="PackedScene" uid="uid://ccycu7asq8cf8" path="res://3d assets/Teist.tscn" id="2_62b7x"]
-[ext_resource type="PackedScene" uid="uid://cbm8g3jmeuckx" path="res://Mask/MaskSpawner.tscn" id="3_8g6m8"]
+[ext_resource type="PackedScene" path="res://Mask/MaskSpawner.tscn" id="3_8g6m8"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="3_pwejh"]
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="5_86hbi"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="6_8joom"]
