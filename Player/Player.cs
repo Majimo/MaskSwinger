@@ -1,4 +1,5 @@
 using Godot;
+using MaskSwinger.Player;
 using Vector2 = Godot.Vector2;
 
 public partial class Player : Node3D
@@ -11,6 +12,7 @@ public partial class Player : Node3D
 	[Export] public bool IsAttacking { get; set; } 
 	
 	public PlayerBehavior Behavior = new PlayerBehavior();
+	public Direction CurrentDirection;
 	
 	private CharacterBody3D _body3D => GetNode<CharacterBody3D>("PlayerBody");
 	private Cooldown _attackCooldown => GetNode<Cooldown>("AttackCooldown");
@@ -23,18 +25,22 @@ public partial class Player : Node3D
 		
 		if (Input.IsActionPressed($"player_{this.PlayerId}_up"))
 		{
+			CurrentDirection = Direction.Up;
 			direction.Z = -1.0f;
 		}
 		if (Input.IsActionPressed($"player_{this.PlayerId}_down"))
 		{
+			CurrentDirection = Direction.Down;
 			direction.Z = 1.0f;
 		}
 		if (Input.IsActionPressed($"player_{this.PlayerId}_left"))
 		{
+			CurrentDirection = Direction.Left;
 			direction.X = -1.0f;
 		}
 		if (Input.IsActionPressed($"player_{this.PlayerId}_right"))
 		{
+			CurrentDirection = Direction.Right;
 			direction.X = 1.0f;
 		}
 
