@@ -15,6 +15,10 @@ run/main_scene="uid://dheb367654qrd"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+PhantomCameraManager="*uid://duq6jhf6unyis"
+
 [display]
 
 window/size/mode=2
@@ -23,6 +27,10 @@ window/stretch/mode="viewport"
 [dotnet]
 
 project/assembly_name="MaskSwinger"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/phantom_camera/plugin.cfg")
 
 [filesystem]
 
