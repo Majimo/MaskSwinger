@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://x0kigyy1bkjx"]
+
+[ext_resource type="Script" uid="uid://dthxvlfhmiye1" path="res://Mask.cs" id="1_rrwd6"]
+[ext_resource type="Resource" uid="uid://cahh5sfslab5" path="res://mask/SwordMaskAttack.tres" id="2_30xea"]
+[ext_resource type="Texture2D" uid="uid://bqykq2ueksvhs" path="res://icon.svg" id="3_v3y8u"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lp4wd"]
+radius = 90.47099
+
+[node name="SwordMask" type="Node2D" unique_id=1653312451]
+script = ExtResource("1_rrwd6")
+attackResource = ExtResource("2_30xea")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=486939252]
+rotation = 0.7853982
+texture = ExtResource("3_v3y8u")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1167070163]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1706164326]
+shape = SubResource("CircleShape2D_lp4wd")
