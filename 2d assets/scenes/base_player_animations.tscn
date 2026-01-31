@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://w1rk7iiysevn"]
 
-[ext_resource type="SpriteFrames" uid="uid://c832i873j2gpc" path="res://2d assets/animations/base_face.tres" id="1_1po0w"]
+[ext_resource type="SpriteFrames" uid="uid://c832i873j2gpc" path="res://2d assets/animations/base.tres" id="1_1po0w"]
 [ext_resource type="Script" uid="uid://dxufsh4jytkjc" path="res://2d assets/scenes/animation_controller.gd" id="2_cpqnc"]
 
 [node name="base_player_animations" type="AnimatedSprite3D" unique_id=376020763]
 sprite_frames = ExtResource("1_1po0w")
-animation = &"idle"
+animation = &"side_walk"
 autoplay = "walk"
+frame_progress = 0.9869192
 script = ExtResource("2_cpqnc")
