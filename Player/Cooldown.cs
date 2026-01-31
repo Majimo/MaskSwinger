@@ -1,12 +1,11 @@
 using Godot;
-using System;
 
 [GlobalClass]
 public partial class Cooldown : Node
 {
 	[Export] public double Duration = 1.0d;
 
-	private double _current;
+	private double _current = 0;
 	
 	public override void _Process(double delta)
 	{
@@ -18,7 +17,7 @@ public partial class Cooldown : Node
 		return _current <= 0;
 	}
 
-	public void Restart()
+	public void Restart(double duration)
 	{
 		_current = Duration;
 	}

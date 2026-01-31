@@ -14,16 +14,16 @@ public partial class Mask : Node3D
 
 	private void AreaOnBodyEntered(Node3D body)
 	{
-		if (Behavior is not null && body is CharacterBody3D playerBody)
+		if (body is not Player player)
 		{
-			var player = playerBody.GetParent<Player>();
-
-			if (player.Behavior is not null)
-			{
-				// TODO : drop mask	
-			}
-			
-			this.Behavior = this.Behavior;
+			return;
 		}
+		
+		if (player.Behavior is not null)
+		{
+			// TODO : drop mask	
+		}
+			
+		player.Behavior = this.Behavior;
 	}
 }

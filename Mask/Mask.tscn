@@ -11,7 +11,6 @@ script = ExtResource("2_ltxsw")
 radius = 0.9532199
 
 [node name="Mask" type="Node3D" unique_id=1995162680]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 script = ExtResource("1_rrwd6")
 Behavior = SubResource("Resource_otmu0")
 

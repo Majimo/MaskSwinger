@@ -1,55 +1,80 @@
+using System.Linq;
 using Godot;
 using MaskSwinger.Player;
 
 [GlobalClass]
 public partial class PlayerBehavior : Resource
 {
-	[Export] public int AttackDamage;
-	[Export] public int AttackCooldown;
-	[Export] public int ShieldDuration = 1;
-	[Export] public int ShieldCooldown = 2;
-	[Export] public float ShieldDivider = 2f;
-	[Export] public int DashSpeedFactor = 3;
-	[Export] public int DashCooldown = 2;
-	[Export] public float DashDuration { get; set; } = 0.2f;
+	[Export] public float AttackDuration { get; set; } = 1f;
+	[Export] public float AttackCooldown { get; set; } = 2f;
+
+	[Export] public float ShieldDuration { get; set; } = 1f;
+	[Export] public float ShieldSpeedDivider { get; set; } = 2f;
+	[Export] public float ShieldCooldown { get; set; } = 2f;
 	
-	public virtual void Attack(Player player, Direction direction)
+	[Export] public float DashSpeedFactor { get; set; } = 5f;
+	[Export] public float DashDuration { get; set; } = 0.1f;
+	[Export] public float DashCooldown { get; set; } = 2f;
+	
+	[Export] public float Speed = 40.0f;
+	
+	#region attack
+	
+	public virtual void Attack(Player player, Vector3 direction)
 	{
-		GD.Print("Attacking " + player.PlayerId + " towards " + direction);
+		player.ExecuteAfter(AttackDuration, () =>
+		{
+			player.IsAttacking = false;
+		});
+		
+		var t = Mathf.Atan2(direction.Z, direction.X);
+
+		var dir = t switch
+		{
+			>= -Mathf.Pi / 4 and < Mathf.Pi / 4 => Direction.Right,
+			>= Mathf.Pi / 4 and < 3 * Mathf.Pi / 4 => Direction.Down,
+			>= 3 * Mathf.Pi / 4 or < -3 * Mathf.Pi / 4 => Direction.Left,
+			_ => Direction.Up
+		};
+
+		var hitZone = player.GetNode<Area3D>($"%AttackZone{dir}");
+
+		var hits = hitZone.GetOverlappingBodies().OfType<Player>();
+		
+		foreach (var hit in hits)
+		{
+			hit.Hit();
+		}
 	}
 	
-    public virtual void Dash(Player player, Direction direction)
+	#endregion
+	
+	#region dash
+	
+    public virtual void Dash(Player player)
     {
         var dashVelocity = player.Velocity * DashSpeedFactor;
         player.Velocity = dashVelocity;
 			
-		Timer timer = new Timer();
-		timer.WaitTime = player.Behavior.DashDuration;
-		timer.OneShot = true;
-		timer.Timeout += () =>
-		{
-			player.IsDashing = false;
-			timer.QueueFree();
-		};
-		player.AddChild(timer);
-		timer.Start();
+        player.ExecuteAfter(DashDuration, () => player.IsDashing = false);
 	}
 
-	public virtual void Shield(Player player, Direction direction)
+    #endregion
+    
+    #region shield
+    
+	public virtual void Shield(Player player)
 	{
-		float playerInitialSpeed = player.Speed;
-		player.Speed = playerInitialSpeed / ShieldDivider;
+		var initialSpeed = this.Speed;
 		
-		Timer timer = new Timer();
-		timer.WaitTime = player.Behavior.ShieldDuration;
-		timer.OneShot = true;
-		timer.Timeout += () =>
+		this.Speed /= ShieldSpeedDivider;
+
+		player.ExecuteAfter(ShieldDuration, () =>
 		{
 			player.IsShielding = false;
-			player.Speed = playerInitialSpeed;
-			timer.QueueFree();
-		};
-		player.AddChild(timer);
-		timer.Start();
+			this.Speed = initialSpeed;
+		});
 	}
+
+	#endregion
 }

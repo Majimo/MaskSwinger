@@ -36,25 +36,25 @@ light_color = Color(0.65, 0.65, 0.65, 1)
 shadow_enabled = true
 
 [node name="Player1" parent="." unique_id=609764325 instance=ExtResource("1_8g6m8")]
-transform = Transform3D(-2, -3.019916e-07, -1.3200472e-14, 0, -8.742278e-08, 2, -3.019916e-07, 2, 8.742278e-08, 40, 2, -40)
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 21.157, 2, 0)
 
 [node name="Player2" parent="." unique_id=743661568 instance=ExtResource("1_8g6m8")]
-transform = Transform3D(-2, -3.019916e-07, -1.3200472e-14, 0, -8.742278e-08, 2, -3.019916e-07, 2, 8.742278e-08, 38.408188, 2, 37.684624)
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 34.7201, 2, 32.08478)
 PlayerId = 2
 
 [node name="Player3" parent="." unique_id=756489808 instance=ExtResource("1_8g6m8")]
-transform = Transform3D(-2, -3.019916e-07, -1.3200472e-14, 0, -8.742278e-08, 2, -3.019916e-07, 2, 8.742278e-08, -40, 2, -40)
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, -34.055077, 2, -33.24725)
 PlayerId = 3
 
 [node name="Player4" parent="." unique_id=2133927695 instance=ExtResource("1_8g6m8")]
-transform = Transform3D(-2, -3.019916e-07, -1.3200472e-14, 0, -8.742278e-08, 2, -3.019916e-07, 2, 8.742278e-08, -36.23752, 2, 37.105778)
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, -32.941124, 2, 28.817547)
 PlayerId = 4
 
 [node name="Ground" parent="." unique_id=432543835 instance=ExtResource("2_62b7x")]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1056510175]
 physics_interpolation_mode = 1
-transform = Transform3D(1, 0, 0, 0, 0.5734907, 0.8192121, 0, -0.8192121, 0.5734907, 0, 42.462326, 42.486637)
+transform = Transform3D(1, 0, 0, 0, 0.5734907, 0.8192121, 0, -0.8192121, 0.5734907, 0.3325119, 37.956528, 39.9088)
 top_level = true
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D" unique_id=161991778]
@@ -65,7 +65,7 @@ script = ExtResource("3_pwejh")
 [node name="MaskSpawner1" parent="." unique_id=340619910 instance=ExtResource("3_8g6m8")]
 
 [node name="PhantomCamera3D" type="Node3D" parent="." unique_id=632207897 node_paths=PackedStringArray("follow_targets")]
-transform = Transform3D(1, 0, 0, 0, 0.5734907, 0.8192121, 0, -0.8192121, 0.5734907, 0, 42.462326, 42.486637)
+transform = Transform3D(1, 0, 0, 0, 0.5734907, 0.8192121, 0, -0.8192121, 0.5734907, 0.3325119, 37.956528, 39.9088)
 top_level = true
 script = ExtResource("5_86hbi")
 follow_mode = 3
