@@ -21,6 +21,7 @@ public partial class PlayerBehavior : Resource
 	[Export] public SpriteFrames AvatarFrames { get; set; } = GD.Load<SpriteFrames>("res://2d assets/animations/base.tres");
 	[Export] public Texture2D MaskTexture { get; set; } = GD.Load<Texture2D>("res://icon.svg");
 	[Export] public Color MaskColor { get; set; } = Colors.White;
+	[Export] public AudioStream MaskSound { get; set; }
 	
 	#region attack
 	

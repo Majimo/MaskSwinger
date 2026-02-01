@@ -1,8 +1,13 @@
 [gd_resource type="Resource" format=3 uid="uid://di61mn2sio0v1"]
 
+[ext_resource type="SpriteFrames" uid="uid://c832i873j2gpc" path="res://2d assets/animations/base.tres" id="1_ft20c"]
 [ext_resource type="Script" uid="uid://mch5i1a7qbc3" path="res://Mask/Ermine/ErmineBehavior.cs" id="1_ljcoh"]
+[ext_resource type="AudioStream" uid="uid://13o7bcf6e4g2" path="res://AudioAssets/SoundEffects/Hermine.mp3" id="2_y77i2"]
+[ext_resource type="Texture2D" uid="uid://4hrqh381f0hs" path="res://2d assets/masks/Mask-Ermine.png" id="3_ft20c"]
 
 [resource]
 script = ExtResource("1_ljcoh")
+MaskTexture = ExtResource("3_ft20c")
 MaskColor = Color(0.74509805, 0.9529412, 0.98039216, 1)
+MaskSound = ExtResource("2_y77i2")
 metadata/_custom_type_script = "uid://cdd2y1cq0uamd"

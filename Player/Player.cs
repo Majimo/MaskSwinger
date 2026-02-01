@@ -11,6 +11,7 @@ public partial class Player : CharacterBody3D
 	private AudioStreamPlayer _deathAudioPlayer;
 	private AudioStreamPlayer _shieldAudioPlayer;
 	private AudioStreamPlayer _dashAudioPlayer;
+	private AudioStreamPlayer _maskAudioPlayer;
 
 	[Export] public int PlayerId { get; set; }
 	
@@ -27,6 +28,7 @@ public partial class Player : CharacterBody3D
 		_deathAudioPlayer = this.GetNode<AudioStreamPlayer>("DeathPlayer");
 		_shieldAudioPlayer = this.GetNode<AudioStreamPlayer>("ShieldPlayer");
 		_dashAudioPlayer = this.GetNode<AudioStreamPlayer>("DashPlayer");
+		_maskAudioPlayer = this.GetNode<AudioStreamPlayer>("MaskPlayer");
 		
 		this.ChangeBehavior(new PlayerBehavior());
 	}
@@ -117,6 +119,12 @@ public partial class Player : CharacterBody3D
 		
 		_sprite.SpriteFrames = behavior.AvatarFrames;
 		_sprite.Modulate = behavior.MaskColor;
+
+		if (behavior.MaskSound is not null)
+		{
+			_maskAudioPlayer.Stream = behavior.MaskSound;
+			_maskAudioPlayer.Play();
+		}
 	}
 
 	private static Direction GetDirection(Vector3 velocity)

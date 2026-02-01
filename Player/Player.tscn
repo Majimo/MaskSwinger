@@ -125,3 +125,6 @@ volume_db = 24.0
 [node name="ShieldPlayer" type="AudioStreamPlayer" parent="." unique_id=712441651]
 stream = SubResource("AudioStreamRandomizer_7uipr")
 volume_db = 24.0
+
+[node name="MaskPlayer" type="AudioStreamPlayer" parent="." unique_id=1469082058]
+volume_db = 24.0
