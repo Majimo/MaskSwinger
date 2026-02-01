@@ -1,0 +1,7 @@
+[gd_resource type="Resource" format=3 uid="uid://c4agxjfuuiblt"]
+
+[ext_resource type="Script" uid="uid://dle57kvjxb8eu" path="res://Mask/Hippopotamus/HippopotamusBehavior.cs" id="1_ge2b6"]
+
+[resource]
+script = ExtResource("1_ge2b6")
+metadata/_custom_type_script = "uid://cdd2y1cq0uamd"

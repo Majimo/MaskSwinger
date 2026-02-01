@@ -1,0 +1,7 @@
+[gd_resource type="Resource" format=3 uid="uid://c8464ackpp3e2"]
+
+[ext_resource type="Script" uid="uid://bllaghlhagh4y" path="res://Mask/Owl/OwlBehavior.cs" id="1_pykgn"]
+
+[resource]
+script = ExtResource("1_pykgn")
+metadata/_custom_type_script = "uid://cdd2y1cq0uamd"

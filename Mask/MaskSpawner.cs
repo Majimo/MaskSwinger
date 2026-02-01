@@ -8,15 +8,24 @@ public partial class MaskSpawner : Node3D
     public override void _Ready()
     {
         _maskScene = GD.Load<PackedScene>("res://Mask/Mask.tscn");
+        
+        this.InstantiateMask();
+        
         this.GetNode<Timer>("Timer").Timeout += TimerOnTimeout;
     }
 
     private void TimerOnTimeout()
     {
-        if (this._currentMask is null && GD.Randf() < 0.5f)
+        if (_currentMask is null && GD.Randf() < 0.5f)
         {
-            this._currentMask = _maskScene.Instantiate<Mask>();
-            AddChild(this._currentMask);
+            this.InstantiateMask();
         }
+    }
+
+    private void InstantiateMask()
+    {
+        _currentMask = _maskScene.Instantiate<Mask>();
+        _currentMask.Position = Position with { Z = 1 };
+        AddChild(_currentMask);
     }
 }

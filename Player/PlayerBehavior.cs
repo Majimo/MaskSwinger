@@ -9,11 +9,11 @@ public partial class PlayerBehavior : Resource
 	[Export] public float AttackCooldown { get; set; } = 2f;
 
 	[Export] public float ShieldDuration { get; set; } = 1f;
-	[Export] public float ShieldSpeedDivider { get; set; } = 2f;
-	[Export] public float ShieldCooldown { get; set; } = 2f;
+	[Export] public float ShieldSpeedDivider { get; set; } = 4f;
+	[Export] public float ShieldCooldown { get; set; } = 4f;
 	
 	[Export] public float DashSpeedFactor { get; set; } = 5f;
-	[Export] public float DashDuration { get; set; } = 0.1f;
+	[Export] public float DashDuration { get; set; } = 0.2f;
 	[Export] public float DashCooldown { get; set; } = 2f;
 	
 	[Export] public float Speed = 40.0f;
@@ -71,8 +71,8 @@ public partial class PlayerBehavior : Resource
 
 		player.ExecuteAfter(ShieldDuration, () =>
 		{
-			player.IsShielding = false;
 			this.Speed = initialSpeed;
+			player.IsShielding = false;
 		});
 	}
 

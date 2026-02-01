@@ -1,5 +1,4 @@
 using Godot;
-using System;
 
 public partial class Mask : Node3D
 {
@@ -10,6 +9,13 @@ public partial class Mask : Node3D
 	public override void _Ready()
 	{
 		_area.BodyEntered += AreaOnBodyEntered;
+
+		var tween = CreateTween();
+
+		tween.TweenProperty(this, "position", this.Position with { Z = 3 }, 2);
+		tween.TweenProperty(this, "position", this.Position with { Z = 1 }, 2);
+
+		tween.SetLoops();
 	}
 
 	private void AreaOnBodyEntered(Node3D body)
@@ -23,7 +29,8 @@ public partial class Mask : Node3D
 		{
 			// TODO : drop mask	
 		}
-			
-		player.Behavior = this.Behavior;
+		
+		// TODO : add mask to player
+		//player.Behavior = this.Behavior;
 	}
 }

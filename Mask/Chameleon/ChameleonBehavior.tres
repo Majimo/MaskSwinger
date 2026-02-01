@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="ChameleonBehavior" format=3 uid="uid://tncplqdn6syo"]
+
+[ext_resource type="Script" uid="uid://0wbd0pem802g" path="res://Mask/Chameleon/ChameleonBehavior.cs" id="1_loem2"]
+
+[resource]
+script = ExtResource("1_loem2")
+metadata/_custom_type_script = "uid://cdd2y1cq0uamd"

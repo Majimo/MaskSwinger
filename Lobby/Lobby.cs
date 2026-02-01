@@ -21,7 +21,7 @@ public partial class Lobby : Node
     {
         GameManager.Instance.ClearPlayers();
         
-        for (var i = 1; i <= 4; i++)
+        for (var i = 0; i <= 3; i++)
         {
             var joinAvatar = JoinButtonsContainer.GetNode<TextureRect>($"Player{i}/VBoxContainer/Avatar");
             joinAvatar.Modulate = Color.Color8(255, 255, 255, 75);
@@ -31,9 +31,9 @@ public partial class Lobby : Node
 
     public override void _Process(double delta)
     {
-        for (var i = 1; i <= 4; i++)
+        for (var i = 0; i <= 3; i++)
         {
-            if (_playersJoined[i - 1]) continue; // Déjà rejoint
+            if (_playersJoined[i]) continue; // Déjà rejoint
             
             if (Input.IsActionJustPressed($"player_{i}_join"))
             {
@@ -41,7 +41,7 @@ public partial class Lobby : Node
             }
         }
 
-        for (var i = 1; i <= 4; i++)
+        for (var i = 0; i <= 3; i++)
         {
             if (!Input.IsActionJustPressed($"player_{i}_launch") ||
                 GameManager.Instance.GetPlayerCount() <= 0) continue;
@@ -57,13 +57,13 @@ public partial class Lobby : Node
             var joinButton = JoinButtonsContainer.GetNode<Button>($"Player{playerId}/VBoxContainer/JoinButton");
             var joinAvatar = JoinButtonsContainer.GetNode<TextureRect>($"Player{playerId}/VBoxContainer/Avatar");
             
-            _playersJoined[playerId - 1] = true;
+            _playersJoined[playerId] = true;
             
             joinButton.Text = "Ready!";
             joinButton.Disabled = true;
-            joinAvatar.Modulate = _playerColors[playerId - 1];
+            joinAvatar.Modulate = _playerColors[playerId];
             
-            GameManager.Instance.AddPlayer(playerId, _playerColors[playerId - 1]);
+            GameManager.Instance.AddPlayer(playerId, _playerColors[playerId]);
             
             if (StartButton != null)
             {

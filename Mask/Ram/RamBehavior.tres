@@ -1,0 +1,7 @@
+[gd_resource type="Resource" format=3 uid="uid://d3q4f6yn6hfm0"]
+
+[ext_resource type="Script" uid="uid://dbqymsyn1fxsk" path="res://Mask/Ram/RamBehavior.cs" id="1_414g5"]
+
+[resource]
+script = ExtResource("1_414g5")
+metadata/_custom_type_script = "uid://cdd2y1cq0uamd"

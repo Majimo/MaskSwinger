@@ -1,0 +1,7 @@
+[gd_resource type="Resource" format=3 uid="uid://di61mn2sio0v1"]
+
+[ext_resource type="Script" uid="uid://mch5i1a7qbc3" path="res://Mask/Ermine/ErmineBehavior.cs" id="1_ljcoh"]
+
+[resource]
+script = ExtResource("1_ljcoh")
+metadata/_custom_type_script = "uid://cdd2y1cq0uamd"

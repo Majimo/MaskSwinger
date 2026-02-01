@@ -2,7 +2,9 @@ using Godot;
 
 public partial class Player : CharacterBody3D
 {
-	[Export] public int PlayerId { get; set; } = 1;
+	private const float DeadZone = 0.2f;
+	
+	[Export] public int PlayerId { get; set; }
 	
 	[Export] public bool IsDashing { get; set; } 
 	[Export] public bool IsShielding { get; set; } 
@@ -15,23 +17,17 @@ public partial class Player : CharacterBody3D
 		if (!IsDashing)
 		{
 			var direction = Vector3.Zero;
-			
-			if (Input.IsActionPressed($"player_{this.PlayerId}_up"))
+
+			var xAxis = Input.GetJoyAxis(this.PlayerId, JoyAxis.LeftX);
+			if (Mathf.Abs(xAxis) > DeadZone)
 			{
-				direction.Z = -1.0f;
+				direction.X = xAxis;
 			} 
-			else if (Input.IsActionPressed($"player_{this.PlayerId}_down"))
-			{
-				direction.Z = 1.0f;
-			}
 			
-			if (Input.IsActionPressed($"player_{this.PlayerId}_left"))
+			var yAxis = Input.GetJoyAxis(this.PlayerId, JoyAxis.LeftY);
+			if (Mathf.Abs(yAxis) > DeadZone)
 			{
-				direction.X = -1.0f;
-			}
-			else if (Input.IsActionPressed($"player_{this.PlayerId}_right"))
-			{
-				direction.X = 1.0f;
+				direction.Z = yAxis;
 			}
 
 			if (direction != Vector3.Zero)

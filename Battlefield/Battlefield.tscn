@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://drrga33bag8dm" path="res://Player/Player.tscn" id="1_8g6m8"]
 [ext_resource type="PackedScene" uid="uid://ccycu7asq8cf8" path="res://3d assets/Teist.tscn" id="2_62b7x"]
-[ext_resource type="PackedScene" path="res://Mask/MaskSpawner.tscn" id="3_8g6m8"]
+[ext_resource type="PackedScene" uid="uid://cbm8g3jmeuckx" path="res://Mask/MaskSpawner.tscn" id="3_8g6m8"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="3_pwejh"]
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="5_86hbi"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="6_8joom"]
@@ -35,26 +35,26 @@ transform = Transform3D(-0.9659258, 0.15684137, -0.2058837, 0, 0.79547346, 0.605
 light_color = Color(0.65, 0.65, 0.65, 1)
 shadow_enabled = true
 
-[node name="Player1" parent="." unique_id=609764325 instance=ExtResource("1_8g6m8")]
+[node name="Player0" parent="." unique_id=609764325 instance=ExtResource("1_8g6m8")]
 transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 21.157, 2, 0)
 
-[node name="Player2" parent="." unique_id=743661568 instance=ExtResource("1_8g6m8")]
+[node name="Player1" parent="." unique_id=743661568 instance=ExtResource("1_8g6m8")]
 transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 34.7201, 2, 32.08478)
+PlayerId = 1
+
+[node name="Player2" parent="." unique_id=756489808 instance=ExtResource("1_8g6m8")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, -34.055077, 2, -33.24725)
 PlayerId = 2
 
-[node name="Player3" parent="." unique_id=756489808 instance=ExtResource("1_8g6m8")]
-transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, -34.055077, 2, -33.24725)
-PlayerId = 3
-
-[node name="Player4" parent="." unique_id=2133927695 instance=ExtResource("1_8g6m8")]
+[node name="Player3" parent="." unique_id=2133927695 instance=ExtResource("1_8g6m8")]
 transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, -32.941124, 2, 28.817547)
-PlayerId = 4
+PlayerId = 3
 
 [node name="Ground" parent="." unique_id=432543835 instance=ExtResource("2_62b7x")]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1056510175]
 physics_interpolation_mode = 1
-transform = Transform3D(1, 0, 0, 0, 0.5734907, 0.8192121, 0, -0.8192121, 0.5734907, 0.3325119, 37.956528, 39.9088)
+transform = Transform3D(1, 0, 0, 0, 0.5734906, 0.81921214, 0, -0.81921214, 0.5734906, 0.3325119, 37.956528, 39.9088)
 top_level = true
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D" unique_id=161991778]
@@ -69,7 +69,7 @@ transform = Transform3D(1, 0, 0, 0, 0.5734907, 0.8192121, 0, -0.8192121, 0.57349
 top_level = true
 script = ExtResource("5_86hbi")
 follow_mode = 3
-follow_targets = [NodePath("../Player1"), NodePath("../Player2"), NodePath("../Player3"), NodePath("../Player4")]
+follow_targets = [NodePath("../Player0"), NodePath("../Player1"), NodePath("../Player2"), NodePath("../Player3")]
 tween_resource = SubResource("Resource_8joom")
 follow_offset = Vector3(0, 7.53, 20.59)
 auto_follow_distance = true
