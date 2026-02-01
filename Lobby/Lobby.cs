@@ -73,7 +73,7 @@ public partial class Lobby : Node
             _playersJoined[playerId] = true;
             
             joinButton.Text = "Ready!";
-            joinAvatar.Modulate = _playerColors[playerId];
+            joinAvatar.Modulate = Color.Color8(255, 255, 255);
             
             _lobbyStreamPlayer.Stream = _playerJoinSound;
             _lobbyStreamPlayer.VolumeDb = 24;

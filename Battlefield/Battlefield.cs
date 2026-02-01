@@ -8,6 +8,14 @@ public partial class Battlefield : Node3D
     private Node _phantomCamera;
     private List<Node3D> _playerNodes = new List<Node3D>();
     private AudioStreamPlayer _musicPlayer;
+    private AudioStreamPlayer _countDownPlayer2;
+    private AudioStream[] _countDownSounds = new AudioStream[]
+    {
+        GD.Load<AudioStream>("res://AudioAssets/SoundEffects/Decompte_01.mp3"),
+        GD.Load<AudioStream>("res://AudioAssets/SoundEffects/Decompte_02.mp3"),
+        GD.Load<AudioStream>("res://AudioAssets/SoundEffects/Decompte_03.mp3"),
+        GD.Load<AudioStream>("res://AudioAssets/SoundEffects/Decompte_04.mp3")
+    };
     private Vector3[] _spawnPoints = new Vector3[]
     {
         new Vector3(-30, 0, -30),
@@ -57,10 +65,16 @@ public partial class Battlefield : Node3D
         _timeRemaining -= (float)delta;
         GetNode<Label>("TimeRemaining/Label").Text = FormatTime(_timeRemaining);
 
-        if (_timeRemaining <= 5.5f)
+        if (_timeRemaining <= 4.5f)
         {
             GetNode<Label>("TimeRemaining/Label2").Visible = true;
             GetNode<Label>("TimeRemaining/Label2").Text = _timeRemaining.ToString("F0");
+            if (_timeRemaining % 1 == 0)
+            {
+                _countDownPlayer2.Stream = _countDownSounds[(int)_timeRemaining - 1];
+                _countDownPlayer2.VolumeDb = 24;
+                _countDownPlayer2.Play();
+            }
         }
         
         if (_timeRemaining <= 0)
