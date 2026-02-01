@@ -39,7 +39,7 @@ public partial class PlayerBehavior : Resource
 		
 		foreach (var hit in hits)
 		{
-			hit.Hit();
+			hit.Hit(player);
 		}
 	}
 	

@@ -78,8 +78,15 @@ public partial class Player : CharacterBody3D
 		_sprite.Call("_play_shield", (int)_lastDirection);
 	}
 	
-	public void Hit()
+	public void Hit(Player hitBy)
 	{
+		if (IsShielding)
+		{
+			return;
+		}
+		
+		GameManager.Killing(this, hitBy);
+			
 		this.ProcessMode = ProcessModeEnum.Disabled;
 		this.Visible = false;
 		

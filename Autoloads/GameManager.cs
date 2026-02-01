@@ -41,6 +41,11 @@ public partial class GameManager : Node
     {
         return JoinedPlayers.Count;
     }
+
+    public static void Killing(Player killed, Player killer)
+    {
+        GD.Print($"Player {killed.PlayerId} killed by player {killer.PlayerId}");
+    }
 }
 
 public class PlayerData
