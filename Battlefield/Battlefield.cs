@@ -1,3 +1,4 @@
+using System;
 using Godot;
 using System.Collections.Generic;
 
@@ -23,7 +24,7 @@ public partial class Battlefield : Node3D
         new Vector3(-30, 0, 30),
         new Vector3(30, 0, 30)
     };
-    private float _timeRemaining = 141.8f; // 2min24s = 144 secondes
+    private TimeSpan _timeRemaining = TimeSpan.FromSeconds(141); // 2min24s = 144 secondes
     private bool _isRunning = true;
     
     public override void _Ready()
@@ -62,24 +63,25 @@ public partial class Battlefield : Node3D
         
         if (!_isRunning) return;
         
-        _timeRemaining -= (float)delta;
-        GetNode<Label>("TimeRemaining/Label").Text = FormatTime(_timeRemaining);
+        _timeRemaining = _timeRemaining.Add(-TimeSpan.FromSeconds(delta));
+        GetNode<Label>("TimeRemaining/Label").Text = _timeRemaining.ToString(@"mm\:ss");
 
-        if (_timeRemaining <= 4.5f)
+        if (_timeRemaining.TotalSeconds <= 5)
         {
             GetNode<Label>("TimeRemaining/Label2").Visible = true;
-            GetNode<Label>("TimeRemaining/Label2").Text = _timeRemaining.ToString("F0");
-            if (_timeRemaining % 1 == 0)
-            {
-                _countDownPlayer2.Stream = _countDownSounds[(int)_timeRemaining - 1];
-                _countDownPlayer2.VolumeDb = 24;
-                _countDownPlayer2.Play();
-            }
+            GetNode<Label>("TimeRemaining/Label2").Text = ((int)_timeRemaining.TotalSeconds).ToString();
+            // if (_timeRemaining % 1 == 0)
+            // {
+            //     _countDownPlayer2.Stream = _countDownSounds[(int)_timeRemaining - 1];
+            //     _countDownPlayer2.VolumeDb = 24;
+            //     _countDownPlayer2.Play();
+            // }
         }
         
-        if (_timeRemaining <= 0)
+        if (_timeRemaining.TotalSeconds <= 0)
         {
-            _timeRemaining = 0;
+            GetNode<Label>("TimeRemaining/Label2").Visible = false;
+            _timeRemaining = TimeSpan.Zero;
             _isRunning = false;
         }
     }
@@ -122,7 +124,6 @@ public partial class Battlefield : Node3D
     private void OnMusicFinished()
     {
         GetNode<AudioStreamPlayer>("FinDuTempsPlayer").Play();
-        GetNode<Label>("TimeRemaining/Label2").Visible = true;
         this.ExecuteAfter(1.0f , () =>
         {
             GetNode<Control>("End").Visible = true;
