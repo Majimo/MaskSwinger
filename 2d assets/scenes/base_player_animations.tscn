@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://w1rk7iiysevn"]
 
-[ext_resource type="SpriteFrames" uid="uid://bddp01o738var" path="res://2d assets/animations/owl.tres" id="1_cpqnc"]
+[ext_resource type="SpriteFrames" uid="uid://cg6qqicgwbqc3" path="res://2d assets/animations/hermine.tres" id="1_cpqnc"]
 [ext_resource type="Script" uid="uid://dxufsh4jytkjc" path="res://2d assets/scenes/animation_controller.gd" id="2_cpqnc"]
 
 [node name="base_player_animations" type="AnimatedSprite3D" unique_id=376020763]
 transform = Transform3D(0.42, 0, 0, 0, 0.42, 0, 0, 0, 0.42, 0, 2.089542, 0)
 billboard = 1
 sprite_frames = ExtResource("1_cpqnc")
-animation = &"side_idle"
-frame_progress = 0.7912547
+animation = &"face_atk"
+frame_progress = 0.74624497
 script = ExtResource("2_cpqnc")

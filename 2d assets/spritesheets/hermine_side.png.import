@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jgk8kollyauc"
-path.s3tc="res://.godot/imported/hermine_front.png-1119eda6bec17979ba184e3aee64bebb.s3tc.ctex"
+uid="uid://bbjfa7tq2tkdq"
+path.s3tc="res://.godot/imported/hermine_side.png-160dc53ecb4bae9d86874b248a9bc72e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://2d assets/spritesheets/hermine_front.png"
-dest_files=["res://.godot/imported/hermine_front.png-1119eda6bec17979ba184e3aee64bebb.s3tc.ctex"]
+source_file="res://2d assets/spritesheets/hermine_side.png"
+dest_files=["res://.godot/imported/hermine_side.png-160dc53ecb4bae9d86874b248a9bc72e.s3tc.ctex"]
 
 [params]
 
