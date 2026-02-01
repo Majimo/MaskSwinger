@@ -15,8 +15,12 @@ public partial class PlayerBehavior : Resource
 	[Export] public float DashSpeedFactor { get; set; } = 5f;
 	[Export] public float DashDuration { get; set; } = 0.2f;
 	[Export] public float DashCooldown { get; set; } = 2f;
-	
+
 	[Export] public float Speed = 40.0f;
+	
+	[Export] public SpriteFrames AvatarFrames { get; set; } = GD.Load<SpriteFrames>("C:/Users/flori/Sources/MaskSwinger/2d assets/animations/base.tres");
+	[Export] public Texture2D MaskTexture { get; set; } = GD.Load<Texture2D>("C:/Users/flori/Sources/MaskSwinger/icon.svg");
+	[Export] public Color MaskColor { get; set; } = Colors.White;
 	
 	#region attack
 	

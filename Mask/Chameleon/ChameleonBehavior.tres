@@ -1,7 +1,10 @@
 [gd_resource type="Resource" script_class="ChameleonBehavior" format=3 uid="uid://tncplqdn6syo"]
 
 [ext_resource type="Script" uid="uid://0wbd0pem802g" path="res://Mask/Chameleon/ChameleonBehavior.cs" id="1_loem2"]
+[ext_resource type="SpriteFrames" uid="uid://c832i873j2gpc" path="res://2d assets/animations/base.tres" id="1_w2ob7"]
+[ext_resource type="Texture2D" uid="uid://bqykq2ueksvhs" path="res://icon.svg" id="2_esr7r"]
 
 [resource]
 script = ExtResource("1_loem2")
+MaskColor = Color(0.20392157, 0.6784314, 0.3019608, 1)
 metadata/_custom_type_script = "uid://cdd2y1cq0uamd"

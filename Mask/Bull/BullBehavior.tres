@@ -1,6 +1,9 @@
 [gd_resource type="Resource" script_class="BullBehavior" format=3 uid="uid://cahh5sfslab5"]
 
 [ext_resource type="Script" uid="uid://cg7v6nixgvyqa" path="res://Mask/Bull/BullBehavior.cs" id="1_igu2o"]
+[ext_resource type="SpriteFrames" uid="uid://c832i873j2gpc" path="res://2d assets/animations/base.tres" id="1_tm386"]
+[ext_resource type="Texture2D" uid="uid://bmcie1pdhqwks" path="res://2d assets/masks/Mask-Bull.png" id="2_kiokn"]
 
 [resource]
 script = ExtResource("1_igu2o")
+MaskTexture = ExtResource("2_kiokn")

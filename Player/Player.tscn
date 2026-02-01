@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://drrga33bag8dm"]
 
 [ext_resource type="Script" uid="uid://bvf825rcgf62l" path="res://Player/Player.cs" id="1_3c3w1"]
-[ext_resource type="Texture2D" uid="uid://bqykq2ueksvhs" path="res://icon.svg" id="1_oul6g"]
+[ext_resource type="PackedScene" uid="uid://w1rk7iiysevn" path="res://2d assets/scenes/base_player_animations.tscn" id="2_8g4oa"]
 [ext_resource type="Script" uid="uid://djq5csqrq5o0q" path="res://Player/Features/DashFeature.cs" id="4_ddoul"]
 [ext_resource type="Script" uid="uid://b4lwen0oemnkr" path="res://Player/Features/AttackFeature.cs" id="5_8g4oa"]
 [ext_resource type="Script" uid="uid://c676f8mw8xoof" path="res://Player/Features/ShieldFeature.cs" id="6_6ysni"]
@@ -22,9 +22,8 @@ radius = 0.63916016
 transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0, 0)
 script = ExtResource("1_3c3w1")
 
-[node name="Sprite" type="Sprite3D" parent="." unique_id=596940612]
+[node name="base_player_animations" parent="." unique_id=376020763 instance=ExtResource("2_8g4oa")]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
-texture = ExtResource("1_oul6g")
 
 [node name="CollisionShape" type="CollisionShape3D" parent="." unique_id=1218065430]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)

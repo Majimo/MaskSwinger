@@ -4,7 +4,3 @@
 
 [node name="MaskSpawner" type="Node3D" unique_id=340619910]
 script = ExtResource("1_5uynp")
-
-[node name="Timer" type="Timer" parent="." unique_id=47679684]
-wait_time = 10.0
-autostart = true

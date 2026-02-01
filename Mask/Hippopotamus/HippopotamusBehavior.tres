@@ -1,7 +1,10 @@
 [gd_resource type="Resource" format=3 uid="uid://c4agxjfuuiblt"]
 
 [ext_resource type="Script" uid="uid://dle57kvjxb8eu" path="res://Mask/Hippopotamus/HippopotamusBehavior.cs" id="1_ge2b6"]
+[ext_resource type="SpriteFrames" uid="uid://c832i873j2gpc" path="res://2d assets/animations/base.tres" id="1_qft05"]
+[ext_resource type="Texture2D" uid="uid://bqykq2ueksvhs" path="res://icon.svg" id="2_6q5so"]
 
 [resource]
 script = ExtResource("1_ge2b6")
+MaskColor = Color(0.18039216, 0.3254902, 0.7607843, 1)
 metadata/_custom_type_script = "uid://cdd2y1cq0uamd"
