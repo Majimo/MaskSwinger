@@ -69,6 +69,66 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.669632, 0.9447398, -2.9375
 [node name="muret2" parent="murs4" unique_id=44825512 instance=ExtResource("3_707xs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.669632, 0.9447398, 2.0624447)
 
+[node name="muret5" parent="murs4" unique_id=364572281 instance=ExtResource("3_707xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.052137, 0.9447398, 7.474245)
+
+[node name="muret6" parent="murs4" unique_id=244912816 instance=ExtResource("3_707xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.052135, 0.9447398, 12.474244)
+
+[node name="muret7" parent="murs4" unique_id=1807309293 instance=ExtResource("3_707xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.320064, 0.9447398, 31.71422)
+
+[node name="muret8" parent="murs4" unique_id=1377503042 instance=ExtResource("3_707xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.320063, 0.9447398, 36.71422)
+
+[node name="muret13" parent="murs4" unique_id=426405362 instance=ExtResource("3_707xs")]
+transform = Transform3D(-4.3711395e-08, 0, -1, 0, 1, 0, 1, 0, -4.3711395e-08, 33.845066, 0.9447398, 24.168064)
+
+[node name="muret14" parent="murs4" unique_id=1949946685 instance=ExtResource("3_707xs")]
+transform = Transform3D(-4.3711395e-08, 0, -1, 0, 1, 0, 1, 0, -4.3711395e-08, 28.845066, 0.9447398, 24.168062)
+
+[node name="muret15" parent="murs4" unique_id=665428176 instance=ExtResource("3_707xs")]
+transform = Transform3D(-4.3711395e-08, 0, -1, 0, 1, 0, 1, 0, -4.3711395e-08, 24.026476, 0.9447398, 24.289886)
+
+[node name="muret16" parent="murs4" unique_id=1469489721 instance=ExtResource("3_707xs")]
+transform = Transform3D(-4.3711395e-08, 0, -1, 0, 1, 0, 1, 0, -4.3711395e-08, 19.02648, 0.9447398, 24.289885)
+
+[node name="muret17" parent="murs4" unique_id=544503560 instance=ExtResource("3_707xs")]
+transform = Transform3D(-4.3711395e-08, 0, -1, 0, 1, 0, 1, 0, -4.3711395e-08, 8.276808, 0.9447398, 31.310831)
+
+[node name="muret18" parent="murs4" unique_id=1895950597 instance=ExtResource("3_707xs")]
+transform = Transform3D(-4.3711395e-08, 0, -1, 0, 1, 0, 1, 0, -4.3711395e-08, 3.2768135, 0.9447398, 31.310823)
+
+[node name="muret19" parent="murs4" unique_id=1734156681 instance=ExtResource("3_707xs")]
+transform = Transform3D(-4.3711395e-08, 0, -1, 0, 1, 0, 1, 0, -4.3711395e-08, 8.276806, 0.9447398, 14.137999)
+
+[node name="muret20" parent="murs4" unique_id=2054682756 instance=ExtResource("3_707xs")]
+transform = Transform3D(-4.3711395e-08, 0, -1, 0, 1, 0, 1, 0, -4.3711395e-08, 3.2768116, 0.9447398, 14.13799)
+
+[node name="muret21" parent="murs4" unique_id=224074282 instance=ExtResource("3_707xs")]
+transform = Transform3D(-4.3711395e-08, 0, -1, 0, 1, 0, 1, 0, -4.3711395e-08, 47.93562, 0.9447398, 14.137993)
+
+[node name="muret22" parent="murs4" unique_id=885008287 instance=ExtResource("3_707xs")]
+transform = Transform3D(-4.3711395e-08, 0, -1, 0, 1, 0, 1, 0, -4.3711395e-08, 42.935623, 0.9447398, 14.137984)
+
+[node name="muret23" parent="murs4" unique_id=815181263 instance=ExtResource("3_707xs")]
+transform = Transform3D(-4.3711395e-08, 0, -1, 0, 1, 0, 1, 0, -4.3711395e-08, 47.935623, 0.9447398, 31.310833)
+
+[node name="muret24" parent="murs4" unique_id=2016623104 instance=ExtResource("3_707xs")]
+transform = Transform3D(-4.3711395e-08, 0, -1, 0, 1, 0, 1, 0, -4.3711395e-08, 42.93563, 0.9447398, 31.310823)
+
+[node name="muret9" parent="murs4" unique_id=886805049 instance=ExtResource("3_707xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.557262, 0.9447398, 7.4742413)
+
+[node name="muret10" parent="murs4" unique_id=1001484991 instance=ExtResource("3_707xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.55726, 0.9447398, 12.47424)
+
+[node name="muret11" parent="murs4" unique_id=297279859 instance=ExtResource("3_707xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.825188, 0.9447398, 31.714216)
+
+[node name="muret12" parent="murs4" unique_id=45953387 instance=ExtResource("3_707xs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.825188, 0.9447398, 36.71421)
+
 [node name="muret3" parent="murs4" unique_id=1581092528 instance=ExtResource("3_707xs")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.66963196, 0.9447398, -3.505207)
 
@@ -101,7 +161,19 @@ shape = SubResource("BoxShape3D_o7hdf")
 [node name="luciole_particles" parent="." unique_id=1785180924 instance=ExtResource("4_6mkuf")]
 
 [node name="Player" parent="." unique_id=381286778 instance=ExtResource("5_4hnps")]
-transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, -1.2546272, 2.3848042, 27.070454)
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, -0.40073013, 2.3848042, 18.436598)
+
+[node name="Player3" parent="." unique_id=929439012 instance=ExtResource("5_4hnps")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 6.6202087, 2.3848042, 34.186268)
+
+[node name="Player4" parent="." unique_id=1278641488 instance=ExtResource("5_4hnps")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, -10.552624, 2.3848042, 34.186268)
+
+[node name="Player5" parent="." unique_id=836667068 instance=ExtResource("5_4hnps")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, -10.552624, 2.3848042, -5.4725456)
+
+[node name="Player6" parent="." unique_id=1892453064 instance=ExtResource("5_4hnps")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 6.6202164, 2.3848042, -5.4725456)
 
 [node name="Player2" parent="." unique_id=1761777092 instance=ExtResource("5_4hnps")]
 transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, -6.852051, 2.3848042, -19.489311)
