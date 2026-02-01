@@ -28,7 +28,13 @@ public partial class GameManager : Node
         {
             PlayerId = playerId,
             Color = playerColor,
-            IsJoined = true
+            IsJoined = true,
+            LeaderBoardEntry = new PlayerLeaderBoardEntry
+            {
+                PlayerId = playerId,
+                Kills = 0,
+                Deaths = 0
+            }
         });
     }
     
@@ -42,10 +48,18 @@ public partial class GameManager : Node
         return JoinedPlayers.Count;
     }
 
-    public static void Killing(Player killed, Player killer)
+    public void Killing(Player killed, Player killer)
     {
-        GD.Print($"Player {killed.PlayerId} killed by player {killer.PlayerId}");
+        JoinedPlayers[killer.PlayerId].LeaderBoardEntry.Kills++;
+        JoinedPlayers[killed.PlayerId].LeaderBoardEntry.Deaths++;
     }
+}
+
+public class PlayerLeaderBoardEntry
+{
+    public int PlayerId { get; set; }
+    public int Kills { get; set; }
+    public int Deaths { get; set; }
 }
 
 public class PlayerData
@@ -53,4 +67,5 @@ public class PlayerData
     public int PlayerId { get; set; }
     public Color Color { get; set; }
     public bool IsJoined { get; set; }
+    public PlayerLeaderBoardEntry LeaderBoardEntry { get; set; }
 }

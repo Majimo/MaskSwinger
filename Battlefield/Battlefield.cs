@@ -26,6 +26,15 @@ public partial class Battlefield : Node3D
         SpawnPlayers();
         
         CallDeferred(nameof(ConfigureCamera));
+        
+        int playersNbr = GameManager.Instance.GetPlayerCount();
+        if (playersNbr is <= 4 and > 0)
+        {
+            for (int i = 0; i < playersNbr; i++)
+            {
+                GetNode<VBoxContainer>($"UIDeathKills/Player{i + 1}LeadBoard").Visible = true;
+            }
+        }
     }
 
     private void SpawnPlayers()
@@ -46,6 +55,7 @@ public partial class Battlefield : Node3D
         
         int spawnIndex = playerData.PlayerId;
         
+        playerInstance.Owner = GetTree().CurrentScene;
         AddChild(playerInstance);
         
         playerInstance.GlobalPosition = _spawnPoints[spawnIndex];

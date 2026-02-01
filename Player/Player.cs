@@ -85,17 +85,17 @@ public partial class Player : CharacterBody3D
 			return;
 		}
 		
-		GameManager.Killing(this, hitBy);
-			
-		this.ProcessMode = ProcessModeEnum.Disabled;
-		this.Visible = false;
+		GameManager.Instance.Killing(this, hitBy);
 		
-		this.Owner.ExecuteAfter(2, () =>
+		GetTree().CurrentScene.ExecuteAfter(2, () =>
 		{
 			GD.Print("Respawn !!!");
 			this.ProcessMode = ProcessModeEnum.Inherit;
 			this.Visible = true;
 		});
+			
+		this.ProcessMode = ProcessModeEnum.Disabled;
+		this.Visible = false;
 	}
 
 	public void ChangeBehavior(PlayerBehavior behavior)

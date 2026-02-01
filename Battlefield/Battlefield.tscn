@@ -40,7 +40,7 @@ shadow_enabled = true
 [node name="Ground" parent="." unique_id=432543835 instance=ExtResource("2_62b7x")]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1056510175]
-transform = Transform3D(1, 0, 0, 0, 0.57349074, 0.8192121, 0, -0.8192121, 0.57349074, 0, 49.519, 21.163)
+transform = Transform3D(1, 0, 0, 0, 0.5734907, 0.8192121, 0, -0.8192121, 0.5734907, 0, 49.519, 21.163)
 top_level = true
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D" unique_id=161991778]
@@ -69,3 +69,155 @@ stream = ExtResource("7_pwejh")
 autoplay = true
 
 [node name="AudioListener3D" type="AudioListener3D" parent="." unique_id=597177706]
+
+[node name="UIDeathKills" type="Control" parent="." unique_id=1151621248]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Player1LeadBoard" type="VBoxContainer" parent="UIDeathKills" unique_id=925296222]
+visible = false
+layout_mode = 0
+offset_right = 61.0
+offset_bottom = 50.0
+alignment = 1
+
+[node name="Label" type="Label" parent="UIDeathKills/Player1LeadBoard" unique_id=1325885497]
+layout_mode = 2
+text = "Player 1"
+
+[node name="Kills" type="HBoxContainer" parent="UIDeathKills/Player1LeadBoard" unique_id=309298886]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UIDeathKills/Player1LeadBoard/Kills" unique_id=1145664931]
+layout_mode = 2
+text = "Kills :"
+
+[node name="Label2" type="Label" parent="UIDeathKills/Player1LeadBoard/Kills" unique_id=943685855]
+layout_mode = 2
+text = "1"
+
+[node name="Deaths" type="HBoxContainer" parent="UIDeathKills/Player1LeadBoard" unique_id=669539810]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UIDeathKills/Player1LeadBoard/Deaths" unique_id=2144274999]
+layout_mode = 2
+text = "Deaths :"
+
+[node name="Label2" type="Label" parent="UIDeathKills/Player1LeadBoard/Deaths" unique_id=421486357]
+layout_mode = 2
+text = "1"
+
+[node name="Player2LeadBoard" type="VBoxContainer" parent="UIDeathKills" unique_id=716000246]
+visible = false
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -61.0
+offset_bottom = 50.0
+grow_horizontal = 0
+
+[node name="Label" type="Label" parent="UIDeathKills/Player2LeadBoard" unique_id=1842574463]
+layout_mode = 2
+text = "Player 2"
+
+[node name="Kills" type="HBoxContainer" parent="UIDeathKills/Player2LeadBoard" unique_id=610635258]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UIDeathKills/Player2LeadBoard/Kills" unique_id=1417417133]
+layout_mode = 2
+text = "Kills :"
+
+[node name="Label2" type="Label" parent="UIDeathKills/Player2LeadBoard/Kills" unique_id=2126779816]
+layout_mode = 2
+text = "1"
+
+[node name="Deaths" type="HBoxContainer" parent="UIDeathKills/Player2LeadBoard" unique_id=177992686]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UIDeathKills/Player2LeadBoard/Deaths" unique_id=42682952]
+layout_mode = 2
+text = "Deaths :"
+
+[node name="Label2" type="Label" parent="UIDeathKills/Player2LeadBoard/Deaths" unique_id=1004271778]
+layout_mode = 2
+text = "1"
+
+[node name="Player3LeadBoard" type="VBoxContainer" parent="UIDeathKills" unique_id=1244046700]
+visible = false
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -50.0
+offset_right = 61.0
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="UIDeathKills/Player3LeadBoard" unique_id=565164548]
+layout_mode = 2
+text = "Player 3"
+
+[node name="Kills" type="HBoxContainer" parent="UIDeathKills/Player3LeadBoard" unique_id=105910530]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UIDeathKills/Player3LeadBoard/Kills" unique_id=1458389062]
+layout_mode = 2
+text = "Kills :"
+
+[node name="Label2" type="Label" parent="UIDeathKills/Player3LeadBoard/Kills" unique_id=351308448]
+layout_mode = 2
+text = "1"
+
+[node name="Deaths" type="HBoxContainer" parent="UIDeathKills/Player3LeadBoard" unique_id=258040364]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UIDeathKills/Player3LeadBoard/Deaths" unique_id=226853969]
+layout_mode = 2
+text = "Deaths :"
+
+[node name="Label2" type="Label" parent="UIDeathKills/Player3LeadBoard/Deaths" unique_id=522201661]
+layout_mode = 2
+text = "1"
+
+[node name="Player4LeadBoard" type="VBoxContainer" parent="UIDeathKills" unique_id=1182891416]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -61.0
+offset_top = -50.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="UIDeathKills/Player4LeadBoard" unique_id=1904076756]
+layout_mode = 2
+text = "Player 4"
+
+[node name="Kills" type="HBoxContainer" parent="UIDeathKills/Player4LeadBoard" unique_id=1605902602]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UIDeathKills/Player4LeadBoard/Kills" unique_id=1900772894]
+layout_mode = 2
+text = "Kills :"
+
+[node name="Label2" type="Label" parent="UIDeathKills/Player4LeadBoard/Kills" unique_id=400006273]
+layout_mode = 2
+text = "1"
+
+[node name="Deaths" type="HBoxContainer" parent="UIDeathKills/Player4LeadBoard" unique_id=430493798]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UIDeathKills/Player4LeadBoard/Deaths" unique_id=1178248661]
+layout_mode = 2
+text = "Deaths :"
+
+[node name="Label2" type="Label" parent="UIDeathKills/Player4LeadBoard/Deaths" unique_id=2098244765]
+layout_mode = 2
+text = "1"
