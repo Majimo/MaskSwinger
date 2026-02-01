@@ -15,7 +15,7 @@ public partial class Battlefield : Node3D
         new Vector3(-30, 0, 30),
         new Vector3(30, 0, 30)
     };
-    private float _timeRemaining = 144.0f; // 2min24s = 144 secondes
+    private float _timeRemaining = 141.8f; // 2min24s = 144 secondes
     private bool _isRunning = true;
     
     public override void _Ready()
@@ -68,7 +68,7 @@ public partial class Battlefield : Node3D
     {
         int minutes = (int)(seconds / 60);
         int secs = (int)(seconds % 60);
-        return $"{minutes}:{secs:D2}"; // Format : "2:24", "1:05", "0:00"
+        return $"{minutes}:{secs:D2}";
     }
 
     private void SpawnPlayers()

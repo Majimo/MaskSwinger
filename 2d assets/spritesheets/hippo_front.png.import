@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://2nxjjfgvyubj"
 path.s3tc="res://.godot/imported/hippo_front.png-4c2907426fd9b5a4f548964da0dd380f.s3tc.ctex"
+path.etc2="res://.godot/imported/hippo_front.png-4c2907426fd9b5a4f548964da0dd380f.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://2d assets/spritesheets/hippo_front.png"
-dest_files=["res://.godot/imported/hippo_front.png-4c2907426fd9b5a4f548964da0dd380f.s3tc.ctex"]
+dest_files=["res://.godot/imported/hippo_front.png-4c2907426fd9b5a4f548964da0dd380f.s3tc.ctex", "res://.godot/imported/hippo_front.png-4c2907426fd9b5a4f548964da0dd380f.etc2.ctex"]
 
 [params]
 
