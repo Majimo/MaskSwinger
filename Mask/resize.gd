@@ -14,6 +14,6 @@ func _ready() -> void:
 		tween.kill() # Abort the previous animation.
 	
 	tween = create_tween()
-	tween.tween_property(self, "rotation_degrees", Vector3(0,360,0), delay)
-	tween.tween_property(self, "rotation_degrees", Vector3.ZERO, delay)
+	tween.tween_property(self, "position", Vector3(0,3,0), delay)
+	tween.tween_property(self, "position", Vector3(0,1,0), delay)
 	tween.set_loops()

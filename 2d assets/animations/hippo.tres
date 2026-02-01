@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" format=3 uid="uid://cg5kpld54reeo"]
+[gd_resource type="SpriteFrames" format=3 uid="uid://oqocjub3i1lc"]
 
 [ext_resource type="Texture2D" uid="uid://djucdaetggbj5" path="res://2d assets/spritesheets/owl_back.png" id="1_msilb"]
 [ext_resource type="Texture2D" uid="uid://dbo43cuuqhx3c" path="res://2d assets/spritesheets/owl_front.png" id="2_4usgt"]
