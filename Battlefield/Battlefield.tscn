@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://dheb367654qrd"]
 
-[ext_resource type="PackedScene" uid="uid://drrga33bag8dm" path="res://Player/Player.tscn" id="1_8g6m8"]
+[ext_resource type="Script" uid="uid://1h1u6h2qq2eg" path="res://Battlefield/Battlefield.cs" id="1_pwejh"]
 [ext_resource type="PackedScene" uid="uid://ccycu7asq8cf8" path="res://3d assets/Teist.tscn" id="2_62b7x"]
 [ext_resource type="PackedScene" uid="uid://cbm8g3jmeuckx" path="res://Mask/MaskSpawner.tscn" id="3_8g6m8"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="3_pwejh"]
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="5_86hbi"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="6_8joom"]
-[ext_resource type="AudioStream" uid="uid://cy1lo1igcd80n" path="res://music assets/Battle_theme.mp3" id="7_pwejh"]
+[ext_resource type="AudioStream" uid="uid://w5nxmx34rpof" path="res://AudioAssets/Musics/Battle_theme.mp3" id="7_pwejh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8joom"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -27,6 +27,7 @@ adjustment_saturation = 1.19
 script = ExtResource("6_8joom")
 
 [node name="Main" type="Node3D" unique_id=1184177733]
+script = ExtResource("1_pwejh")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=160560654]
 environment = SubResource("Environment_86hbi")
@@ -36,26 +37,10 @@ transform = Transform3D(-0.9659258, 0.15684137, -0.2058837, 0, 0.79547346, 0.605
 light_color = Color(0.65, 0.65, 0.65, 1)
 shadow_enabled = true
 
-[node name="Player0" parent="." unique_id=609764325 instance=ExtResource("1_8g6m8")]
-transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 21.157, 2, 0)
-
-[node name="Player1" parent="." unique_id=743661568 instance=ExtResource("1_8g6m8")]
-transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 34.7201, 2, 32.08478)
-PlayerId = 1
-
-[node name="Player2" parent="." unique_id=756489808 instance=ExtResource("1_8g6m8")]
-transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, -34.055077, 2, -33.24725)
-PlayerId = 2
-
-[node name="Player3" parent="." unique_id=2133927695 instance=ExtResource("1_8g6m8")]
-transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, -32.941124, 2, 28.817547)
-PlayerId = 3
-
 [node name="Ground" parent="." unique_id=432543835 instance=ExtResource("2_62b7x")]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1056510175]
-physics_interpolation_mode = 1
-transform = Transform3D(1, 0, 0, 0, 0.57349074, 0.8192121, 0, -0.8192121, 0.57349074, 0.3325119, 37.956528, 39.9088)
+transform = Transform3D(1, 0, 0, 0, 0.57349074, 0.8192121, 0, -0.8192121, 0.57349074, 0, 49.519, 21.163)
 top_level = true
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D" unique_id=161991778]
@@ -65,19 +50,19 @@ script = ExtResource("3_pwejh")
 
 [node name="MaskSpawner1" parent="." unique_id=340619910 instance=ExtResource("3_8g6m8")]
 
-[node name="PhantomCamera3D" type="Node3D" parent="." unique_id=632207897 node_paths=PackedStringArray("follow_targets")]
-transform = Transform3D(1, 0, 0, 0, 0.5734907, 0.8192121, 0, -0.8192121, 0.5734907, 0.3325119, 37.956528, 39.9088)
+[node name="PhantomCamera3D" type="Node3D" parent="." unique_id=632207897]
+transform = Transform3D(1, 0, 0, 0, 0.5734907, 0.8192121, 0, -0.8192121, 0.5734907, 0, 49.519, 21.163)
 top_level = true
 script = ExtResource("5_86hbi")
 follow_mode = 3
-follow_targets = [NodePath("../Player0"), NodePath("../Player1"), NodePath("../Player2"), NodePath("../Player3")]
 tween_resource = SubResource("Resource_8joom")
-follow_offset = Vector3(0, 7.53, 20.59)
+follow_offset = Vector3(0, 25, 35)
+follow_damping = true
+follow_damping_value = Vector3(3, 3, 3)
 auto_follow_distance = true
+auto_follow_distance_min = 15.0
 auto_follow_distance_max = 50.0
-auto_follow_distance_divisor = 100.0
-align_transform_with_view = Callable()
-align_position_with_view = Callable()
+auto_follow_distance_divisor = 8.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=691569204]
 stream = ExtResource("7_pwejh")
