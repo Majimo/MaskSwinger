@@ -8,7 +8,8 @@ public partial class Player : CharacterBody3D
 	private AnimatedSprite3D _sprite;
 	private Direction _lastDirection;
 	private AudioStreamPlayer _swingAudioPlayer;
-	private AudioStreamPlayer _hitAudioPlayer;
+	private AudioStreamPlayer _deathAudioPlayer;
+	private AudioStreamPlayer _shieldAudioPlayer;
 	private AudioStreamPlayer _dashAudioPlayer;
 
 	[Export] public int PlayerId { get; set; }
@@ -23,6 +24,9 @@ public partial class Player : CharacterBody3D
 	{
 		_sprite = this.GetNode<AnimatedSprite3D>("Animation");
 		_swingAudioPlayer = this.GetNode<AudioStreamPlayer>("SwingPlayer");
+		_deathAudioPlayer = this.GetNode<AudioStreamPlayer>("DeathPlayer");
+		_shieldAudioPlayer = this.GetNode<AudioStreamPlayer>("ShieldPlayer");
+		_dashAudioPlayer = this.GetNode<AudioStreamPlayer>("DashPlayer");
 		
 		this.ChangeBehavior(new PlayerBehavior());
 	}
@@ -75,6 +79,7 @@ public partial class Player : CharacterBody3D
 	
 	public void PlayDashAnimation()
 	{
+		_dashAudioPlayer.Play();
 		_sprite.Call("_play_dash", (int)_lastDirection);
 	}
 	
@@ -87,8 +92,11 @@ public partial class Player : CharacterBody3D
 	{
 		if (IsShielding)
 		{
+			_shieldAudioPlayer.Play();
 			return;
 		}
+
+		_deathAudioPlayer.Play();
 		
 		GameManager.Instance.Killing(this, hitBy);
 		

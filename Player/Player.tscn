@@ -5,8 +5,17 @@
 [ext_resource type="Script" uid="uid://djq5csqrq5o0q" path="res://Player/Features/DashFeature.cs" id="4_ddoul"]
 [ext_resource type="Script" uid="uid://b4lwen0oemnkr" path="res://Player/Features/AttackFeature.cs" id="5_8g4oa"]
 [ext_resource type="Script" uid="uid://c676f8mw8xoof" path="res://Player/Features/ShieldFeature.cs" id="6_6ysni"]
+[ext_resource type="AudioStream" uid="uid://dqlxgulk7rik1" path="res://AudioAssets/SoundEffects/Dash_01.mp3" id="6_j23h2"]
 [ext_resource type="AudioStream" uid="uid://c5vlojgqitvqp" path="res://AudioAssets/SoundEffects/Swing_01.mp3" id="6_vlldt"]
+[ext_resource type="AudioStream" uid="uid://deci50e63rqos" path="res://AudioAssets/SoundEffects/Dash_02.mp3" id="7_0j2ni"]
 [ext_resource type="AudioStream" uid="uid://c3bw7wxbo81bs" path="res://AudioAssets/SoundEffects/Swing_02.mp3" id="7_s1rgi"]
+[ext_resource type="AudioStream" uid="uid://cgsibrnm33231" path="res://AudioAssets/SoundEffects/Mort_01.mp3" id="10_7v5gs"]
+[ext_resource type="AudioStream" uid="uid://cf5evptiubwpc" path="res://AudioAssets/SoundEffects/Mort_02.mp3" id="11_8sa4y"]
+[ext_resource type="AudioStream" uid="uid://dq4cu8qte4p14" path="res://AudioAssets/SoundEffects/Mort_03.mp3" id="12_3nb2p"]
+[ext_resource type="AudioStream" uid="uid://cf4j8msji0xyo" path="res://AudioAssets/SoundEffects/Aie_Bouclier_01.mp3" id="17_evw08"]
+[ext_resource type="AudioStream" uid="uid://binhxsl7gtyku" path="res://AudioAssets/SoundEffects/Aie_Bouclier_02.mp3" id="18_roy6y"]
+[ext_resource type="AudioStream" uid="uid://dmdujkdicu281" path="res://AudioAssets/SoundEffects/Aie_Bouclier_03.mp3" id="19_u5tep"]
+[ext_resource type="AudioStream" uid="uid://bbqydx5hofmig" path="res://AudioAssets/SoundEffects/Aie_Bouclier_04.mp3" id="20_ps8ct"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_rkbax"]
 height = 1.2675781
@@ -20,10 +29,28 @@ radius = 0.63916016
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_j23h2"]
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_v0k0e"]
+streams_count = 2
+stream_0/stream = ExtResource("6_j23h2")
+stream_1/stream = ExtResource("7_0j2ni")
+
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_j23h2"]
 streams_count = 2
 stream_0/stream = ExtResource("6_vlldt")
 stream_1/stream = ExtResource("7_s1rgi")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_ps8ct"]
+streams_count = 3
+stream_0/stream = ExtResource("10_7v5gs")
+stream_1/stream = ExtResource("11_8sa4y")
+stream_2/stream = ExtResource("12_3nb2p")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_7uipr"]
+streams_count = 4
+stream_0/stream = ExtResource("17_evw08")
+stream_1/stream = ExtResource("18_roy6y")
+stream_2/stream = ExtResource("19_u5tep")
+stream_3/stream = ExtResource("20_ps8ct")
 
 [node name="Player" type="CharacterBody3D" unique_id=381286778]
 transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0, 0)
@@ -83,10 +110,18 @@ script = ExtResource("6_6ysni")
 metadata/_custom_type_script = "uid://c676f8mw8xoof"
 
 [node name="DashPlayer" type="AudioStreamPlayer" parent="." unique_id=1503447622]
+stream = SubResource("AudioStreamRandomizer_v0k0e")
+volume_db = 24.0
 
 [node name="SwingPlayer" type="AudioStreamPlayer" parent="." unique_id=1225159121]
 stream = SubResource("AudioStreamRandomizer_j23h2")
 volume_db = 24.0
 bus = &"SFX"
 
-[node name="HitPlayer" type="AudioStreamPlayer" parent="." unique_id=659496031]
+[node name="DeathPlayer" type="AudioStreamPlayer" parent="." unique_id=659496031]
+stream = SubResource("AudioStreamRandomizer_ps8ct")
+volume_db = 24.0
+
+[node name="ShieldPlayer" type="AudioStreamPlayer" parent="." unique_id=712441651]
+stream = SubResource("AudioStreamRandomizer_7uipr")
+volume_db = 24.0
