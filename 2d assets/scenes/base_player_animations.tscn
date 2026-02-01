@@ -7,5 +7,5 @@
 sprite_frames = ExtResource("1_1po0w")
 animation = &"back_walk"
 autoplay = "walk"
-frame_progress = 0.73463994
+frame_progress = 0.5215199
 script = ExtResource("2_cpqnc")
