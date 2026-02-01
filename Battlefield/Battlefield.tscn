@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="5_86hbi"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="6_8joom"]
 [ext_resource type="AudioStream" uid="uid://w5nxmx34rpof" path="res://AudioAssets/Musics/Battle_theme.mp3" id="7_pwejh"]
+[ext_resource type="FontFile" uid="uid://d0y83c0weoe1c" path="res://fonts/UnrealT.ttf" id="8_86hbi"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8joom"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -25,6 +26,14 @@ adjustment_saturation = 1.19
 
 [sub_resource type="Resource" id="Resource_8joom"]
 script = ExtResource("6_8joom")
+
+[sub_resource type="Theme" id="Theme_qi62q"]
+default_font = ExtResource("8_86hbi")
+default_font_size = 72
+
+[sub_resource type="Theme" id="Theme_86hbi"]
+default_font = ExtResource("8_86hbi")
+default_font_size = 45
 
 [node name="Main" type="Node3D" unique_id=1184177733]
 script = ExtResource("1_pwejh")
@@ -221,3 +230,39 @@ text = "Deaths :"
 [node name="Count" type="Label" parent="UIDeathKills/Player4LeadBoard/Deaths" unique_id=2098244765]
 layout_mode = 2
 text = "0"
+
+[node name="End" type="Control" parent="." unique_id=434756650]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="End" unique_id=1510905798]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="End/VBoxContainer" unique_id=1404293822]
+layout_mode = 2
+theme = SubResource("Theme_qi62q")
+text = "C'est fini !"
+horizontal_alignment = 1
+
+[node name="Winner" type="Label" parent="End/VBoxContainer" unique_id=2145645188]
+layout_mode = 2
+theme = SubResource("Theme_86hbi")
+text = "Player 1 avec 12 kills et 3 morts"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="End/VBoxContainer" unique_id=826976560]
+layout_mode = 2
+theme = SubResource("Theme_86hbi")
+text = "gagne la partie !"
+horizontal_alignment = 1

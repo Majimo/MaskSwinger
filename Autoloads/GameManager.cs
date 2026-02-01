@@ -47,6 +47,22 @@ public partial class GameManager : Node
         return JoinedPlayers.Count;
     }
 
+    public PlayerData GetTopPlayer()
+    {
+        PlayerData topPlayer = null;
+        foreach (var player in JoinedPlayers)
+        {
+            if (topPlayer == null ||
+                player.LeaderBoardEntry.Kills > topPlayer.LeaderBoardEntry.Kills ||
+                (player.LeaderBoardEntry.Kills == topPlayer.LeaderBoardEntry.Kills &&
+                 player.LeaderBoardEntry.Deaths < topPlayer.LeaderBoardEntry.Deaths))
+            {
+                topPlayer = player;
+            }
+        }
+        return topPlayer;
+    }
+
     public void Killing(Player killed, Player killer)
     {
         JoinedPlayers[killer.PlayerId].LeaderBoardEntry.Kills++;

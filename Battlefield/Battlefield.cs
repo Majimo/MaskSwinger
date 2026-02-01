@@ -8,6 +8,8 @@ public partial class Battlefield : Node3D
     
     private List<Node3D> _playerNodes = new List<Node3D>();
     
+    private AudioStreamPlayer _musicPlayer;
+    
     private Vector3[] _spawnPoints = new Vector3[]
     {
         new Vector3(-30, 0, -30),
@@ -35,6 +37,9 @@ public partial class Battlefield : Node3D
                 PlayerLeaderBoards.Add(playerLeadBoard);
             }
         }
+        
+        _musicPlayer = GetNode<AudioStreamPlayer>("AudioStreamPlayer");
+        _musicPlayer.Finished += OnMusicFinished;
     }
     
     public override void _Process(double delta)
@@ -76,6 +81,15 @@ public partial class Battlefield : Node3D
             
             _playerNodes.Add(playerInstance);
         }
+    }
+
+    private void OnMusicFinished()
+    {
+        GetNode<Control>("End").Visible = true;
+        PlayerData winningPlayerData = GameManager.Instance.GetTopPlayer();
+        GetNode<Label>("End/VBoxContainer/Winner").Text = 
+            $"Player {winningPlayerData.PlayerId} avec {winningPlayerData.LeaderBoardEntry.Kills} kills et {winningPlayerData.LeaderBoardEntry.Deaths} morts";
+        GetTree().Paused = true;
     }
     
     private void ConfigureCamera()
