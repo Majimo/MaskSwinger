@@ -1,8 +1,6 @@
 [gd_resource type="Resource" format=3 uid="uid://c8464ackpp3e2"]
 
-[ext_resource type="SpriteFrames" uid="uid://c832i873j2gpc" path="res://2d assets/animations/base.tres" id="1_b4hik"]
 [ext_resource type="Script" uid="uid://bllaghlhagh4y" path="res://Mask/Owl/OwlBehavior.cs" id="1_pykgn"]
-[ext_resource type="Texture2D" uid="uid://bqykq2ueksvhs" path="res://icon.svg" id="2_id7xh"]
 
 [resource]
 script = ExtResource("1_pykgn")

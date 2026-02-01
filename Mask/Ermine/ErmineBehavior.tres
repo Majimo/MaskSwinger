@@ -1,8 +1,6 @@
 [gd_resource type="Resource" format=3 uid="uid://di61mn2sio0v1"]
 
 [ext_resource type="Script" uid="uid://mch5i1a7qbc3" path="res://Mask/Ermine/ErmineBehavior.cs" id="1_ljcoh"]
-[ext_resource type="SpriteFrames" uid="uid://c832i873j2gpc" path="res://2d assets/animations/base.tres" id="1_qap0a"]
-[ext_resource type="Texture2D" uid="uid://bqykq2ueksvhs" path="res://icon.svg" id="2_ft20c"]
 
 [resource]
 script = ExtResource("1_ljcoh")

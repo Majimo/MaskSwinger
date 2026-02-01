@@ -23,13 +23,14 @@ transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, 0, 0
 script = ExtResource("1_3c3w1")
 
 [node name="Animation" parent="." unique_id=376020763 instance=ExtResource("2_8g4oa")]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+transform = Transform3D(0.29, 0, 0, 0, -1.2676303e-08, -0.29, 0, 0.29, -1.2676303e-08, 0, -6.371362e-08, 1.4575977)
 
 [node name="CollisionShape" type="CollisionShape3D" parent="." unique_id=1218065430]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, -2.8721574e-08, 0.657073)
 shape = SubResource("CylinderShape3D_rkbax")
 
 [node name="HitZones" type="Node3D" parent="." unique_id=1092980415]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.5440082e-08, 1.0395479)
 
 [node name="AttackZoneLeft" type="Area3D" parent="HitZones" unique_id=583862114]
 unique_name_in_owner = true

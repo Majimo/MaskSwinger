@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dxufsh4jytkjc" path="res://2d assets/scenes/animation_controller.gd" id="2_cpqnc"]
 
 [node name="base_player_animations" type="AnimatedSprite3D" unique_id=376020763]
+transform = Transform3D(0.42, 0, 0, 0, 0.42, 0, 0, 0, 0.42, 0, 2.089542, 0)
 sprite_frames = ExtResource("1_1po0w")
 animation = &"side_walk"
 frame_progress = 0.6086898

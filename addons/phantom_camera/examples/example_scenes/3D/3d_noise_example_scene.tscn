@@ -60,7 +60,7 @@ expand_margin_bottom = 6.0
 [node name="MainCamera3D" type="Camera3D" parent="." unique_id=1607438333]
 unique_name_in_owner = true
 physics_interpolation_mode = 1
-transform = Transform3D(-0.00965344, -0.02777674, 0.99956757, 1.4551915e-11, 0.9996141, 0.027778035, -0.99995345, 0.00026815356, -0.0096497135, -16.46, 0.5, 4.249)
+transform = Transform3D(0.0329725, -0.005429307, 0.9994415, 0, 0.9999852, 0.00543226, -0.9994563, -0.00017911519, 0.032972015, -16.46, 0.5, 4.249)
 top_level = true
 
 [node name="PhantomCameraHost" type="Node" parent="MainCamera3D" unique_id=1903019233]

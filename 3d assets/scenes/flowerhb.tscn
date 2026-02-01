@@ -4,13 +4,13 @@
 
 [node name="flower" unique_id=134487398 instance=ExtResource("1_emo5l")]
 
-[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(1404281173) index="0" unique_id=1535470932]
+[node name="Skeleton3D" parent="Armature" parent_id_path=PackedInt32Array(942618052) index="0" unique_id=16803670]
 bones/0/rotation = Quaternion(-0.052668627, -1.1904381e-07, 6.278583e-09, 0.99861205)
 bones/1/rotation = Quaternion(0.041509707, -3.0900284e-14, -9.896685e-09, 0.9991381)
 bones/2/rotation = Quaternion(0.06449436, -1.1896114e-07, -2.3064981e-08, 0.99791807)
 bones/3/rotation = Quaternion(0.47261712, -0.47261685, 0.5259592, 0.52595943)
 bones/4/rotation = Quaternion(0.47261712, -0.47261685, 0.5259592, 0.52595943)
 
-[node name="AnimationPlayer" parent="." index="1" unique_id=1033207755]
+[node name="AnimationPlayer" parent="." index="1" unique_id=1728926675]
 autoplay = &"flower_headbang"
 speed_scale = 2.0

@@ -18,8 +18,8 @@ public partial class PlayerBehavior : Resource
 
 	[Export] public float Speed = 40.0f;
 	
-	[Export] public SpriteFrames AvatarFrames { get; set; } = GD.Load<SpriteFrames>("C:/Users/flori/Sources/MaskSwinger/2d assets/animations/base.tres");
-	[Export] public Texture2D MaskTexture { get; set; } = GD.Load<Texture2D>("C:/Users/flori/Sources/MaskSwinger/icon.svg");
+	[Export] public SpriteFrames AvatarFrames { get; set; } = GD.Load<SpriteFrames>("res://2d assets/animations/base.tres");
+	[Export] public Texture2D MaskTexture { get; set; } = GD.Load<Texture2D>("res://icon.svg");
 	[Export] public Color MaskColor { get; set; } = Colors.White;
 	
 	#region attack
@@ -47,20 +47,20 @@ public partial class PlayerBehavior : Resource
 	
 	#region dash
 	
-    public virtual void Dash(Player player)
-    {
-	    player.PlayDashAnimation();
-	    
-        var dashVelocity = player.Velocity * DashSpeedFactor;
-        player.Velocity = dashVelocity;
+	public virtual void Dash(Player player)
+	{
+		player.PlayDashAnimation();
+		
+		var dashVelocity = player.Velocity * DashSpeedFactor;
+		player.Velocity = dashVelocity;
 			
-        player.ExecuteAfter(DashDuration, () => player.IsDashing = false);
+		player.ExecuteAfter(DashDuration, () => player.IsDashing = false);
 	}
 
-    #endregion
-    
-    #region shield
-    
+	#endregion
+	
+	#region shield
+	
 	public virtual void Shield(Player player)
 	{
 		player.PlayShieldAnimation();

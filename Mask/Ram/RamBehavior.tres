@@ -1,7 +1,6 @@
 [gd_resource type="Resource" format=3 uid="uid://d3q4f6yn6hfm0"]
 
 [ext_resource type="Script" uid="uid://dbqymsyn1fxsk" path="res://Mask/Ram/RamBehavior.cs" id="1_414g5"]
-[ext_resource type="SpriteFrames" uid="uid://c832i873j2gpc" path="res://2d assets/animations/base.tres" id="1_lirmm"]
 [ext_resource type="Texture2D" uid="uid://btog4v257qrn8" path="res://2d assets/masks/Mask-Ram.png" id="2_lirmm"]
 
 [resource]
