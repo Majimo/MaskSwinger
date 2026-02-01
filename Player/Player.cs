@@ -7,7 +7,10 @@ public partial class Player : CharacterBody3D
 	
 	private AnimatedSprite3D _sprite;
 	private Direction _lastDirection;
-	
+	private AudioStreamPlayer _swingAudioPlayer;
+	private AudioStreamPlayer _hitAudioPlayer;
+	private AudioStreamPlayer _dashAudioPlayer;
+
 	[Export] public int PlayerId { get; set; }
 	
 	[Export] public bool IsDashing { get; set; } 
@@ -19,6 +22,7 @@ public partial class Player : CharacterBody3D
 	public override void _Ready()
 	{
 		_sprite = this.GetNode<AnimatedSprite3D>("Animation");
+		_swingAudioPlayer = this.GetNode<AudioStreamPlayer>("SwingPlayer");
 		
 		this.ChangeBehavior(new PlayerBehavior());
 	}
@@ -65,6 +69,7 @@ public partial class Player : CharacterBody3D
 
 	public void PlayAttackAnimation(Direction direction)
 	{
+		_swingAudioPlayer.Play();
 		_sprite.Call("_play_atk", (int)direction);
 	}
 	
