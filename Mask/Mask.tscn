@@ -19,6 +19,7 @@ Behavior = SubResource("Resource_otmu0")
 [node name="Sprite" type="Sprite3D" parent="." unique_id=1586256970]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.64676523, 0)
 billboard = 1
+texture_filter = 0
 texture = ExtResource("3_v3y8u")
 script = ExtResource("5_rv8l5")
 

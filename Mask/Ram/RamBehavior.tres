@@ -2,12 +2,10 @@
 
 [ext_resource type="Script" uid="uid://dbqymsyn1fxsk" path="res://Mask/Ram/RamBehavior.cs" id="1_414g5"]
 [ext_resource type="SpriteFrames" uid="uid://bojelx27kv5jn" path="res://2d assets/animations/ram.tres" id="1_dgxlo"]
-[ext_resource type="AudioStream" uid="uid://5nrv3nkqu1n8" path="res://AudioAssets/SoundEffects/Belier.mp3" id="2_8emgv"]
 [ext_resource type="Texture2D" uid="uid://btog4v257qrn8" path="res://2d assets/masks/Mask-Ram.png" id="2_lirmm"]
 
 [resource]
 script = ExtResource("1_414g5")
 AvatarFrames = ExtResource("1_dgxlo")
 MaskTexture = ExtResource("2_lirmm")
-MaskSound = ExtResource("2_8emgv")
 metadata/_custom_type_script = "uid://cdd2y1cq0uamd"

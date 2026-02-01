@@ -116,7 +116,6 @@ volume_db = 24.0
 [node name="SwingPlayer" type="AudioStreamPlayer" parent="." unique_id=1225159121]
 stream = SubResource("AudioStreamRandomizer_j23h2")
 volume_db = 24.0
-bus = &"SFX"
 
 [node name="DeathPlayer" type="AudioStreamPlayer" parent="." unique_id=659496031]
 stream = SubResource("AudioStreamRandomizer_ps8ct")
