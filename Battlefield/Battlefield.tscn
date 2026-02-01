@@ -96,9 +96,9 @@ layout_mode = 2
 layout_mode = 2
 text = "Kills :"
 
-[node name="Label2" type="Label" parent="UIDeathKills/Player1LeadBoard/Kills" unique_id=943685855]
+[node name="Count" type="Label" parent="UIDeathKills/Player1LeadBoard/Kills" unique_id=943685855]
 layout_mode = 2
-text = "1"
+text = "0"
 
 [node name="Deaths" type="HBoxContainer" parent="UIDeathKills/Player1LeadBoard" unique_id=669539810]
 layout_mode = 2
@@ -107,9 +107,9 @@ layout_mode = 2
 layout_mode = 2
 text = "Deaths :"
 
-[node name="Label2" type="Label" parent="UIDeathKills/Player1LeadBoard/Deaths" unique_id=421486357]
+[node name="Count" type="Label" parent="UIDeathKills/Player1LeadBoard/Deaths" unique_id=421486357]
 layout_mode = 2
-text = "1"
+text = "0"
 
 [node name="Player2LeadBoard" type="VBoxContainer" parent="UIDeathKills" unique_id=716000246]
 visible = false
@@ -132,9 +132,9 @@ layout_mode = 2
 layout_mode = 2
 text = "Kills :"
 
-[node name="Label2" type="Label" parent="UIDeathKills/Player2LeadBoard/Kills" unique_id=2126779816]
+[node name="Count" type="Label" parent="UIDeathKills/Player2LeadBoard/Kills" unique_id=2126779816]
 layout_mode = 2
-text = "1"
+text = "0"
 
 [node name="Deaths" type="HBoxContainer" parent="UIDeathKills/Player2LeadBoard" unique_id=177992686]
 layout_mode = 2
@@ -143,9 +143,9 @@ layout_mode = 2
 layout_mode = 2
 text = "Deaths :"
 
-[node name="Label2" type="Label" parent="UIDeathKills/Player2LeadBoard/Deaths" unique_id=1004271778]
+[node name="Count" type="Label" parent="UIDeathKills/Player2LeadBoard/Deaths" unique_id=1004271778]
 layout_mode = 2
-text = "1"
+text = "0"
 
 [node name="Player3LeadBoard" type="VBoxContainer" parent="UIDeathKills" unique_id=1244046700]
 visible = false
@@ -168,9 +168,9 @@ layout_mode = 2
 layout_mode = 2
 text = "Kills :"
 
-[node name="Label2" type="Label" parent="UIDeathKills/Player3LeadBoard/Kills" unique_id=351308448]
+[node name="Count" type="Label" parent="UIDeathKills/Player3LeadBoard/Kills" unique_id=351308448]
 layout_mode = 2
-text = "1"
+text = "0"
 
 [node name="Deaths" type="HBoxContainer" parent="UIDeathKills/Player3LeadBoard" unique_id=258040364]
 layout_mode = 2
@@ -179,9 +179,9 @@ layout_mode = 2
 layout_mode = 2
 text = "Deaths :"
 
-[node name="Label2" type="Label" parent="UIDeathKills/Player3LeadBoard/Deaths" unique_id=522201661]
+[node name="Count" type="Label" parent="UIDeathKills/Player3LeadBoard/Deaths" unique_id=522201661]
 layout_mode = 2
-text = "1"
+text = "0"
 
 [node name="Player4LeadBoard" type="VBoxContainer" parent="UIDeathKills" unique_id=1182891416]
 visible = false
@@ -207,9 +207,9 @@ layout_mode = 2
 layout_mode = 2
 text = "Kills :"
 
-[node name="Label2" type="Label" parent="UIDeathKills/Player4LeadBoard/Kills" unique_id=400006273]
+[node name="Count" type="Label" parent="UIDeathKills/Player4LeadBoard/Kills" unique_id=400006273]
 layout_mode = 2
-text = "1"
+text = "0"
 
 [node name="Deaths" type="HBoxContainer" parent="UIDeathKills/Player4LeadBoard" unique_id=430493798]
 layout_mode = 2
@@ -218,6 +218,6 @@ layout_mode = 2
 layout_mode = 2
 text = "Deaths :"
 
-[node name="Label2" type="Label" parent="UIDeathKills/Player4LeadBoard/Deaths" unique_id=2098244765]
+[node name="Count" type="Label" parent="UIDeathKills/Player4LeadBoard/Deaths" unique_id=2098244765]
 layout_mode = 2
-text = "1"
+text = "0"

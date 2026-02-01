@@ -16,32 +16,43 @@ public partial class Battlefield : Node3D
         new Vector3(30, 0, 30)
     };
     
+    public List<VBoxContainer> PlayerLeaderBoards { get; private set; } = new List<VBoxContainer>();
+    
     public override void _Ready()
     {
         _phantomCamera = GetNode("PhantomCamera3D");
-        
-        GD.Print("=== Battlefield Ready ===");
-        GD.Print($"PhantomCamera found: {_phantomCamera != null}");
         
         SpawnPlayers();
         
         CallDeferred(nameof(ConfigureCamera));
         
-        int playersNbr = GameManager.Instance.GetPlayerCount();
-        if (playersNbr is <= 4 and > 0)
+        if (_playerNodes.Count is <= 4 and > 0)
         {
-            for (int i = 0; i < playersNbr; i++)
+            for (int i = 0; i < _playerNodes.Count; i++)
             {
-                GetNode<VBoxContainer>($"UIDeathKills/Player{i + 1}LeadBoard").Visible = true;
+                VBoxContainer playerLeadBoard = GetNode<VBoxContainer>($"UIDeathKills/Player{i + 1}LeadBoard");
+                playerLeadBoard.Visible = true;
+                PlayerLeaderBoards.Add(playerLeadBoard);
             }
+        }
+    }
+    
+    public override void _Process(double delta)
+    {
+        // if (Input.IsActionJustPressed("ui_accept"))
+        // {
+        //     DebugCamera();
+        // }
+        foreach (var player in PlayerLeaderBoards)
+        {
+            player.GetNode<Label>("Kills/Count").Text = GameManager.Instance.JoinedPlayers[PlayerLeaderBoards.IndexOf(player)].LeaderBoardEntry.Kills.ToString();
+            player.GetNode<Label>("Deaths/Count").Text = GameManager.Instance.JoinedPlayers[PlayerLeaderBoards.IndexOf(player)].LeaderBoardEntry.Deaths.ToString();
         }
     }
 
     private void SpawnPlayers()
     {
         List<PlayerData> joinedPlayers = GameManager.Instance.JoinedPlayers;
-        
-        GD.Print($"Spawning {joinedPlayers.Count} players");
         
         foreach (PlayerData playerData in joinedPlayers)
         {
@@ -55,7 +66,6 @@ public partial class Battlefield : Node3D
         
         int spawnIndex = playerData.PlayerId;
         
-        playerInstance.Owner = GetTree().CurrentScene;
         AddChild(playerInstance);
         
         playerInstance.GlobalPosition = _spawnPoints[spawnIndex];
@@ -65,8 +75,6 @@ public partial class Battlefield : Node3D
             player.PlayerId = playerData.PlayerId;
             
             _playerNodes.Add(playerInstance);
-            
-            GD.Print($"✅ Spawned Player {playerData.PlayerId} at {_spawnPoints[spawnIndex]}");
         }
     }
     
@@ -83,8 +91,6 @@ public partial class Battlefield : Node3D
             GD.PrintErr("No players to follow!");
             return;
         }
-        
-        GD.Print($"🎥 Configuring camera with {_playerNodes.Count} targets");
         
         var godotArray = new Godot.Collections.Array<Node3D>(_playerNodes);
         
@@ -110,9 +116,6 @@ public partial class Battlefield : Node3D
             
             _phantomCamera.Set("dead_zone_width", 0.05f);
             _phantomCamera.Set("dead_zone_height", 0.05f);
-            
-            GD.Print("✅ Camera: FRAMED mode configured");
-            GD.Print($"   Min distance: 15, Max distance: 50, Divisor: 8");
         }
         else
         {
@@ -123,20 +126,6 @@ public partial class Battlefield : Node3D
             _phantomCamera.Set("follow_damping", true);
             _phantomCamera.Set("follow_damping_value", new Vector3(2.0f, 2.0f, 2.0f));
             _phantomCamera.Set("auto_follow_distance", false);
-            
-            GD.Print("✅ Camera: SIMPLE mode configured");
-        }
-        GD.Print($"📸 Follow offset: {_phantomCamera.Get("follow_offset")}");
-        GD.Print($"📸 Auto distance: {_phantomCamera.Get("auto_follow_distance")}");
-        GD.Print($"📸 Distance divisor: {_phantomCamera.Get("auto_follow_distance_divisor")}");
-    }
-
-    
-    public override void _Process(double delta)
-    {
-        if (Input.IsActionJustPressed("ui_accept"))
-        {
-            DebugCamera();
         }
     }
     

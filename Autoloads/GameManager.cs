@@ -31,7 +31,6 @@ public partial class GameManager : Node
             IsJoined = true,
             LeaderBoardEntry = new PlayerLeaderBoardEntry
             {
-                PlayerId = playerId,
                 Kills = 0,
                 Deaths = 0
             }
@@ -57,7 +56,6 @@ public partial class GameManager : Node
 
 public class PlayerLeaderBoardEntry
 {
-    public int PlayerId { get; set; }
     public int Kills { get; set; }
     public int Deaths { get; set; }
 }
