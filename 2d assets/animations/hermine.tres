@@ -1,0 +1,86 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://cg6qqicgwbqc3"]
+
+[ext_resource type="Texture2D" uid="uid://jgk8kollyauc" path="res://2d assets/spritesheets/hermine_front.png" id="1_80i16"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oopq2"]
+atlas = ExtResource("1_80i16")
+region = Rect2(5400, 0, 1800, 2000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmcg6"]
+atlas = ExtResource("1_80i16")
+region = Rect2(7200, 0, 1800, 2000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4fu8p"]
+atlas = ExtResource("1_80i16")
+region = Rect2(0, 0, 1800, 2000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_frhpa"]
+atlas = ExtResource("1_80i16")
+region = Rect2(1800, 0, 1800, 2000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rnfse"]
+atlas = ExtResource("1_80i16")
+region = Rect2(3600, 0, 1800, 2000)
+
+[resource]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"back_atk",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"back_idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"back_walk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oopq2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gmcg6")
+}],
+"loop": true,
+"name": &"face_atk",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4fu8p")
+}],
+"loop": true,
+"name": &"face_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_frhpa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rnfse")
+}],
+"loop": true,
+"name": &"face_walk",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"side_atk",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"side_idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"side_walk",
+"speed": 5.0
+}]
