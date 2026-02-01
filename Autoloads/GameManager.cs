@@ -7,6 +7,15 @@ public partial class GameManager : Node
     
     public List<PlayerData> JoinedPlayers { get; private set; } = new();
     
+    private AudioStreamPlayer _killingSpreePlayer;
+    private PlayerData _lastKiller;
+    private int _killingSpreeCount = 0;
+
+    public override void _Ready()
+    {
+        base._Ready();
+    }
+
     public override void _EnterTree()
     {
         Instance = this;
@@ -65,6 +74,25 @@ public partial class GameManager : Node
 
     public void Killing(Player killed, Player killer)
     {
+        if (_lastKiller == null)
+        {
+            // Play firstKill
+            _killingSpreeCount = 1;
+        } else if (_lastKiller.PlayerId == killer.PlayerId)
+        {
+            _killingSpreeCount ++;
+            if (_killingSpreeCount == 2)
+            {
+                // Play doubleKill
+            } else if (_killingSpreeCount == 5)
+            {
+                // Meurtre de masse
+            }
+        } else
+        {
+            _killingSpreeCount = 1;
+        }
+        _lastKiller = JoinedPlayers[killer.PlayerId];
         JoinedPlayers[killer.PlayerId].LeaderBoardEntry.Kills++;
         JoinedPlayers[killed.PlayerId].LeaderBoardEntry.Deaths++;
     }

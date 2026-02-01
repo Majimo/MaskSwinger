@@ -85,11 +85,15 @@ public partial class Battlefield : Node3D
 
     private void OnMusicFinished()
     {
-        GetNode<Control>("End").Visible = true;
-        PlayerData winningPlayerData = GameManager.Instance.GetTopPlayer();
-        GetNode<Label>("End/VBoxContainer/Winner").Text = 
-            $"Player {winningPlayerData.PlayerId} avec {winningPlayerData.LeaderBoardEntry.Kills} kills et {winningPlayerData.LeaderBoardEntry.Deaths} morts";
-        GetTree().Paused = true;
+        GetNode<AudioStreamPlayer>("FinDuTempsPlayer").Play();
+        this.ExecuteAfter(1.0f , () =>
+        {
+            GetNode<Control>("End").Visible = true;
+            PlayerData winningPlayerData = GameManager.Instance.GetTopPlayer();
+            GetNode<Label>("End/VBoxContainer/Winner").Text = 
+                $"Player {winningPlayerData.PlayerId} avec {winningPlayerData.LeaderBoardEntry.Kills} kills et {winningPlayerData.LeaderBoardEntry.Deaths} morts";
+            GetTree().Paused = true;
+        });
     }
     
     private void ConfigureCamera()
