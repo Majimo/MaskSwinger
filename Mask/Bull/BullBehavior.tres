@@ -7,6 +7,7 @@
 
 [resource]
 script = ExtResource("1_igu2o")
+AttackDuration = 0.25
 AvatarFrames = ExtResource("1_tm386")
 MaskTexture = ExtResource("2_kiokn")
 MaskSound = ExtResource("2_7sier")

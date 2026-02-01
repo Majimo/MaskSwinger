@@ -1,12 +1,13 @@
 [gd_resource type="Resource" format=3 uid="uid://c8464ackpp3e2"]
 
-[ext_resource type="SpriteFrames" uid="uid://c832i873j2gpc" path="res://2d assets/animations/base.tres" id="1_id7xh"]
+[ext_resource type="SpriteFrames" uid="uid://bddp01o738var" path="res://2d assets/animations/owl.tres" id="1_id7xh"]
 [ext_resource type="Script" uid="uid://bllaghlhagh4y" path="res://Mask/Owl/OwlBehavior.cs" id="1_pykgn"]
 [ext_resource type="AudioStream" uid="uid://ca8r1vq8gjbr2" path="res://AudioAssets/SoundEffects/Chouette.mp3" id="2_5f3f7"]
-[ext_resource type="Texture2D" uid="uid://bqykq2ueksvhs" path="res://icon.svg" id="3_kfo5l"]
+[ext_resource type="Texture2D" uid="uid://vryx7w530ou2" path="res://2d assets/masks/Mask-Owl.png" id="3_5f3f7"]
 
 [resource]
 script = ExtResource("1_pykgn")
-MaskColor = Color(0.99607843, 0.95686275, 0.3254902, 1)
+AvatarFrames = ExtResource("1_id7xh")
+MaskTexture = ExtResource("3_5f3f7")
 MaskSound = ExtResource("2_5f3f7")
 metadata/_custom_type_script = "uid://cdd2y1cq0uamd"
