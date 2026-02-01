@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://vb06kv4n083e"
 path.s3tc="res://.godot/imported/ram_face.png-135af9c2f8b9a0a7b9fc77111f5f412a.s3tc.ctex"
+path.etc2="res://.godot/imported/ram_face.png-135af9c2f8b9a0a7b9fc77111f5f412a.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://2d assets/spritesheets/ram_face.png"
-dest_files=["res://.godot/imported/ram_face.png-135af9c2f8b9a0a7b9fc77111f5f412a.s3tc.ctex"]
+dest_files=["res://.godot/imported/ram_face.png-135af9c2f8b9a0a7b9fc77111f5f412a.s3tc.ctex", "res://.godot/imported/ram_face.png-135af9c2f8b9a0a7b9fc77111f5f412a.etc2.ctex"]
 
 [params]
 

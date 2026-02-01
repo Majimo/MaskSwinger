@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://iev8vdj4hkin"
 path.s3tc="res://.godot/imported/owl_side.png-6d1e1174d269301e3dd55adb6dc98451.s3tc.ctex"
+path.etc2="res://.godot/imported/owl_side.png-6d1e1174d269301e3dd55adb6dc98451.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://2d assets/spritesheets/owl_side.png"
-dest_files=["res://.godot/imported/owl_side.png-6d1e1174d269301e3dd55adb6dc98451.s3tc.ctex"]
+dest_files=["res://.godot/imported/owl_side.png-6d1e1174d269301e3dd55adb6dc98451.s3tc.ctex", "res://.godot/imported/owl_side.png-6d1e1174d269301e3dd55adb6dc98451.etc2.ctex"]
 
 [params]
 

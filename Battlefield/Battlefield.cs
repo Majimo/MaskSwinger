@@ -3,13 +3,11 @@ using System.Collections.Generic;
 
 public partial class Battlefield : Node3D
 {
+    private List<VBoxContainer> PlayerLeaderBoards { get; set; } = new List<VBoxContainer>();
     private PackedScene PlayerScene { get; set; } = GD.Load<PackedScene>("res://Player/Player.tscn");
     private Node _phantomCamera;
-    
     private List<Node3D> _playerNodes = new List<Node3D>();
-    
     private AudioStreamPlayer _musicPlayer;
-    
     private Vector3[] _spawnPoints = new Vector3[]
     {
         new Vector3(-30, 0, -30),
@@ -17,8 +15,8 @@ public partial class Battlefield : Node3D
         new Vector3(-30, 0, 30),
         new Vector3(30, 0, 30)
     };
-    
-    public List<VBoxContainer> PlayerLeaderBoards { get; private set; } = new List<VBoxContainer>();
+    private float _timeRemaining = 144.0f; // 2min24s = 144 secondes
+    private bool _isRunning = true;
     
     public override void _Ready()
     {
@@ -53,6 +51,24 @@ public partial class Battlefield : Node3D
             player.GetNode<Label>("Kills/Count").Text = GameManager.Instance.JoinedPlayers[PlayerLeaderBoards.IndexOf(player)].LeaderBoardEntry.Kills.ToString();
             player.GetNode<Label>("Deaths/Count").Text = GameManager.Instance.JoinedPlayers[PlayerLeaderBoards.IndexOf(player)].LeaderBoardEntry.Deaths.ToString();
         }
+        
+        if (!_isRunning) return;
+        
+        _timeRemaining -= (float)delta;
+        GetNode<Label>("TimeRemaining/Label").Text = FormatTime(_timeRemaining);
+        
+        if (_timeRemaining <= 0)
+        {
+            _timeRemaining = 0;
+            _isRunning = false;
+        }
+    }
+    
+    private string FormatTime(float seconds)
+    {
+        int minutes = (int)(seconds / 60);
+        int secs = (int)(seconds % 60);
+        return $"{minutes}:{secs:D2}"; // Format : "2:24", "1:05", "0:00"
     }
 
     private void SpawnPlayers()

@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://cika51aqohii6"
 path.s3tc="res://.godot/imported/Player-Base-front.png-69abc55b8f5e5331d518d2b411d7d0b5.s3tc.ctex"
+path.etc2="res://.godot/imported/Player-Base-front.png-69abc55b8f5e5331d518d2b411d7d0b5.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://2d assets/spritesheets/Player-Base-front.png"
-dest_files=["res://.godot/imported/Player-Base-front.png-69abc55b8f5e5331d518d2b411d7d0b5.s3tc.ctex"]
+dest_files=["res://.godot/imported/Player-Base-front.png-69abc55b8f5e5331d518d2b411d7d0b5.s3tc.ctex", "res://.godot/imported/Player-Base-front.png-69abc55b8f5e5331d518d2b411d7d0b5.etc2.ctex"]
 
 [params]
 

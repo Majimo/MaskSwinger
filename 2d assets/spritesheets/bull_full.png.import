@@ -4,15 +4,16 @@ importer="texture"
 type="CompressedTexture2D"
 uid="uid://bxxuxfjhaikla"
 path.s3tc="res://.godot/imported/bull_full.png-1ca263a7a2ea31b87a850983af7088a6.s3tc.ctex"
+path.etc2="res://.godot/imported/bull_full.png-1ca263a7a2ea31b87a850983af7088a6.etc2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://2d assets/spritesheets/bull_full.png"
-dest_files=["res://.godot/imported/bull_full.png-1ca263a7a2ea31b87a850983af7088a6.s3tc.ctex"]
+dest_files=["res://.godot/imported/bull_full.png-1ca263a7a2ea31b87a850983af7088a6.s3tc.ctex", "res://.godot/imported/bull_full.png-1ca263a7a2ea31b87a850983af7088a6.etc2.ctex"]
 
 [params]
 
