@@ -4,11 +4,11 @@
 [ext_resource type="Material" uid="uid://dcvbrligww5i" path="res://3d assets/materials/ground.tres" id="2_p0coo"]
 [ext_resource type="PackedScene" uid="uid://b22v2q28f1bjx" path="res://3d assets/scenes/muret.tscn" id="3_707xs"]
 [ext_resource type="PackedScene" uid="uid://s67rcabiqgw4" path="res://3d assets/scenes/luciole_particles.tscn" id="4_6mkuf"]
-[ext_resource type="PackedScene" uid="uid://w1rk7iiysevn" path="res://2d assets/scenes/base_player_animations.tscn" id="5_4hnps"]
+[ext_resource type="PackedScene" uid="uid://drrga33bag8dm" path="res://Player/Player.tscn" id="5_4hnps"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_o7hdf"]
 material = ExtResource("2_p0coo")
-size = Vector2(100, 100)
+size = Vector2(120, 120)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_o7hdf"]
 size = Vector3(100, 1, 100)
@@ -78,15 +78,16 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.33
 [node name="world" type="Node3D" parent="." unique_id=1580102496]
 
 [node name="wall" parent="world" unique_id=1098000650 instance=ExtResource("1_oabow")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.273468, 0, 0)
 
 [node name="wall2" parent="world" unique_id=1647687490 instance=ExtResource("1_oabow")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 11.70697, 0, 0)
 
 [node name="wall3" parent="world" unique_id=664614195 instance=ExtResource("1_oabow")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, -11.229132)
 
 [node name="wall4" parent="world" unique_id=1963189770 instance=ExtResource("1_oabow")]
-transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 0, 0, 0)
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 0, 0, 10.512381)
 
 [node name="ground" type="MeshInstance3D" parent="world" unique_id=1904007460]
 mesh = SubResource("PlaneMesh_o7hdf")
@@ -99,5 +100,8 @@ shape = SubResource("BoxShape3D_o7hdf")
 
 [node name="luciole_particles" parent="." unique_id=1785180924 instance=ExtResource("4_6mkuf")]
 
-[node name="base_player_animations" parent="." unique_id=376020763 instance=ExtResource("5_4hnps")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.6635838, 0)
+[node name="Player" parent="." unique_id=381286778 instance=ExtResource("5_4hnps")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, -1.2546272, 2.3848042, 27.070454)
+
+[node name="Player2" parent="." unique_id=1761777092 instance=ExtResource("5_4hnps")]
+transform = Transform3D(2, 0, 0, 0, -8.742278e-08, 2, 0, -2, -8.742278e-08, -6.852051, 2.3848042, -19.489311)

@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://w1rk7iiysevn"]
 
-[ext_resource type="SpriteFrames" uid="uid://c832i873j2gpc" path="res://2d assets/animations/base.tres" id="1_1po0w"]
+[ext_resource type="SpriteFrames" uid="uid://bojelx27kv5jn" path="res://2d assets/animations/ram.tres" id="1_cpqnc"]
 [ext_resource type="Script" uid="uid://dxufsh4jytkjc" path="res://2d assets/scenes/animation_controller.gd" id="2_cpqnc"]
 
 [node name="base_player_animations" type="AnimatedSprite3D" unique_id=376020763]
 transform = Transform3D(0.42, 0, 0, 0, 0.42, 0, 0, 0, 0.42, 0, 2.089542, 0)
-sprite_frames = ExtResource("1_1po0w")
+sprite_frames = ExtResource("1_cpqnc")
 animation = &"side_walk"
-frame_progress = 0.6086898
+frame_progress = 0.14485998
 script = ExtResource("2_cpqnc")
