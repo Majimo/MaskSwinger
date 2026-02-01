@@ -26,14 +26,13 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_6tm10")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1252589309]
+[node name="Background" type="TextureRect" parent="." unique_id=654756550]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.46034718, 0.46034718, 0.46034712, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=134340831]
 layout_mode = 1
@@ -42,10 +41,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
+theme_override_constants/margin_left = 80
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 80
+theme_override_constants/margin_bottom = 80
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1565059737]
 layout_mode = 2
@@ -71,17 +70,29 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Player0" unique_id=590933464]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/Player0" unique_id=1915605420]
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Player0" unique_id=1754133704]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Player0/MarginContainer" unique_id=590933464]
 layout_mode = 2
 theme_override_constants/separation = 30
 
-[node name="Avatar" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/Player0/VBoxContainer" unique_id=1168432275]
+[node name="Avatar" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/Player0/MarginContainer/VBoxContainer" unique_id=1168432275]
 modulate = Color(1, 1, 1, 0.29411766)
 layout_mode = 2
 texture = ExtResource("3_6tm10")
 expand_mode = 5
 
-[node name="JoinButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/Player0/VBoxContainer" unique_id=770005506]
+[node name="JoinButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/Player0/MarginContainer/VBoxContainer" unique_id=770005506]
 layout_mode = 2
 text = "Join"
 
@@ -89,17 +100,27 @@ text = "Join"
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Player1" unique_id=895632709]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/Player1" unique_id=2102478862]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Player1" unique_id=1211048547]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Player1/MarginContainer" unique_id=1669192357]
 layout_mode = 2
 theme_override_constants/separation = 30
 
-[node name="Avatar" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/Player1/VBoxContainer" unique_id=1670585876]
+[node name="Avatar" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/Player1/MarginContainer/VBoxContainer" unique_id=542006308]
 modulate = Color(1, 1, 1, 0.29411766)
 layout_mode = 2
 texture = ExtResource("3_6tm10")
 expand_mode = 5
 
-[node name="JoinButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/Player1/VBoxContainer" unique_id=1937909462]
+[node name="JoinButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/Player1/MarginContainer/VBoxContainer" unique_id=746848259]
 layout_mode = 2
 text = "Join"
 
@@ -107,17 +128,27 @@ text = "Join"
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Player2" unique_id=613705885]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/Player2" unique_id=299553010]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Player2" unique_id=1604353158]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Player2/MarginContainer" unique_id=1184477571]
 layout_mode = 2
 theme_override_constants/separation = 30
 
-[node name="Avatar" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/Player2/VBoxContainer" unique_id=1442648776]
+[node name="Avatar" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/Player2/MarginContainer/VBoxContainer" unique_id=1114508473]
 modulate = Color(1, 1, 1, 0.29411766)
 layout_mode = 2
 texture = ExtResource("3_6tm10")
 expand_mode = 5
 
-[node name="JoinButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/Player2/VBoxContainer" unique_id=1223679987]
+[node name="JoinButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/Player2/MarginContainer/VBoxContainer" unique_id=1323011800]
 layout_mode = 2
 text = "Join"
 
@@ -125,23 +156,34 @@ text = "Join"
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Player3" unique_id=994130363]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/Player3" unique_id=1966136758]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Player3" unique_id=324387009]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/Player3/MarginContainer" unique_id=1949369386]
 layout_mode = 2
 theme_override_constants/separation = 30
 
-[node name="Avatar" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/Player3/VBoxContainer" unique_id=1398315546]
+[node name="Avatar" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/Player3/MarginContainer/VBoxContainer" unique_id=961847061]
 modulate = Color(1, 1, 1, 0.29411766)
 layout_mode = 2
 texture = ExtResource("3_6tm10")
 expand_mode = 5
 
-[node name="JoinButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/Player3/VBoxContainer" unique_id=925395640]
+[node name="JoinButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/Player3/MarginContainer/VBoxContainer" unique_id=1897366712]
 layout_mode = 2
 text = "Join"
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer" unique_id=1809948471]
 layout_mode = 2
 theme_override_constants/margin_left = 300
+theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 300
 
 [node name="StartButton" type="Button" parent="MarginContainer/VBoxContainer/MarginContainer" unique_id=306960220]

@@ -23,7 +23,7 @@ public partial class Lobby : Node
         
         for (var i = 0; i <= 3; i++)
         {
-            var joinAvatar = JoinButtonsContainer.GetNode<TextureRect>($"Player{i}/VBoxContainer/Avatar");
+            var joinAvatar = JoinButtonsContainer.GetNode<TextureRect>($"Player{i}/MarginContainer/VBoxContainer/Avatar");
             joinAvatar.Modulate = Color.Color8(255, 255, 255, 75);
         }
         if (StartButton != null) StartButton.Disabled = true;
@@ -54,13 +54,12 @@ public partial class Lobby : Node
     {
         try
         {
-            var joinButton = JoinButtonsContainer.GetNode<Button>($"Player{playerId}/VBoxContainer/JoinButton");
-            var joinAvatar = JoinButtonsContainer.GetNode<TextureRect>($"Player{playerId}/VBoxContainer/Avatar");
+            var joinButton = JoinButtonsContainer.GetNode<Button>($"Player{playerId}/MarginContainer/VBoxContainer/JoinButton");
+            var joinAvatar = JoinButtonsContainer.GetNode<TextureRect>($"Player{playerId}/MarginContainer/VBoxContainer/Avatar");
             
             _playersJoined[playerId] = true;
             
             joinButton.Text = "Ready!";
-            joinButton.Disabled = true;
             joinAvatar.Modulate = _playerColors[playerId];
             
             GameManager.Instance.AddPlayer(playerId, _playerColors[playerId]);
