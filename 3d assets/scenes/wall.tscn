@@ -8,6 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://k0eao7l2cn2o" path="res://3d assets/scenes/flower.tscn" id="6_c0xvo"]
 [ext_resource type="PackedScene" uid="uid://dpjx4wr503mcr" path="res://3d assets/scenes/flowerhb.tscn" id="7_jnurr"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_jnurr"]
+size = Vector3(15.710571, 2016.1807, 127.05078)
+
 [node name="wall" type="Node3D" unique_id=1098000650]
 
 [node name="arbre1" parent="." unique_id=1989823110 instance=ExtResource("1_yj3w5")]
@@ -378,3 +381,10 @@ transform = Transform3D(-0.8628933, 0, -0.5053862, 0, 1, 0, 0.5053862, 0, -0.862
 
 [node name="flower16" parent="." unique_id=1403667187 instance=ExtResource("7_jnurr")]
 transform = Transform3D(-0.884467, 0, -0.46660256, 0, 1, 0, 0.46660256, 0, -0.884467, -42.92839, 9.536743e-07, 53.06501)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=2053911324]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -49.62345, 9.718219, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=931259677]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.89385986, 991.8395, 0)
+shape = SubResource("BoxShape3D_jnurr")
