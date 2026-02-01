@@ -2,10 +2,12 @@
 
 [ext_resource type="Script" uid="uid://0wbd0pem802g" path="res://Mask/Chameleon/ChameleonBehavior.cs" id="1_loem2"]
 [ext_resource type="SpriteFrames" uid="uid://cnba0wvw8e1xy" path="res://2d assets/animations/chameleon.tres" id="1_w2ob7"]
+[ext_resource type="AudioStream" uid="uid://jk6hsqank65k" path="res://AudioAssets/SoundEffects/Cameleon.mp3" id="2_26nym"]
 [ext_resource type="Texture2D" uid="uid://dvmc7rntfpwd1" path="res://2d assets/masks/J_CHAM.png" id="2_esr7r"]
 
 [resource]
 script = ExtResource("1_loem2")
 AvatarFrames = ExtResource("1_w2ob7")
 MaskTexture = ExtResource("2_esr7r")
+MaskSound = ExtResource("2_26nym")
 metadata/_custom_type_script = "uid://cdd2y1cq0uamd"
