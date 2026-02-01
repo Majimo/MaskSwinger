@@ -5,6 +5,7 @@
 
 [node name="base_player_animations" type="AnimatedSprite3D" unique_id=376020763]
 transform = Transform3D(0.42, 0, 0, 0, 0.42, 0, 0, 0, 0.42, 0, 2.089542, 0)
+billboard = 1
 sprite_frames = ExtResource("1_cpqnc")
 animation = &"side_walk"
 frame_progress = 0.14485998

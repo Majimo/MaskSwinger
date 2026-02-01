@@ -2,6 +2,7 @@ extends AnimatedSprite3D
 class_name PlayerAnimationController
 
 var player
+var camera: Camera3D
 
 enum animation_side {
 	FACE,
@@ -12,6 +13,9 @@ enum animation_side {
 
 func _ready() -> void:
 	_play_idle(animation_side.FACE)
+	camera = get_node("/root/Main/Camera3D")
+
+
 
 func _play_idle(side: animation_side) -> void:
 	flip_h = false
