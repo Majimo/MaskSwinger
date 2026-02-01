@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dthxvlfhmiye1" path="res://Mask/Mask.cs" id="1_rrwd6"]
 [ext_resource type="Script" uid="uid://cdd2y1cq0uamd" path="res://Player/PlayerBehavior.cs" id="2_ltxsw"]
+[ext_resource type="SpriteFrames" uid="uid://c832i873j2gpc" path="res://2d assets/animations/base.tres" id="2_otmu0"]
 [ext_resource type="Texture2D" uid="uid://bqykq2ueksvhs" path="res://icon.svg" id="3_v3y8u"]
+[ext_resource type="Script" uid="uid://dawv1mx5nherw" path="res://Mask/resize.gd" id="5_rv8l5"]
 
 [sub_resource type="Resource" id="Resource_otmu0"]
 script = ExtResource("2_ltxsw")
@@ -15,9 +17,14 @@ script = ExtResource("1_rrwd6")
 Behavior = SubResource("Resource_otmu0")
 
 [node name="Sprite" type="Sprite3D" parent="." unique_id=1586256970]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.64676523, 0)
 texture = ExtResource("3_v3y8u")
+script = ExtResource("5_rv8l5")
 
 [node name="Area" type="Area3D" parent="." unique_id=2040927948]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7869606, 0)
 
 [node name="CollisionShape" type="CollisionShape3D" parent="Area" unique_id=672123985]
 shape = SubResource("SphereShape3D_rrwd6")
+
+[connection signal="texture_changed" from="Sprite" to="Sprite" method="_on_texture_changed"]

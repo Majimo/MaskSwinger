@@ -12,12 +12,12 @@ public partial class Mask : Node3D
 	{
 		_area.BodyEntered += AreaOnBodyEntered;
 
-		var tween = CreateTween();
-
-		tween.TweenProperty(this, "position", this.Position with { Z = this.Position.Z + 3 }, 2);
-		tween.TweenProperty(this, "position", this.Position with { Z = this.Position.Z }, 2);
-
-		tween.SetLoops();
+		//var tween = CreateTween();
+//
+		//tween.TweenProperty(this, "position", this.Position with { Z = this.Position.Z + 3 }, 2);
+		//tween.TweenProperty(this, "position", this.Position with { Z = this.Position.Z }, 2);
+//
+		//tween.SetLoops();
 
 		var sprite = GetNode<Sprite3D>("Sprite");
 		
