@@ -73,10 +73,10 @@ follow_mode = 3
 tween_resource = SubResource("Resource_8joom")
 follow_offset = Vector3(0, 25, 35)
 follow_damping = true
+follow_damping_value = Vector3(0.01, 0.01, 0.01)
 auto_follow_distance = true
-auto_follow_distance_min = 2.62
 auto_follow_distance_max = 50.0
-auto_follow_distance_divisor = 51.66
+auto_follow_distance_divisor = 60.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=691569204]
 stream = ExtResource("7_pwejh")
