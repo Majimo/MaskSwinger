@@ -56,6 +56,12 @@ public partial class Battlefield : Node3D
         
         _timeRemaining -= (float)delta;
         GetNode<Label>("TimeRemaining/Label").Text = FormatTime(_timeRemaining);
+
+        if (_timeRemaining <= 5.5f)
+        {
+            GetNode<Label>("TimeRemaining/Label2").Visible = true;
+            GetNode<Label>("TimeRemaining/Label2").Text = _timeRemaining.ToString("F0");
+        }
         
         if (_timeRemaining <= 0)
         {
@@ -102,6 +108,7 @@ public partial class Battlefield : Node3D
     private void OnMusicFinished()
     {
         GetNode<AudioStreamPlayer>("FinDuTempsPlayer").Play();
+        GetNode<Label>("TimeRemaining/Label2").Visible = true;
         this.ExecuteAfter(1.0f , () =>
         {
             GetNode<Control>("End").Visible = true;
