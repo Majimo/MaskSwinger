@@ -1,3 +1,4 @@
+using System;
 using Godot;
 using System.Collections.Generic;
 
@@ -11,9 +12,27 @@ public partial class GameManager : Node
     private PlayerData _lastKiller;
     private int _killingSpreeCount = 0;
 
+    private AudioStream[] _firstBloodSounds;
+    private AudioStream[] _doubleDeathSounds;
+    private AudioStream[] _killingSpreeSounds;
+
     public override void _Ready()
     {
-        base._Ready();
+        _killingSpreePlayer = new AudioStreamPlayer();
+        _firstBloodSounds = [
+            GD.Load<AudioStream>("res://AudioAssets/SoundEffects/Premier_Meutre_01.mp3"),
+            GD.Load<AudioStream>("res://AudioAssets/SoundEffects/Premier_Meutre_02.mp3"),
+            GD.Load<AudioStream>("res://AudioAssets/SoundEffects/Premier_Meutre_03.mp3")
+        ];
+        _doubleDeathSounds = [
+            GD.Load<AudioStream>("res://AudioAssets/SoundEffects/Double_deces_01.mp3"),
+            GD.Load<AudioStream>("res://AudioAssets/SoundEffects/Double_deces_02.mp3")
+        ];
+        _killingSpreeSounds = [
+            GD.Load<AudioStream>("res://AudioAssets/SoundEffects/Morts_de_masse_01.mp3"),
+            GD.Load<AudioStream>("res://AudioAssets/SoundEffects/Morts_de_masse_02.mp3")
+        ];
+        AddChild(_killingSpreePlayer);
     }
 
     public override void _EnterTree()
@@ -77,6 +96,7 @@ public partial class GameManager : Node
         if (_lastKiller == null)
         {
             // Play firstKill
+            AddAndPlayAudio(_firstBloodSounds);
             _killingSpreeCount = 1;
         } else if (_lastKiller.PlayerId == killer.PlayerId)
         {
@@ -84,9 +104,11 @@ public partial class GameManager : Node
             if (_killingSpreeCount == 2)
             {
                 // Play doubleKill
+                AddAndPlayAudio(_doubleDeathSounds);
             } else if (_killingSpreeCount == 5)
             {
                 // Meurtre de masse
+                AddAndPlayAudio(_killingSpreeSounds);
             }
         } else
         {
@@ -95,6 +117,14 @@ public partial class GameManager : Node
         _lastKiller = JoinedPlayers[killer.PlayerId];
         JoinedPlayers[killer.PlayerId].LeaderBoardEntry.Kills++;
         JoinedPlayers[killed.PlayerId].LeaderBoardEntry.Deaths++;
+    }
+    
+    private void AddAndPlayAudio(AudioStream[] audios)
+    {
+        var sound = audios[Random.Shared.Next(audios.Length)];
+        _killingSpreePlayer.Stream = sound;
+        _killingSpreePlayer.VolumeDb = 24;
+        _killingSpreePlayer.Play();
     }
 }
 

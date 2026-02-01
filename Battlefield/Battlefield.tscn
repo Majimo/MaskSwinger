@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="6_8joom"]
 [ext_resource type="AudioStream" uid="uid://w5nxmx34rpof" path="res://AudioAssets/Musics/Battle_theme.mp3" id="7_pwejh"]
 [ext_resource type="FontFile" uid="uid://d0y83c0weoe1c" path="res://fonts/UnrealT.ttf" id="8_86hbi"]
+[ext_resource type="AudioStream" uid="uid://dovyybpm7bo3q" path="res://AudioAssets/SoundEffects/Fin_du_Temps_01.mp3" id="9_qi62q"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8joom"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -266,3 +267,7 @@ layout_mode = 2
 theme = SubResource("Theme_86hbi")
 text = "gagne la partie !"
 horizontal_alignment = 1
+
+[node name="FinDuTempsPlayer" type="AudioStreamPlayer" parent="." unique_id=1105940934]
+stream = ExtResource("9_qi62q")
+volume_db = 24.0
