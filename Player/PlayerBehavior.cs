@@ -24,24 +24,16 @@ public partial class PlayerBehavior : Resource
 	
 	#region attack
 	
-	public virtual void Attack(Player player, Vector3 direction)
+	public virtual void Attack(Player player, Direction direction)
 	{
+		player.PlayAttackAnimation(direction);
+		
 		player.ExecuteAfter(AttackDuration, () =>
 		{
 			player.IsAttacking = false;
 		});
 		
-		var t = Mathf.Atan2(direction.Z, direction.X);
-
-		var dir = t switch
-		{
-			>= -Mathf.Pi / 4 and < Mathf.Pi / 4 => Direction.Right,
-			>= Mathf.Pi / 4 and < 3 * Mathf.Pi / 4 => Direction.Down,
-			>= 3 * Mathf.Pi / 4 or < -3 * Mathf.Pi / 4 => Direction.Left,
-			_ => Direction.Up
-		};
-
-		var hitZone = player.GetNode<Area3D>($"%AttackZone{dir}");
+		var hitZone = player.GetNode<Area3D>($"%AttackZone{direction}");
 
 		var hits = hitZone.GetOverlappingBodies().OfType<Player>();
 		
@@ -57,6 +49,8 @@ public partial class PlayerBehavior : Resource
 	
     public virtual void Dash(Player player)
     {
+	    player.PlayDashAnimation();
+	    
         var dashVelocity = player.Velocity * DashSpeedFactor;
         player.Velocity = dashVelocity;
 			
@@ -69,6 +63,8 @@ public partial class PlayerBehavior : Resource
     
 	public virtual void Shield(Player player)
 	{
+		player.PlayShieldAnimation();
+		
 		var initialSpeed = this.Speed;
 		
 		this.Speed /= ShieldSpeedDivider;

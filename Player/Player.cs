@@ -1,8 +1,12 @@
 using Godot;
+using MaskSwinger.Player;
 
 public partial class Player : CharacterBody3D
 {
 	private const float DeadZone = 0.2f;
+	
+	private AnimatedSprite3D _sprite;
+	private Direction _lastDirection;
 	
 	[Export] public int PlayerId { get; set; }
 	
@@ -10,37 +14,70 @@ public partial class Player : CharacterBody3D
 	[Export] public bool IsShielding { get; set; } 
 	[Export] public bool IsAttacking { get; set; } 
 	
-	public PlayerBehavior Behavior = new PlayerBehavior();
+	public PlayerBehavior Behavior { get; private set; }
+
+	public override void _Ready()
+	{
+		_sprite = this.GetNode<AnimatedSprite3D>("Animation");
+		
+		this.ChangeBehavior(new PlayerBehavior());
+	}
 
 	public override void _PhysicsProcess(double delta)
 	{
-		if (!IsDashing)
+		if (!IsDashing && !IsAttacking)
 		{
-			var direction = Vector3.Zero;
+			var velocity = Vector3.Zero;
 
 			var xAxis = Input.GetJoyAxis(this.PlayerId, JoyAxis.LeftX);
 			if (Mathf.Abs(xAxis) > DeadZone)
 			{
-				direction.X = xAxis;
+				velocity.X = xAxis;
 			} 
 			
 			var yAxis = Input.GetJoyAxis(this.PlayerId, JoyAxis.LeftY);
 			if (Mathf.Abs(yAxis) > DeadZone)
 			{
-				direction.Z = yAxis;
+				velocity.Z = yAxis;
 			}
 
-			if (direction != Vector3.Zero)
+			if (velocity != Vector3.Zero)
 			{
-				direction = direction.Normalized();
+				velocity = velocity.Normalized();
+				
+				_lastDirection = GetDirection(velocity);
+				
+				_sprite.Call("_play_walk", (int)_lastDirection);
+			}
+			else
+			{
+				_sprite.Call("_play_idle", (int)_lastDirection);
 			}
 			
-			this.Velocity = direction * this.Behavior.Speed;
+			this.Velocity = velocity * this.Behavior.Speed;
 		}
-		
-		this.MoveAndSlide();
+
+		if (!IsAttacking)
+		{
+			this.MoveAndSlide();
+		}
 	}
 
+	public void PlayAttackAnimation(Direction direction)
+	{
+		_sprite.Call("_play_atk", (int)direction);
+	}
+	
+	public void PlayDashAnimation()
+	{
+		_sprite.Call("_play_dash", (int)_lastDirection);
+	}
+	
+	public void PlayShieldAnimation()
+	{
+		_sprite.Call("_play_shield", (int)_lastDirection);
+	}
+	
 	public void Hit()
 	{
 		this.ProcessMode = ProcessModeEnum.Disabled;
@@ -52,5 +89,28 @@ public partial class Player : CharacterBody3D
 			this.ProcessMode = ProcessModeEnum.Inherit;
 			this.Visible = true;
 		});
+	}
+
+	public void ChangeBehavior(PlayerBehavior behavior)
+	{
+		this.Behavior = behavior;
+		
+		_sprite.SpriteFrames = behavior.AvatarFrames;
+		_sprite.Modulate = behavior.MaskColor;
+	}
+
+	private static Direction GetDirection(Vector3 velocity)
+	{
+		var t = Mathf.Atan2(velocity.Z, velocity.X);
+
+		var direction = t switch
+		{
+			>= -Mathf.Pi / 4 and < Mathf.Pi / 4 => Direction.Right,
+			>= Mathf.Pi / 4 and < 3 * Mathf.Pi / 4 => Direction.Down,
+			>= 3 * Mathf.Pi / 4 or < -3 * Mathf.Pi / 4 => Direction.Left,
+			_ => Direction.Up
+		};
+
+		return direction;
 	}
 }

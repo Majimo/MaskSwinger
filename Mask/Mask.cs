@@ -36,14 +36,8 @@ public partial class Mask : Node3D
 
 		this.Spawner.ReleaseMask();
 		
-		this.QueueFree();
+		player.ChangeBehavior(this.Behavior);
 		
-		// if (player.Behavior is not null)
-		// {
-		// 	// TODO : drop mask	
-		// }
-		//
-		// // TODO : add mask to player
-		// //player.Behavior = this.Behavior;
+		this.QueueFree();
 	}
 }
