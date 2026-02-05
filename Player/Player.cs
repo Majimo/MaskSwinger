@@ -3,8 +3,6 @@ using MaskSwinger.Player;
 
 public partial class Player : CharacterBody3D
 {
-	private const float DeadZone = 0.2f;
-	
 	private AnimatedSprite3D _sprite;
 	private Direction _lastDirection;
 	private AudioStreamPlayer _swingAudioPlayer;
@@ -39,18 +37,9 @@ public partial class Player : CharacterBody3D
 		{
 			var velocity = Vector3.Zero;
 
-			var xAxis = Input.GetJoyAxis(this.PlayerId, JoyAxis.LeftX);
-			if (Mathf.Abs(xAxis) > DeadZone)
-			{
-				velocity.X = xAxis;
-			} 
+			velocity.Z = Input.GetActionStrength($"player_{this.PlayerId}_down") - Input.GetActionStrength($"player_{this.PlayerId}_up");
+			velocity.X = Input.GetActionStrength($"player_{this.PlayerId}_right") - Input.GetActionStrength($"player_{this.PlayerId}_left");
 			
-			var yAxis = Input.GetJoyAxis(this.PlayerId, JoyAxis.LeftY);
-			if (Mathf.Abs(yAxis) > DeadZone)
-			{
-				velocity.Z = yAxis;
-			}
-
 			if (velocity != Vector3.Zero)
 			{
 				velocity = velocity.Normalized();

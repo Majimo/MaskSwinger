@@ -1,12 +1,13 @@
 using System;
 using Godot;
 using System.Collections.Generic;
+using System.Linq;
 
 public partial class GameManager : Node
 {
     public static GameManager Instance { get; private set; }
-    
-    public List<PlayerData> JoinedPlayers { get; private set; } = new();
+
+    public Dictionary<int, PlayerData> JoinedPlayers { get; private set; } = [];
     
     private AudioStreamPlayer _killingSpreePlayer;
     private PlayerData _lastKiller;
@@ -52,7 +53,7 @@ public partial class GameManager : Node
     
     public void AddPlayer(int playerId, Color playerColor)
     {
-        JoinedPlayers.Add(new PlayerData
+        JoinedPlayers[playerId] = new PlayerData
         {
             PlayerId = playerId,
             Color = playerColor,
@@ -62,12 +63,12 @@ public partial class GameManager : Node
                 Kills = 0,
                 Deaths = 0
             }
-        });
+        };
     }
     
     public bool IsPlayerJoined(int playerId)
     {
-        return JoinedPlayers.Exists(p => p.PlayerId == playerId);
+        return JoinedPlayers.ContainsKey(playerId);
     }
     
     public int GetPlayerCount()
@@ -77,17 +78,11 @@ public partial class GameManager : Node
 
     public PlayerData GetTopPlayer()
     {
-        PlayerData topPlayer = null;
-        foreach (var player in JoinedPlayers)
-        {
-            if (topPlayer == null ||
-                player.LeaderBoardEntry.Kills > topPlayer.LeaderBoardEntry.Kills ||
-                (player.LeaderBoardEntry.Kills == topPlayer.LeaderBoardEntry.Kills &&
-                 player.LeaderBoardEntry.Deaths < topPlayer.LeaderBoardEntry.Deaths))
-            {
-                topPlayer = player;
-            }
-        }
+        PlayerData topPlayer = this.JoinedPlayers.Values
+            .OrderByDescending(p => p.LeaderBoardEntry.Kills)
+            .ThenBy(p => p.LeaderBoardEntry.Deaths)
+            .First();
+        
         return topPlayer;
     }
 

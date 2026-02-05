@@ -6,7 +6,7 @@ public partial class DashFeature : Feature
 {
 	protected override void DoFeature(double delta)
 	{
-		if (!Input.IsActionPressed($"player_{this.Player.PlayerId}_dash"))
+		if (!Input.IsActionJustPressed($"player_{this.Player.PlayerId}_dash"))
 		{
 			return;
 		}

@@ -5,7 +5,7 @@ public partial class ShieldFeature : Feature
 {
 	protected override void DoFeature(double delta)
 	{
-		if (!Input.IsActionPressed($"player_{this.Player.PlayerId}_shield"))
+		if (!Input.IsActionJustPressed($"player_{this.Player.PlayerId}_shield"))
 		{
 			return;
 		}

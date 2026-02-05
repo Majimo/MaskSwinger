@@ -22,19 +22,19 @@ public partial class AttackFeature : Feature
     {
         direction = null;
         
-        if (Input.IsActionPressed($"player_{this.Player.PlayerId}_attack_up"))
+        if (Input.IsActionJustPressed($"player_{this.Player.PlayerId}_attack_up"))
         {
             direction = Direction.Up;
         } 
-        else if (Input.IsActionPressed($"player_{this.Player.PlayerId}_attack_down"))
+        else if (Input.IsActionJustPressed($"player_{this.Player.PlayerId}_attack_down"))
         {
             direction = Direction.Down;
         } 
-        else if(Input.IsActionPressed($"player_{this.Player.PlayerId}_attack_left"))
+        else if(Input.IsActionJustPressed($"player_{this.Player.PlayerId}_attack_left"))
         {
             direction = Direction.Left;
         }
-        else if (Input.IsActionPressed($"player_{this.Player.PlayerId}_attack_right"))
+        else if (Input.IsActionJustPressed($"player_{this.Player.PlayerId}_attack_right"))
         {
             direction = Direction.Right;
         }

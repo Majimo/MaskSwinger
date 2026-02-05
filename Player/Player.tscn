@@ -118,6 +118,7 @@ stream = SubResource("AudioStreamRandomizer_j23h2")
 volume_db = 24.0
 
 [node name="DeathPlayer" type="AudioStreamPlayer" parent="." unique_id=659496031]
+process_mode = 3
 stream = SubResource("AudioStreamRandomizer_ps8ct")
 volume_db = 24.0
 
