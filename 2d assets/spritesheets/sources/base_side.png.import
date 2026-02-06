@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cqdcf7uxwt50v"
-path.s3tc="res://.godot/imported/Player-Bull-back.png-25ab2d7c188e101f86fb251519a0a067.s3tc.ctex"
-path.etc2="res://.godot/imported/Player-Bull-back.png-25ab2d7c188e101f86fb251519a0a067.etc2.ctex"
+uid="uid://c3sk0gmfly2ln"
+path.s3tc="res://.godot/imported/base_side.png-41cedc58dd59c485051e9960cbcafe7c.s3tc.ctex"
+path.etc2="res://.godot/imported/base_side.png-41cedc58dd59c485051e9960cbcafe7c.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://2d assets/spritesheets/Player-Bull-back.png"
-dest_files=["res://.godot/imported/Player-Bull-back.png-25ab2d7c188e101f86fb251519a0a067.s3tc.ctex", "res://.godot/imported/Player-Bull-back.png-25ab2d7c188e101f86fb251519a0a067.etc2.ctex"]
+source_file="res://2d assets/spritesheets/sources/base_side.png"
+dest_files=["res://.godot/imported/base_side.png-41cedc58dd59c485051e9960cbcafe7c.s3tc.ctex", "res://.godot/imported/base_side.png-41cedc58dd59c485051e9960cbcafe7c.etc2.ctex"]
 
 [params]
 

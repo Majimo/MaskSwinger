@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0gn5oicpfpyb"
-path.s3tc="res://.godot/imported/1769897645449.png-5fb3c6267ed9ec6048596b27c207ddb4.s3tc.ctex"
-path.etc2="res://.godot/imported/1769897645449.png-5fb3c6267ed9ec6048596b27c207ddb4.etc2.ctex"
+uid="uid://bt4sappsco8ue"
+path.s3tc="res://.godot/imported/hermine_side.png-57a0b6046d1f059e538deaf1bb3e3a78.s3tc.ctex"
+path.etc2="res://.godot/imported/hermine_side.png-57a0b6046d1f059e538deaf1bb3e3a78.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://2d assets/spritesheets/1769897645449.png"
-dest_files=["res://.godot/imported/1769897645449.png-5fb3c6267ed9ec6048596b27c207ddb4.s3tc.ctex", "res://.godot/imported/1769897645449.png-5fb3c6267ed9ec6048596b27c207ddb4.etc2.ctex"]
+source_file="res://2d assets/spritesheets/sources/hermine_side.png"
+dest_files=["res://.godot/imported/hermine_side.png-57a0b6046d1f059e538deaf1bb3e3a78.s3tc.ctex", "res://.godot/imported/hermine_side.png-57a0b6046d1f059e538deaf1bb3e3a78.etc2.ctex"]
 
 [params]
 

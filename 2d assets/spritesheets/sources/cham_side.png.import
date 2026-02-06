@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cika51aqohii6"
-path.s3tc="res://.godot/imported/Player-Base-front.png-69abc55b8f5e5331d518d2b411d7d0b5.s3tc.ctex"
-path.etc2="res://.godot/imported/Player-Base-front.png-69abc55b8f5e5331d518d2b411d7d0b5.etc2.ctex"
+uid="uid://ciij1oja17np6"
+path.s3tc="res://.godot/imported/cham_side.png-51b951e4defe21343972e31e0e9bfb90.s3tc.ctex"
+path.etc2="res://.godot/imported/cham_side.png-51b951e4defe21343972e31e0e9bfb90.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://2d assets/spritesheets/Player-Base-front.png"
-dest_files=["res://.godot/imported/Player-Base-front.png-69abc55b8f5e5331d518d2b411d7d0b5.s3tc.ctex", "res://.godot/imported/Player-Base-front.png-69abc55b8f5e5331d518d2b411d7d0b5.etc2.ctex"]
+source_file="res://2d assets/spritesheets/sources/cham_side.png"
+dest_files=["res://.godot/imported/cham_side.png-51b951e4defe21343972e31e0e9bfb90.s3tc.ctex", "res://.godot/imported/cham_side.png-51b951e4defe21343972e31e0e9bfb90.etc2.ctex"]
 
 [params]
 

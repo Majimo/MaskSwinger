@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cu7h6c2o66oci"
-path.s3tc="res://.godot/imported/basis_full.png-c182b2673efa69d92da0a6cf83571c33.s3tc.ctex"
-path.etc2="res://.godot/imported/basis_full.png-c182b2673efa69d92da0a6cf83571c33.etc2.ctex"
+uid="uid://c24wwjvhdgdri"
+path.s3tc="res://.godot/imported/hermine_front.png-d712237f47f23bb2e7999b7bd7cff1fb.s3tc.ctex"
+path.etc2="res://.godot/imported/hermine_front.png-d712237f47f23bb2e7999b7bd7cff1fb.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://2d assets/spritesheets/basis_full.png"
-dest_files=["res://.godot/imported/basis_full.png-c182b2673efa69d92da0a6cf83571c33.s3tc.ctex", "res://.godot/imported/basis_full.png-c182b2673efa69d92da0a6cf83571c33.etc2.ctex"]
+source_file="res://2d assets/spritesheets/sources/hermine_front.png"
+dest_files=["res://.godot/imported/hermine_front.png-d712237f47f23bb2e7999b7bd7cff1fb.s3tc.ctex", "res://.godot/imported/hermine_front.png-d712237f47f23bb2e7999b7bd7cff1fb.etc2.ctex"]
 
 [params]
 
