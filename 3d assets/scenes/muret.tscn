@@ -6,7 +6,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_h8ssw"]
 size = Vector3(2.435669, 2.7050781, 4.936035)
 
-[node name="muret" unique_id=2121342368 instance=ExtResource("1_h8ssw")]
+[node name="muret" unique_id=242142964 instance=ExtResource("1_h8ssw")]
 script = ExtResource("2_f4tay")
 scale_smol = Vector3(0.95, 0.95, 0.95)
 scale_big = Vector3(1.05, 1.05, 1.05)

@@ -4,7 +4,8 @@ extends Sprite3D
 var tween: Tween
 
 func _on_texture_changed() -> void:
-	scale = Vector3(0.2, 0.2, 0.2)
+	#scale = Vector3(0.2, 0.2, 0.2)
+	pass
 
 func _ready() -> void:
 	
