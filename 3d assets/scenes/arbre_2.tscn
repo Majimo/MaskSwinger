@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bgx3ftw2h63m0"]
 
-[ext_resource type="ArrayMesh" uid="uid://bxi0yr11axhf6" path="res://3d assets/meshes/arbre_Cylinder_001.res" id="1_05ryy"]
+[ext_resource type="ArrayMesh" uid="uid://c3rk4qabu2vtx" path="res://3d assets/meshes/arbre_Cylinder_001.res" id="1_05ryy"]
 [ext_resource type="Script" uid="uid://bc8e4c6vdvobh" path="res://3d assets/scripts/tween_animation.gd" id="2_bke1m"]
 
 [node name="arbre2" type="Node3D" unique_id=1989823110]
@@ -8,3 +8,4 @@
 [node name="ArbreCylinder" type="MeshInstance3D" parent="." unique_id=406493565]
 mesh = ExtResource("1_05ryy")
 script = ExtResource("2_bke1m")
+is_random_rotate = true

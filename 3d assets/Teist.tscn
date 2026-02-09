@@ -1,17 +1,22 @@
 [gd_scene format=3 uid="uid://ccycu7asq8cf8"]
 
-[ext_resource type="PackedScene" uid="uid://d3hlwsb4k6iry" path="res://3d assets/scenes/wall.tscn" id="1_oabow"]
 [ext_resource type="Material" uid="uid://dcvbrligww5i" path="res://3d assets/materials/ground.tres" id="2_p0coo"]
+[ext_resource type="Material" uid="uid://ptg4b2h4deme" path="res://3d assets/materials/ground2.tres" id="3_4hnps"]
 [ext_resource type="PackedScene" uid="uid://b22v2q28f1bjx" path="res://3d assets/scenes/muret.tscn" id="3_707xs"]
 [ext_resource type="PackedScene" uid="uid://s67rcabiqgw4" path="res://3d assets/scenes/luciole_particles.tscn" id="4_6mkuf"]
+[ext_resource type="PackedScene" uid="uid://bc2it5uykcrwm" path="res://3d assets/scenes/walls.tscn" id="4_kx7aw"]
 [ext_resource type="PackedScene" uid="uid://cbm8g3jmeuckx" path="res://Mask/MaskSpawner.tscn" id="5_4hnps"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_o7hdf"]
 material = ExtResource("2_p0coo")
-size = Vector2(120, 120)
+size = Vector2(150, 150)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_o7hdf"]
 size = Vector3(100, 1, 100)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_45ey6"]
+material = ExtResource("3_4hnps")
+size = Vector2(500, 500)
 
 [node name="Teist" type="Node3D" unique_id=432543835]
 
@@ -269,18 +274,6 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.33
 
 [node name="world" type="Node3D" parent="." unique_id=1580102496]
 
-[node name="wall" parent="world" unique_id=1098000650 instance=ExtResource("1_oabow")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.273468, 0, 0)
-
-[node name="wall2" parent="world" unique_id=1647687490 instance=ExtResource("1_oabow")]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 11.70697, 0, 0)
-
-[node name="wall3" parent="world" unique_id=664614195 instance=ExtResource("1_oabow")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, -11.229132)
-
-[node name="wall4" parent="world" unique_id=1963189770 instance=ExtResource("1_oabow")]
-transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 0, 0, 10.512381)
-
 [node name="ground" type="MeshInstance3D" parent="world" unique_id=1904007460]
 mesh = SubResource("PlaneMesh_o7hdf")
 
@@ -289,6 +282,12 @@ mesh = SubResource("PlaneMesh_o7hdf")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="world/ground/StaticBody3D" unique_id=1366049562]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 shape = SubResource("BoxShape3D_o7hdf")
+
+[node name="background" type="MeshInstance3D" parent="world" unique_id=214464823]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+mesh = SubResource("PlaneMesh_45ey6")
+
+[node name="Walls" parent="world" unique_id=2016747349 instance=ExtResource("4_kx7aw")]
 
 [node name="luciole_particles" parent="." unique_id=1785180924 instance=ExtResource("4_6mkuf")]
 

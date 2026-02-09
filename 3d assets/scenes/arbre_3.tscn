@@ -8,3 +8,4 @@
 [node name="ArbreCylinder" type="MeshInstance3D" parent="." unique_id=406493565]
 mesh = ExtResource("1_5i011")
 script = ExtResource("2_hr8ax")
+is_random_rotate = true

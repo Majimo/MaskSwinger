@@ -21,10 +21,9 @@ sky_material = SubResource("ProceduralSkyMaterial_8joom")
 [sub_resource type="Environment" id="Environment_86hbi"]
 background_mode = 2
 sky = SubResource("Sky_pwejh")
-tonemap_mode = 3
+tonemap_mode = 1
+tonemap_exposure = 2.06
 adjustment_enabled = true
-adjustment_contrast = 1.145
-adjustment_saturation = 1.19
 
 [sub_resource type="Resource" id="Resource_8joom"]
 script = ExtResource("6_8joom")
@@ -228,6 +227,7 @@ layout_mode = 2
 text = "0"
 
 [node name="End" type="Control" parent="." unique_id=434756650]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

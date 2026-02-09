@@ -10,3 +10,4 @@ mesh = ExtResource("1_nfo3g")
 script = ExtResource("1_x54u0")
 scale_smol = Vector3(1, 0.8, 1)
 scale_big = Vector3(1, 1.2, 1)
+is_random_rotate = true
