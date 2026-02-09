@@ -2,8 +2,6 @@
 
 [resource]
 resource_name = "stone"
-cull_mode = 2
 diffuse_mode = 3
 specular_mode = 1
-albedo_color = Color(0.48, 0.3936, 0.41088003, 1)
-roughness = 0.73
+albedo_color = Color(0.7019608, 0.57254905, 0.30980393, 1)

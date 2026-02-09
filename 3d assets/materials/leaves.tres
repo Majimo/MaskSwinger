@@ -2,8 +2,7 @@
 
 [resource]
 resource_name = "leaves"
-cull_mode = 2
-albedo_color = Color(0.15729627, 0.9644572, 0, 1)
+albedo_color = Color(0.15522005, 0.78, 0.08580001, 1)
 roughness = 0.66
 backlight_enabled = true
 backlight = Color(0.057906672, 0.43, 0.0516, 1)

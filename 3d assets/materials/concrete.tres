@@ -2,6 +2,7 @@
 
 [resource]
 resource_name = "concrete"
-cull_mode = 2
-albedo_color = Color(0.71, 0.71, 0.71, 1)
-roughness = 0.77
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.6458053, 0.6279245, 0.49182266, 1)
+roughness = 0.63

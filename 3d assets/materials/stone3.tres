@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cjmhlr4dqu3hn"]
+
+[resource]
+resource_name = "stone3"
+diffuse_mode = 3
+specular_mode = 1
+albedo_color = Color(0.5882353, 0.4627451, 0.23137255, 1)

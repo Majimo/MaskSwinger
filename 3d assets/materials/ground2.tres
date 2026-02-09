@@ -1,8 +1,6 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://ptg4b2h4deme"]
 
 [resource]
-shading_mode = 0
 diffuse_mode = 3
 specular_mode = 1
-disable_ambient_light = true
-albedo_color = Color(0.021817489, 0.24050716, 0.036540143, 1)
+albedo_color = Color(0.03160682, 0.27872714, 0.04711867, 1)

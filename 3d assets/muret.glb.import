@@ -48,6 +48,16 @@ _subresources={
 "use_external/enabled": true,
 "use_external/fallback_path": "res://3d assets/materials/stone.tres",
 "use_external/path": "uid://bwgcqp6xda63"
+},
+"stone2": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://3d assets/materials/stone2.tres",
+"use_external/path": "uid://d18oalhq2to7b"
+},
+"stone3": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://3d assets/materials/stone3.tres",
+"use_external/path": "uid://cjmhlr4dqu3hn"
 }
 },
 "meshes": {

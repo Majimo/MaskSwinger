@@ -22,11 +22,12 @@ script = ExtResource("1_pwejh")
 environment = ExtResource("2_p5k04")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1042154745]
-transform = Transform3D(-0.9659258, 0.15684137, -0.2058837, 0, 0.79547346, 0.60598844, 0.25881907, 0.5853399, -0.76836836, 0, 0, 0)
+transform = Transform3D(-0.92522955, 0.22991669, -0.3018088, 5.1670135e-10, 0.7954736, 0.6059885, 0.3794078, 0.5606785, -0.7359957, 0, 12.906805, 0)
 light_color = Color(0.65, 0.65, 0.65, 1)
 shadow_enabled = true
 
 [node name="Ground" parent="." unique_id=432543835 instance=ExtResource("2_62b7x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.258, 0, 12.145)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1056510175]
 transform = Transform3D(1, 0, 0, 0, 0.5734907, 0.8192121, 0, -0.8192121, 0.5734907, 0, 49.519, 21.163)
