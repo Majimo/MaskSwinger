@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://5t4nkhxg1ne1"]
+
+[ext_resource type="FontFile" uid="uid://d0y83c0weoe1c" path="res://fonts/UnrealT.ttf" id="1_55rmr"]
+
+[resource]
+default_font = ExtResource("1_55rmr")
+default_font_size = 45

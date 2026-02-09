@@ -6,8 +6,10 @@
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="5_86hbi"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="6_8joom"]
 [ext_resource type="AudioStream" uid="uid://w5nxmx34rpof" path="res://AudioAssets/Musics/Battle_theme.mp3" id="7_pwejh"]
-[ext_resource type="FontFile" uid="uid://d0y83c0weoe1c" path="res://fonts/UnrealT.ttf" id="8_86hbi"]
+[ext_resource type="Theme" uid="uid://bol4lsiaw1crr" path="res://fonts/Themes/smalltxt_theme.tres" id="7_ute6a"]
+[ext_resource type="Theme" uid="uid://5t4nkhxg1ne1" path="res://fonts/Themes/middletxt_theme.tres" id="8_p5k04"]
 [ext_resource type="AudioStream" uid="uid://dovyybpm7bo3q" path="res://AudioAssets/SoundEffects/Fin_du_Temps_01.mp3" id="9_qi62q"]
+[ext_resource type="Theme" uid="uid://dkkq0o8lnc45t" path="res://fonts/Themes/bigtxt_theme.tres" id="10_h5mnd"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8joom"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -26,22 +28,6 @@ adjustment_saturation = 1.19
 
 [sub_resource type="Resource" id="Resource_8joom"]
 script = ExtResource("6_8joom")
-
-[sub_resource type="Theme" id="Theme_qi62q"]
-default_font = ExtResource("8_86hbi")
-default_font_size = 72
-
-[sub_resource type="Theme" id="Theme_86hbi"]
-default_font = ExtResource("8_86hbi")
-default_font_size = 45
-
-[sub_resource type="Theme" id="Theme_ute6a"]
-default_font = ExtResource("8_86hbi")
-default_font_size = 20
-
-[sub_resource type="Theme" id="Theme_p5k04"]
-default_font = ExtResource("8_86hbi")
-default_font_size = 120
 
 [node name="Main" type="Node3D" unique_id=1184177733]
 script = ExtResource("1_pwejh")
@@ -71,11 +57,11 @@ top_level = true
 script = ExtResource("5_86hbi")
 follow_mode = 3
 tween_resource = SubResource("Resource_8joom")
-follow_offset = Vector3(0, 25, 35)
+follow_offset = Vector3(0, 16.025, 15)
 follow_damping = true
 follow_damping_value = Vector3(0.01, 0.01, 0.01)
 auto_follow_distance = true
-auto_follow_distance_max = 40.0
+auto_follow_distance_max = 60.0
 auto_follow_distance_divisor = 100.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=691569204]
@@ -89,8 +75,13 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 34.0
+offset_top = 25.0
+offset_right = -34.0
+offset_bottom = -25.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("7_ute6a")
 
 [node name="Player0LeadBoard" type="VBoxContainer" parent="UIDeathKills" unique_id=925296222]
 visible = false
@@ -237,13 +228,13 @@ layout_mode = 2
 text = "0"
 
 [node name="End" type="Control" parent="." unique_id=434756650]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("8_p5k04")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="End" unique_id=1510905798]
 layout_mode = 1
@@ -256,19 +247,17 @@ alignment = 1
 
 [node name="Label" type="Label" parent="End/VBoxContainer" unique_id=1404293822]
 layout_mode = 2
-theme = SubResource("Theme_qi62q")
+theme_override_font_sizes/font_size = 72
 text = "C'est fini !"
 horizontal_alignment = 1
 
 [node name="Winner" type="Label" parent="End/VBoxContainer" unique_id=2145645188]
 layout_mode = 2
-theme = SubResource("Theme_86hbi")
 text = "Player 1 avec 12 kills et 3 morts"
 horizontal_alignment = 1
 
 [node name="Label2" type="Label" parent="End/VBoxContainer" unique_id=826976560]
 layout_mode = 2
-theme = SubResource("Theme_86hbi")
 text = "gagne la partie !"
 horizontal_alignment = 1
 
@@ -293,7 +282,7 @@ offset_left = -23.5
 offset_right = 23.5
 offset_bottom = 29.0
 grow_horizontal = 2
-theme = SubResource("Theme_ute6a")
+theme = ExtResource("7_ute6a")
 text = "2:24"
 
 [node name="Label2" type="Label" parent="TimeRemaining" unique_id=1013290387]
@@ -310,5 +299,5 @@ offset_right = 20.0
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-theme = SubResource("Theme_p5k04")
+theme = ExtResource("10_h5mnd")
 text = "5"
