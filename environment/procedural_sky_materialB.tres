@@ -1,0 +1,5 @@
+[gd_resource type="ProceduralSkyMaterial" format=3 uid="uid://dxi1ap6gsmm5s"]
+
+[resource]
+sky_energy_multiplier = 2.0
+sun_curve = 35.828514

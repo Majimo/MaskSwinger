@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://1h1u6h2qq2eg" path="res://Battlefield/Battlefield.cs" id="1_pwejh"]
 [ext_resource type="PackedScene" uid="uid://ccycu7asq8cf8" path="res://3d assets/Teist.tscn" id="2_62b7x"]
+[ext_resource type="Environment" uid="uid://u04wusi4owtc" path="res://environment/environmentA.tres" id="2_p5k04"]
 [ext_resource type="Script" uid="uid://bd046eokvcnu2" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="3_pwejh"]
 [ext_resource type="Script" uid="uid://csjccrhj5wnx7" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="5_86hbi"]
 [ext_resource type="Script" uid="uid://8umksf8e80fw" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="6_8joom"]
@@ -11,20 +12,6 @@
 [ext_resource type="AudioStream" uid="uid://dovyybpm7bo3q" path="res://AudioAssets/SoundEffects/Fin_du_Temps_01.mp3" id="9_qi62q"]
 [ext_resource type="Theme" uid="uid://dkkq0o8lnc45t" path="res://fonts/Themes/bigtxt_theme.tres" id="10_h5mnd"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8joom"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-
-[sub_resource type="Sky" id="Sky_pwejh"]
-sky_material = SubResource("ProceduralSkyMaterial_8joom")
-
-[sub_resource type="Environment" id="Environment_86hbi"]
-background_mode = 2
-sky = SubResource("Sky_pwejh")
-tonemap_mode = 1
-tonemap_exposure = 2.06
-adjustment_enabled = true
-
 [sub_resource type="Resource" id="Resource_8joom"]
 script = ExtResource("6_8joom")
 
@@ -32,7 +19,7 @@ script = ExtResource("6_8joom")
 script = ExtResource("1_pwejh")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=160560654]
-environment = SubResource("Environment_86hbi")
+environment = ExtResource("2_p5k04")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1042154745]
 transform = Transform3D(-0.9659258, 0.15684137, -0.2058837, 0, 0.79547346, 0.60598844, 0.25881907, 0.5853399, -0.76836836, 0, 0, 0)
